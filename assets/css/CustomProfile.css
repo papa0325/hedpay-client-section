@@ -1,0 +1,1646 @@
+/* fonts and sizes */
+body{
+  font-family: 'Roboto', sans-serif;
+
+}
+label{
+    font-weight: 400;
+}
+.H-12{
+    font-size: 0.75rem ;
+}
+.H-13{
+    font-size: 13px ;
+}
+.H-14,.MenuText{
+    font-size: 0.875rem ;
+}
+.H-16{
+    font-size: 1rem;
+
+}
+.H-18{
+    font-size: 1.125rem;
+}
+.H-20{
+    font-size:1.25rem;
+}
+.H-22{
+    font-size: 1.375rem;
+}
+.H-24{
+    font-size: 1.5rem;
+}
+.H-25{
+    font-size: 1.575rem;
+}
+.H-30{
+    font-size: 1.875rem;
+  }
+  .H-35{
+    font-size: 2.188rem;
+  }
+.H-40{
+    font-size: 2.5rem;
+}
+.fontW-400{
+    font-weight: 400;
+}
+.fontW-500{
+    font-weight: 500;
+}
+.fontW-600{
+    font-weight: 600;
+}
+.fontW-700{
+    font-weight: 700;
+}
+.W-Color{
+    color: #F5F7FA;
+}
+
+.LigthBlue,.TextBlue{
+    color: #2DCCD3;
+}
+.BD-Color{
+    color: #002554;
+}
+.OrangeColor{
+    color:#FFA300;
+}
+.greenColor{
+    color: #229F17;
+}
+.RedColor{
+    color:#FF000A;
+}
+.TextWhite{
+    color: #fff;
+  }
+  .TextDark{
+    color:#00263F
+  }
+  .TextGray{
+    color: #707070;
+  }
+  .TextGrayLight{
+    color: #8395A1;
+  }
+  .TextGrayWallet{
+    color: #556575;
+  }
+
+  .TextBlack{
+    color: #1C2126;
+  }
+  .Bg-OrangeColor{
+    background:#FFA300;
+}
+.Bg-DBlue{
+    background:#002554;
+}
+.Bg-LBlue{
+    background:#2DCCD3;
+}
+.Bg-Gray{
+    background:#556575 !important;
+}
+/*buttons*/
+button, select{
+    overflow: hidden;
+    outline: none;
+}
+/* SELECT */
+select *{
+    padding: 10px 20px;
+    border-bottom: 2px solid #F4F3F3;
+}
+select:hover{
+    background-color: #F4F3F3;
+    opacity: 1;
+   }
+/* RADIO BUTTONS */
+.radio-custom {
+    opacity: 0;
+    position: absolute;   
+}
+.radio-custom, .radio-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.radio-label {
+    position: relative;
+}
+.radio-custom + .radio-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+
+.radio-custom:checked + .radio-label:before {
+    font-family: fontAwesome;
+    content: "\f00c";
+    color: #2DCCD3;
+   
+
+  }
+  /* CHECKBOX STAR */
+  .Contact-Star > .star {
+    visibility:hidden;
+    font-size:30px;
+    cursor:pointer;
+    padding: 0;
+}
+.Contact-Star > .star:before {
+    content: "\f005";
+    font-family: FontAwesome;
+   position: absolute;
+   visibility:visible;
+   color: rgb(168, 155, 155);
+
+}
+.Contact-Star > .star:checked:before {
+    content: "\f005";
+    font-family: FontAwesome;
+   position: absolute;
+   color: #FFA300;
+
+
+}
+.icon-table-star{
+    font-size:20px !important;
+
+}
+
+/* menu custom */
+.LineBlueBottom{
+    border-bottom: 1px solid #2DCCD3;
+}
+.LineOrangeBottom{
+    border-bottom: 1px solid #FFA300;
+}
+.LineDarkeBottom{
+    border-bottom: 1px solid #002554;
+}
+.ButtonSideVertical{
+    background: #2DCCD3;
+    width: 53px;
+    height: 53px;
+}
+.dropdown-menu{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+box-shadow: 3px 3px 12px #00000029;
+border-radius: 4px;
+padding: 5px;
+}
+.TopSpace{
+    padding-top: 240px;
+}
+.Avatar-Vertical{
+    width: 90px;
+    height: 90px;
+
+}
+.Avatar-Profile{
+    width: 128px;
+    height: 128px;
+    border: 3px solid #2DCCD3;
+}
+.Coins-Size-Dashboard{
+    width: 30px;
+    height: 30px;
+
+}
+.dropdown-menu{
+    width: 241px;
+}
+
+.Icon-Menu{
+    max-width: 59px;
+    max-height: 21px;
+}
+.icon-2fa{
+    width: 59px;
+    height: 21px;
+}
+.envelope-icon{
+    height: 18px;
+}
+.contacts-question-icon{
+    height: 12px;
+
+}
+#ButtonBottomProfileMenu{
+    display: none;
+
+}
+.NumberIcon{
+    top:-1px;right: 19px;
+}
+.MessageIcon{
+    top:0px;right: 12px;
+}
+/* .Prev-Next:hover, .page-item:hover .page-link, .page-link:hover{
+} */
+.next>a, .previous >a{
+    padding: 0.5rem;
+}
+li.next:hover>a.page-link,  li.previous:hover>a.page-link{
+    background: #FFA300 !important;
+    color:#ffffff;
+}
+
+.page-Clients {
+    scroll-margin-top: 175px; /* assuming that your sticky menu is about 90px high + added 15px extra margin */
+    margin-top: 50px;
+  }
+  .TitleGrafic{
+    max-width:830px;width:100%;
+}
+/* .table th, .table td{
+    width: fit-content !important;
+} */
+
+
+
+/* MENU LATERAL STARTS*/
+#sidebar-menu {
+    padding: 10px 0 30px 0;
+  }
+  
+  #sidebar-menu .mm-active > .has-arrow:after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  
+  #sidebar-menu .has-arrow:after {
+    content: "\F0142";
+    font-family: 'Material Design Icons';
+    display: block;
+    float: right;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    padding-top: 2px;
+    font-size: 1rem;
+  }
+  
+  #sidebar-menu ul li a {
+    display: block;
+    padding: .65rem 1.5rem;
+    color: #899dbf;
+    position: relative;
+    font-size: 15px;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+  }
+  
+  #sidebar-menu ul li a:hover {
+    color: #c4d2e8;
+  }
+  
+  #sidebar-menu ul li a i {
+    display: inline-block;
+    min-width: 1.8rem;
+    padding-bottom: .125em;
+    font-size: 1.2rem;
+    line-height: 1.40625rem;
+    vertical-align: middle;
+    opacity: 0.75;
+  }
+  
+  #sidebar-menu ul li .badge {
+    margin-top: 4px;
+  }
+  
+  #sidebar-menu ul li ul.sub-menu {
+    padding: 0;
+  }
+  
+  #sidebar-menu ul li ul.sub-menu li a {
+    padding: .4rem 1.5rem .4rem 3.25rem;
+    font-size: 14px;
+  }
+  
+  #sidebar-menu ul li ul.sub-menu li ul.sub-menu {
+    padding: 0;
+  }
+  
+  #sidebar-menu ul li ul.sub-menu li ul.sub-menu li a {
+    padding: .4rem 1.5rem .4rem 4.5rem;
+    font-size: 13.5px;
+  }
+  .vertical-menu {
+    width: 300px;
+    z-index: 1001;
+    background: #F5F7FA 0% 0% no-repeat padding-box;
+    opacity: 1;
+    bottom: 0;
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    -webkit-box-shadow: 6px 0px 6px #0000001A;
+            box-shadow: 6px 0px 6px #0000001A;
+  }
+  .vertical-menu-Closed {
+    width: 53px;
+    z-index: 1001;
+    background: #F5F7FA 0% 0% no-repeat padding-box;
+    opacity: 1;
+    bottom: 0;
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    -webkit-box-shadow: 6px 0px 6px #0000001A;
+            box-shadow: 6px 0px 6px #0000001A;
+  }
+ 
+    .vertical-menu {
+      display: none;
+    }
+  
+  #vertical-menu-btn{
+    display: none;
+  
+  }
+  .vertical-menu-Closed {
+    display: block;
+  
+  }
+  body.enable-vertical-menu .vertical-menu,
+  body.enable-vertical-menu .menu-overlay {
+    display: block;
+  }
+  body.enable-vertical-menu .vertical-menu-Closed{
+    display: none;
+  }
+  @media (max-width: 992px) {
+    .menu-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(34, 42, 62, 0.3);
+      display: none;
+      z-index: 1000;
+    }
+    }
+/* MENU LATERAL ENDS*/
+ 
+  @media (min-width:1700px) {
+    .justify-Center-XXL{
+        justify-content: center !important;
+    }
+    .Width-XXL{
+        max-width: 50% !important;
+    }
+    .TitleGrafic{
+        max-width:100%;
+        width:100%;
+    }
+    .Dashboard-Table,.TitleTable{
+        width: 700px !important;
+    }
+}
+@media (max-width:1400px) and (min-width:1200px){
+    .M-Text{
+        /* display: none; */
+    }
+}
+@media (max-width:1699px) {
+    .Dashboard-Table,.TitleTable{
+        width: 500px !important;
+    }
+}
+
+@media (max-width:1200px) {
+    .Dashboard-Table,.TitleTable{
+        width: 750px !important;
+    }
+    .navbar-brand-box{
+        display: none;
+    }
+    .NumberIcon{
+        top:-1px;right: 9px;
+    }
+    .MessageIcon{
+        top:0px;right: 3px;
+    }
+}
+
+@media (max-width:990px) {
+   
+    .MenuText{
+        font-size: 1rem;
+    }
+    .Icon-Menu{
+        max-width: 49px;
+        max-height: 25px;
+    }
+    .Dashboard-Table{
+        width: 700px !important;
+    }
+   
+
+}
+@media (max-width:800px) {
+    .page-Clients {
+        scroll-margin-top: 175px; /* assuming that your sticky menu is about 90px high + added 15px extra margin */
+        margin-top: 120px;
+      }
+      .Dashboard-Table{
+        width: 600px !important;
+    }
+    /* #topnav-menu-content{
+        display: none;
+    } */
+}
+@media (max-width:600px) {
+    .Dashboard-Table{
+        width: 400px !important;
+    }
+}
+@media (max-width:475px) {
+    
+    .Icon-Menu{
+        max-width: 40px;
+        max-height: 18px;
+    }
+    #ButtonProfileMenu{
+        display: none;
+
+    }
+    #ButtonBottomProfileMenu{
+        display: inline-block;
+
+    }
+    .header-profile-user {
+        height: 40px;
+        width: 40px;
+        background-color: #2DCCD3;
+        padding: 1px;
+      }
+      .Dashboard-Table{
+        width: 300px !important;
+    }
+}
+@media (max-width:390px){
+    .ArrowIcon{
+        display: none;
+    }
+    .Dashboard-Table{
+        width: 280px !important;
+    }
+}
+
+
+/* DASHBOARD */
+.dataTables_length{
+    display: none;
+}
+.page-item.active .page-link{
+    background-color: #2DCCD3;
+    border-color: #2DCCD3;
+}
+.BalanceBox{
+    /* min-width: 270px; */
+    /* width: 270px; */
+    height: 90px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000019;
+    border: 1px solid #E2E2E2;
+    border-radius: 6px;
+    opacity: 1;
+    padding: 12px !important;
+    margin-bottom: 12px;
+    /* margin-right: 12px; */
+}
+.Wallet-Total{
+    background: #2DCCD3 0% 0% no-repeat padding-box;
+    border: 1px solid #002554;
+
+}
+.back-icon{
+    border:2px solid #229F17;
+
+}
+.PdS{
+    padding-right: 70px !important;
+    /* padding-left: 15px !important; */
+}
+#lineChart{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 3px 3px 9px #00000029;
+border-radius: 6px;
+opacity: 1;
+}
+.progress{
+    width: 100%;
+    height: 14px;
+    max-width: 1116px;
+}
+.Two-Container{
+    max-width: 1116px;
+
+}
+.Help-Box:hover + .Expand-Box {
+ display: inline-block;
+}
+.Expand-Box{
+    width: 220px;
+    bottom: 10px;
+    left: 0;
+    z-index: 20;
+    border: 1px solid #002554 !important;
+    display: none;
+}
+.Profile_Exp_Box{
+    width: 220px;
+    top: 0px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    z-index: 20;
+    border: 1px solid #002554 !important;
+    display: none;
+}
+/* .Expand-Box::after{
+    font-family: fontAwesome;
+    content: "\f139\00a0";
+    position: absolute;
+    top:-17px;
+    right: -6px;
+
+} */
+.Exch-Rates-Box{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 9px #00000029;
+    border-radius: 6px;
+    opacity: 1;
+}
+.Exch-Rates-Box-List{
+    background: #F5F7FA 0% 0% no-repeat padding-box;
+    opacity: 1;
+    max-height: 40px;
+    /* 
+    border: 1px solid rgba(0,0,0,.15);
+    margin-bottom: 20px !important; */
+}
+
+.SelectExchange {
+    position: relative;
+    /*Don't really need this just for demo styling*/
+    float: left;
+  }
+  
+  .SelectExchange:after, .Funds:after {
+      content: '\f078';
+      font: normal normal normal 14px/1 FontAwesome;
+      color: #2DCCD3;
+      right: 11px;
+      top: 6px;
+      height: 34px;
+      padding: 5px 0px 5px 8px;
+      position: absolute;
+      pointer-events: none;
+  }
+  
+.DarkArrowSelect:after{
+    color: #002554;
+
+}
+.SelectContacts:after{
+    content: '\f078\f0c0';
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #FFA300;
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    height: 40px;
+    padding: 10px 10px 5px 10px;
+    border:1px solid #FFA300;
+}
+
+.Trans:after{
+    content: '\f078\f0c0';
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #2DCCD3;
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    height: 40px;
+    padding: 10px 10px 5px 10px;
+    border:1px solid #2DCCD3;
+}
+
+.SelectContacts select, .Funds select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+
+}
+  /* IE11 hide native button (thanks Matt!) */
+  select::-ms-expand {
+  display: none;
+  }
+  
+  .SelectExchange select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    
+    display: block;
+    float: left;
+    /* line-height: 1.z75; */
+    color: #333;
+    background: #F5F7FA !important;
+    box-shadow: 3px 3px 6px #00000029;
+    border: 1px solid #002554;
+    border-radius: 6px;
+
+    height: 40px;
+    /* background-image: none; */
+    /* border: none !important; */
+    -ms-word-break: normal;
+    word-break: normal;
+  }
+ 
+.Size-Boxes{
+   max-width: 700px;
+    width: 100%;
+}
+
+  /* DROPDOWN LIST WITH ICONS */
+  .vodiapicker{
+    display: none; 
+  }
+  .lang-select,.lang{
+    z-index: 100;
+    background: #ffffff;
+    box-shadow: 3px 3px 9px #00000029;
+    height: 40px;
+    border-radius: 6px;
+  }
+  /* WALLET */
+  .wallet-select,.wall{
+    z-index: 100;
+    background: #ffffff;
+    height: 53px;
+    border-radius: 6px;
+  }
+  #a{
+    padding-left: 0px;
+    background: #ffffff;
+    margin-bottom: 1px;
+  }
+  
+  #a img, .btn-select img{
+    width: 22px;
+    
+  }
+  
+  #a li{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100;
+   background-color: #fff;
+    border-bottom: 2px solid #F4F3F3;
+    margin-left: 0;
+  }
+  
+  #a li:hover{
+   background-color: #F4F3F3;
+   opacity: 1;
+
+  }
+  
+  #a li img{
+    margin-left: 14.5px;
+  }
+  
+  .btn-select li span{
+    /* margin-left: 20px; */
+    opacity: 1;
+    /* z-index: 100; */
+
+
+  }
+/* LIST */
+ul li{
+    list-style: none;
+    text-align: left;
+}
+.Accounts-List{
+    color: #002554;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding: 5px;
+
+}
+li>p.Address-Account{
+    font-weight: 500;
+}
+  /* WALLET  */
+  .a{
+    padding-left: 0px;
+    background: #ffffff;
+    margin-bottom: 1px;
+  }
+  
+  .a img, .btn-select img{
+    width: 22px;
+    
+  }
+  
+  .a li{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100;
+   background-color: #fff;
+    border-bottom: 2px solid #F4F3F3;
+    margin-left: 0;
+  }
+  
+  .a li:hover{
+   background-color: #F4F3F3;
+   opacity: 1;
+
+  }
+  
+  .a li img{
+    margin-left: 14.5px;
+  }
+  .a li span{
+    padding-left: 20px !important;
+    opacity: 1;
+    z-index: 100;
+
+  }
+  .a li span.uno{
+    color:#ffffff;
+
+  }
+  .a li span.uno:hover{
+    color:#F4F3F3;
+
+  }
+  /* END WALLET */
+  #a li span{
+    padding-left: 20px !important;
+    opacity: 1;
+    z-index: 100;
+
+  }
+  #a li span.uno{
+    color:#ffffff;
+
+  }
+  #a li span.uno:hover{
+    color:#F4F3F3;
+
+  }
+  
+  /* item list */
+  
+  .b{
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+
+    /* max-width: 350px; */
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 5px;
+    opacity: 1;
+    
+  }
+  /* WALLET */
+  .b-wallet{
+    display: none;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+    /* max-width: 350px; */
+    /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 5px;
+    opacity: 1;
+    
+  }
+  .open{
+    display: inline-block !important;
+    opacity: 1;
+  }
+  
+  
+  .btn-select{
+    margin-top: 10px;
+    width: 100%;
+    /* max-width: 350px; */
+    height: 40px;
+    border-radius: 5px;
+   
+  }
+  .btn-select li{
+    list-style: none;
+    float: left;
+    padding-bottom: 0px;
+    padding-left: 15px !important;
+
+  }
+  
+  .btn-select:hover li{
+    margin-left: 2px;
+  }
+  
+  .btn-select:hover{
+    background-color: #F4F3F3;
+    /* box-shadow: inset 0 0px 0px 1px #ccc; */
+    height: auto;
+    min-height: 40px;
+    
+  }
+  /* wallet */
+  .btn-wallet-select{
+    height: 40px;
+
+  }
+  .btn-wallet-select:hover{
+    min-height: 40px;
+
+  }
+  /* .btn-select:focus{
+     outline:none;
+  } */
+  
+.Table-Dash,.Grafic{
+    max-width: 830px;
+    float: right;
+}
+/* #lineChart{
+    max-height: 313px;
+    max-width: 830px;
+
+} */
+.RespIconPound{
+    display: none;
+}
+@media (min-width:2100px){
+    .BalanceBox{
+        max-width: 330px;
+        width: 330px;
+    }
+}
+@media (max-width:1500px){
+    /* .H-16{
+        font-size: 0.875rem;
+    } */
+    /* .H-14{
+        font-size: 0.75rem;
+    } */
+    /* .H-12{
+        font-size: 0.6rem;
+    } */
+   
+}
+@media (max-width:1409px){
+   .RespIcon{
+       display: none;
+   }
+   .RespIconPound{
+       display: inline-block;
+   }
+   .H-20{
+    font-size: 1.125rem;
+}
+   
+}
+
+@media (max-width:1200px){
+    .BalanceBox{
+        max-width: auto;
+        width: auto;       
+    }
+    .RespIcon{
+        display: inline-block;
+    }
+    .RespIconPound{
+        display: none;
+    }
+    .Size-Boxes{
+        max-width: 100%;
+    }
+    .Size-Boxes{
+        width: 700px;
+
+    }
+ }
+
+
+ @media (max-width:770px){
+   .BA{
+       align-items: center;
+       
+   }
+   .PdS {
+    padding-right: 0px !important;
+
+   }
+   .DashboardSection{
+       padding: 20px;
+   }
+   .uno{
+    display: none;
+}
+#lineChart{
+    height: 100%;
+    width: 100%;
+
+}
+ }
+
+ @media (max-width:430px){
+    .Table-Dash,.Grafic{
+        max-width: 430px;
+    }
+    /* .BalanceBox{
+        max-width: 270px;
+        width: 270px;       
+    } */
+ }
+
+/* REFERRAL */
+/* NEW DESIGN starts*/
+.Icon-Ref-New{
+    width: 17.5px;
+}
+.TextArea-Referal{
+    height: 158px !important;
+}
+/* NEW DESIGN ends */
+
+.Box-Card{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    box-shadow: 3px 3px 12px #00000029 !important;
+    border-radius: 6px !important;
+    opacity: 1;
+
+    height: fit-content;
+    border: 1px solid #E2E2E2;
+}
+tbody{
+    background: #FFFFFF 0% 0% no-repeat padding-box !important;
+    box-shadow: 3px 3px 12px #00000029 !important;
+    border-radius: 6px !important;
+    opacity: 1;
+
+    
+    border: 1px solid #E2E2E2;
+}
+.Ref-input{
+    background: #F5F7FA 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 6px;
+    opacity: 1;
+    width: 461px;
+    min-height: 38px !important;
+}
+.Ref-Button{
+    background: #2DCCD3 0% 0% no-repeat padding-box;
+border-radius: 4px;
+opacity: 1;
+height: auto;
+max-width: 300px;
+}
+
+.Ref{
+    width: 119px;
+    min-height: 53px !important;
+}
+.Share-Send{
+    max-width: 253px;
+    min-height: 53px;
+}
+
+.Invite-Input{
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 3px 3px 12px #00000019;
+border: 1px solid #E2E2E2;
+border-radius: 6px;
+opacity: 1;
+/* max-width: 387px; */
+height: 58px ;
+}
+
+
+
+/* .BoxShare-Send{
+    max-width: 438px;
+} */
+.ReferenceBox{
+    /* min-width: 270px; */
+    /* width: 270px; */
+    /* height: 90px; */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000019;
+    border: 1px solid #E2E2E2;
+    border-radius: 6px;
+    opacity: 1;
+    padding: 12px !important;
+    /* margin-bottom: 12px; */
+    /* margin-right: 12px; */
+}
+@media (min-width:2500px){
+  
+    .BoxShare-Send{
+        min-width: 438px;
+    }
+ }
+
+ @media (max-width:767px){
+    .SizeH-Ref{
+        min-height: auto;
+        max-height: 100%;
+
+    }
+    
+ }
+ @media (max-width:575px){
+    .Ref-Button{
+        margin-top: 20px;
+        /* width: 253px; */
+    }
+    .Share-Send{
+        min-width: 100px;
+    }
+    
+ }
+
+ /* WALLET */
+ /* WALLET NEW DESIGN STARTS */
+ .Active-Wallet{
+    background: #002554 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    color: white;
+ }
+.Proceed{
+    position: absolute;
+    bottom: -15px;
+}
+ /* WALLET NEW DESIGN ENDS */
+
+ .Wallet-Box-Card{
+    padding: 12px !important;
+    margin-bottom: 12px;
+    margin-right: 12px;
+ }
+ .Wallet-Box{
+    background: #F5F7FA 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000019;
+    border: 1px solid #2DCCD3;
+    border-radius: 6px;
+    opacity: 1;
+ }
+ .Wallet-icon{
+     width: 40px;
+ }
+ .Wallet-Hide-ProggressBar{
+     display: none;
+ }
+ .Wallet-BlueLigth{
+    background: #2DCCD3 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+height: 35px;
+ }
+ .Wallet-BlueDark{
+    background: #002554 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    height: 35px;
+ }
+.wallet-inp{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000029;
+    border-radius: 6px 0 0 6px;
+    opacity: 1;
+    height: 35px;
+    border: 1px solid #E2E2E2;
+    width: 340px;
+    padding: 5px 16px;
+}
+.Wallet-SearchButton{
+    width: 35px;
+    height: 35px;
+    background: #00263F;
+    border-radius:0 6px 6px 0;
+    min-width: 10%;
+}
+.linebottomgray{
+    border-bottom: 2px solid #F4F3F3 ;
+    
+
+}
+.Funds-LabelBlue{
+    background: #2DCCD3 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000019;
+    border-radius: 6px;
+    opacity: 1;
+    height: 40px;
+}
+.Funds-LabelOrange{
+    background: #FFA300 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000019;
+    border-radius: 6px;
+    opacity: 1;
+    height: 40px;
+}
+.Block-Funds{
+    max-width: 571px
+}
+.progress-wallet{
+    max-width: 500px;width:350px;
+}
+.MissingInfo{
+    border: 1px solid #dc2f02;
+    background-color: #FDDED8 !important;
+}
+.Contact-Button{
+    background: transparent !important; 
+    right: 5%;
+     top:11px;
+}
+.AddContactLink:link, .AddContactLink:visited, .AddContactLink:hover{
+    color: #FFA300;
+    border-bottom: 1px solid #FFA300;
+
+}
+.AddContactLink::before{
+    content: "+";
+    border: 1px solid #FFA300;
+    color: #FFA300;
+    padding: 0 5px;
+    margin-right: 3px;
+
+}
+.swal2-popup .swal2-title{
+    font-size: 1.25em !important;
+    font-weight: 600 !important;
+}
+.AddBlueLink:link, .AddBlueLink:visited, .AddBlueLink:hover{
+    color: #2DCCD3;
+    border-bottom: 1px solid #2DCCD3;
+
+}
+.AddBlueLink::before{
+    content: "+";
+    border: 1px solid #2DCCD3;
+    color: #2DCCD3;
+    padding: 0 5px;
+    margin-right: 3px;
+
+}
+
+.Transfer-LabelOrange{
+    background: #FFA300 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000019;
+    border-radius: 6px;
+    opacity: 1;
+    height: 53px;
+}
+@media (max-width:1440px){
+    
+  
+    .GUID-CODE{
+        font-size: 0.75rem;
+    }
+
+ }
+ @media (max-width:1200px){
+    
+    .SEPA-Margin{
+        margin-top: 90px !important;
+    }
+    .progress-wallet{
+        max-width: 500px;
+        width:250px;
+    }
+ }
+ @media (max-width:988px){
+    
+    .Block-Funds{
+        max-width: 100%
+    }
+    .GUID-CODE{
+        font-size: 1rem;
+    }
+    .SEPA-Margin{
+        margin-left: 0px !important;
+    }
+    
+ }
+ @media (max-width:571px){
+    
+    .WalletFinalStep{
+        font-size: 0.85rem;
+    }
+    .GUID-CODE{
+        font-size: 0.75rem;
+    }
+    .Wallet-SearchButton{
+      
+        min-width: 25%;
+    }
+    .CardsIcons{
+        position: absolute;
+          top: -30px;
+          right: 0;
+          padding-right:28px;
+    }
+    .Contact-Button{
+        background: transparent !important; 
+        right: 7%;
+         top:11px;
+    }
+    
+    
+ }
+ @media (max-width:442px){
+    
+    .GUID-CODE{
+        font-size: 0.6rem;
+        font-weight: 500;
+    }
+    
+ }
+
+ /* EXCHANGE */
+ .icon-rotate{
+    
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    
+ }
+
+
+ /* PROFILE */
+ .Profile-Sizes{
+     /* width: 185px ; */
+     height: 132px;
+     padding: 20px 15px;
+ }
+
+ /* CAROUSEL */
+.slick-arrow{
+    background-color: #fff;
+    position: absolute;
+    top:40%;
+    color: #fff;
+
+}
+.slick-prev{
+    left: 0;
+}
+.slick-next{
+    right: 0;
+}
+ .slick-prev::before{
+    font-family: fontAwesome;
+    content: "\f053\00a0";
+
+     color: #2DCCD3;
+     background-color: #fff;
+ }
+ .slick-next::after{
+    font-family: fontAwesome;
+    content: "\f054\00a0";
+
+     color: #2DCCD3;
+     background-color: #fff;
+ }
+.Div-Gray-Open{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E8E8;
+
+}
+.Div-Gray-Open > span, .Div-Gray-Open > p{
+    color: #002554;
+
+}
+ .Prof-BlueLight-Div{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    width: 1447px;
+    height: 53px;
+ }
+ .Profile-Div-Active{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+ }
+ .Profile-Button{
+    background: #2DCCD3 0% 0% no-repeat padding-box;
+    border-radius: 6px 0px 0px 6px;
+    max-width: 53px;
+    height: 53px;
+ }
+ .Profile-Button-Active{
+    background: #002554 0% 0% no-repeat padding-box;
+ }
+ .Size-Prof-Box{
+    max-width: 85%;
+ }
+
+ .File-Upload::before{
+    font-family: fontAwesome;
+    content: "\f093\00a0";
+    color: #002554;
+    position: absolute;
+    top:0%;
+    left: 5%;
+ }
+
+ .Table-option-button{
+     width: 20px;
+     height: 20px;
+ }
+
+ /* FUNDS PACKAGES */
+ .B-Packages{
+     max-width: 275px;
+ }
+ .B-Packages:hover{
+    transition-duration: 0.3s;
+     border: 1px solid #2DCCD3;
+ }
+ .B-Packages:hover > button{
+    transition-duration: 0.3s;
+    background: #002554;
+ }
+ .B-Packages:hover > .TextDark{
+    transition-duration: 0.3s;
+    color: #2DCCD3;
+ }
+
+ #Favorites-Table > tbody tr td, #Saved-Table > tbody tr td{
+     font-size: 0.8rem;
+     color: #002554;
+     margin-bottom: 0px;
+     padding-left:0.5rem ;
+     padding-right:0.5rem ;
+     text-align: center;
+
+ }
+
+
+ /* SETTINGS */
+ .S-Curr>.BlueCBox.locked:checked::after {
+    font-family: fontAwesome;
+    content: "\f023\00a0";
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color:#333;
+  }
+.MailMenu{
+    max-width: 250px;
+    
+
+}
+  .Mailbox-Body > tr> td, .MailMenu > li>a, .MailMenu > li>a>span, .MailMenu > li>span{
+    font-size: 0.85rem ;
+    color: #002554;
+  }
+  .Mailbox-Body > tr> td.Name{
+    font-size: 0.875rem ;
+    color: #002554;
+  }
+  .Mail-Active>td{
+      font-weight: 600;
+  }
+  .Ul-Mail{
+      width: 250px;
+      z-index: 5;
+      overflow: hidden;
+  }
+  .MailMenu > li{
+    border-bottom: 2px solid #F4F3F3;
+
+  }
+  .MailMenu > li.Active-Mailbox{
+    border-bottom: 1px solid #2DCCD3;
+
+  }
+  .MailMenu > li.Active-Mailbox>a,.MailMenu > li.Active-Mailbox>a>span{
+    color: #2DCCD3;
+    
+  }
+  .MailMenu > li.Active-Mailbox>span{
+    color: #fff;
+    background-color: #2DCCD3;
+    border-radius: 50%;
+  }
+
+  #Mailbox-Table input[type=search], #Mailbox-Table_filter input[type=search],
+  #Saved-Table_filter input[type=search], 
+  #Wallet-Stake-Table_filter input[type=search], 
+  #Favorites-Table_filter input[type=search], 
+  #Referral-Table_filter input[type=search], 
+  #Stake-Table_filter input[type=search], 
+  .dataTables_filter input[type=search] {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 12px #00000029;
+    border-radius: 6px 0 0 6px;
+    opacity: 1;
+    height: 35px;
+    border: 1px solid #E2E2E2;
+    width: 90%;
+    padding: 5px 16px;
+    align-self: flex-start;
+  }
+  #Mailbox-Table > label, #Mailbox-Table_filter >label,  .dataTables_filter >label{
+    color: #fff;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.Box-Mail-Position{
+    position: absolute;
+    top:0;z-index: 5;
+}
+/* .Desc-Resp{
+    display: none;
+} */
+.Mail-Desc,.Name{
+    white-space: wrap;
+}
+.Mail-Date{
+    white-space: nowrap;
+}
+.Desc-Resp{
+    text-align: left;
+}
+@media only screen and (max-width: 768px) {
+    .Box-Mail-Position{
+        position: initial;
+        
+    }
+    .Ul-Mail{
+        position: absolute;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .Name{
+        padding-right: 0px !important;
+        
+    }
+    .Desc-Resp{
+        font-size: 0.75rem;
+    }
+}
+
+#Stake-Table >tbody>tr>td{
+    color:#00263F;
+    margin-bottom: 0;
+    font-size: 0.875rem ;
+
+}
+#Stake-Table >tbody>tr>td.Completed{
+    color:#002554;
+    font-weight: 500;
+
+}
+#Stake-Table >tbody>tr>td.T-Active{
+    color:#2DCCD3;
+    font-weight: 500;
+}
+#Stake-Table >tbody>tr>td.Locked{
+    color:#FFA300;
+    font-weight: 500;
+
+}
+
+/* CHAT FOOTER */
+#Chat{
+   position: fixed;
+   right: 5%;
+   bottom: 0;
+   width: 296px;
+   z-index: 150;
+   box-shadow: 3px 3px 9px #00000029;
+}
+.Chat-Header{
+    height: 39px;
+    background: #002554 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 9px #00000029;
+    border-radius: 4px 4px 0px 0px;
+}
+.Chat-Body, .Chat-footer{
+    display: none;
+}
+.Chat-icon{
+    width: 70%;
+}
+.Chat-icon-message{
+    width: 17%;
+}
+.Chat-Header.Opened{
+    height:53px;
+    background: #002554 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 9px #00000029;
+    border-radius: 4px 4px 0px 0px;
+}
+.Chat-Header.Opened>div >p{
+  font-size: 1rem;
+}
+
+.Chat-Header.Opened>div>.Chat-icon{
+    width: 85%;
+}
+.Chat-Header.Opened>div>.Chat-icon-message{
+    width: 25%;
+}
+
+ .Chat-Header.Opened ~ .Chat-footer{
+    display: flex;
+}
+.Chat-Header.Opened + .Chat-Body{ 
+    display: block;
+}
+
+.Chat-Body{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    height: 335px;
+    overflow: scroll;
+}
+.Chat-Messages{
+    background: #EBF0F5 0% 0% no-repeat padding-box;
+    border: 1px solid #2DCCD3;
+    border-radius: 4px;
+}
+.Chat-Messages-User{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #2DCCD3;
+    border-radius: 4px;
+}
+.Chat-Admin{
+    position: absolute;
+    right: -10px;
+    top:30%;
+    width: 10px;
+    height: 10px;
+    background: #EBF0F5 0% 0% no-repeat padding-box;
+    border-right: 1px solid #2DCCD3;
+    border-bottom: 1px solid #2DCCD3;
+    transform: matrix(1, -1, 1, 1, -3.8, 6);
+}
+.Chat-User{
+    position: absolute;
+    left: -10px;
+    top:30%;
+    width: 10px;
+    height: 10px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-left: 1px solid #2DCCD3;
+    border-top: 1px solid #2DCCD3;
+    transform: matrix(1, -1, 1, 1, 3.8, 6);
+}
+.Chat-footer{
+    height: 104px;
+    background: #EBF0F5 0% 0% no-repeat padding-box;
+}
+.Chat-Box{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 4px;
+width: 226px;
+height: 79px;
+outline: none;
+border: none;
+}
+.Body-Text{
+    word-wrap: break-word;
+}

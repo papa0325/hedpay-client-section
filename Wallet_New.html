@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+     <!-- App favicon -->
+     <link rel="shortcut icon" href="Icons/HDPicon.svg">
+
+     <!-- App css -->
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+     <!-- CSS FOR THE MENU IN THE LEFT -->
+     <!-- <link href="assets/Vertical/css/theme.css" rel="stylesheet" type="text/css" /> -->
+
+     <!-- CSS FOR THE MENU HORIZONTAL -->
+     <link href="assets/css/theme.css" rel="stylesheet" type="text/css" />
+
+     <link href="assets/css/CustomProfile.css" rel="stylesheet" type="text/css" />
+
+      <!-- Plugins css -->
+  <link href="assets/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Slick carousel css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Dropify css -->
+    <link href="plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+<style>
+    .navbar-header,#page-topbar {
+  background-color: #002554;
+
+}
+.topnav .topnav-menu{
+    min-height: 80px;
+    height: 80px;
+}
+.Invite-Input{
+    min-height: 40px;
+    height: 40px;
+   }
+
+</style>
+</head>
+<body>
+    <a class="Go-Up"  javascript:void(0) title="Go up">
+        <span class="fa-stack" style="color: #2DCCD3;">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+           <!-- Begin page -->
+           <div id="layout-wrapper">
+
+            <div class="main-content">
+
+                <header id="page-topbar">
+                    <div class="navbar-header">
+                        <div class=" d-flex align-items-center justify-content-between ">
+                            <!-- d-lg-none -->
+                            <button type="button" class="btn btn-sm px-sm-3 px-2 font-size-16 header-item waves-effect d-inline-block d-sm-none"
+                            id="vertical-menu-btn">
+                            <span class="W-Color"><i class="fa fa-fw fa-bars"></i></span>
+                            </button>
+                            <div class="d-flex justify-content-between align-items-start pl-sm-2 pl-1">
+                                <div class="d-flex GrayBox mr-2">
+                                    <p class="Nav-TextGray">Hdp.ф &nbsp;&nbsp;</p>
+                                    <p class="Nav-TextGray">0.1039</p>
+                                    <p class="Nav-TextGreen">(+15.15%)</p>
+                                </div>
+                                <div class="d-flex GrayBox">
+                                    <p class="Nav-TextGray">Vol: &nbsp;&nbsp;</p>
+                                    <p class="Nav-TextGray">2,082</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ButtonProfileMenu" class="d-sm-inline-block d-none">
+                            <div class=" d-flex align-items-center justify-content-end " >
+                                <div class="d-lg-flex align-items-center justify-content-end d-none">
+                                    <a class="col d-flex align-items-start justify-content-center H-16 TextWhite px-xl-4 waves-effect position-relative pt-2"
+                                        href="Chat_New.html">
+                                        <img src="Icons/Profile/envelope.svg" class="Icon-Menu envelope-icon" />
+                                        <img src="Icons/Profile/MessageOrange.svg" class="Icon-Menu  position-absolute MessageIcon" />
+
+                                        <p class="TextWhite position-absolute H-14 fontW-500 NumberIcon" >2</p>
+                                    </a>
+
+                                    <a class="col d-flex align-items-center H-16 TextWhite px-xl-4 pl-md-4  pr-2 pt-2"
+                                        href="Profile_New.html">
+                                        <img src="Icons/Profile/info-circle.svg" class="Icon-Menu  " />
+                                        <p class="d-flex TextWhite pl-1 mr-2 my-0 H-16" >KYC<span class="OrangeColor pl-1"> 50%</span> </p>
+                                    </a>
+
+                                    <a class="col d-flex align-items-center H-16 TextWhite pl-md-2  pr-3 pt-2 px-xl-4"
+                                        href="TwoFA.html">
+                                        <img src="Icons/Profile/mobile-alt.svg" class="Icon-Menu " />
+                                        <p class="d-flex TextWhite pl-1 mr-2 my-0 H-16" >2FA </p>
+                                        <img src="Icons/Profile/record-vinyl.svg" class="Icon-Menu " />
+
+                                    </a>
+                                    <a class="col d-flex align-items-center H-16 TextWhite pl-md-3 ml-1  pt-2"
+                                        href="Referral_New.html">
+                                        <span class="TextWhite MenuText pr-2 d-none d-sm-inline-block">Referral</span>
+                                        <img src="Icons/Profile/icon-referral.svg" class="Icon-Menu" />
+                                    </a>
+                                </div>
+                                <p class="W-Color H-16 my-2 mx-xl-3 mx-2 d-none d-sm-inline-block">|</p>
+                                <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-4">
+                                    <button type="button" class="btn header-item waves-effect px-0 d-flex align-items-center" id="page-header-user-dropdown"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                            <span class="d-none d-sm-inline-block mr-2 W-Color H-16 my-2 pl-2" style="line-height: 0.9;">Joe Doe
+                                                <br>
+                                                <span class="H-12 py-0 OrangeColor">87654321</span>
+                                            </span>
+
+                                        <img class="rounded-circle header-profile-user Avatar-Changed" src="assets/images/users/avatar-2.jpg"
+                                            alt="Header Avatar">
+                                        <i class="mdi mdi-chevron-down  d-inline-block H-20 W-Color pr-2" ></i>
+
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-sm-none d-inline-block col-12">Joe Doe</p>
+                                        <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-md-none d-inline-block col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+                                        <a class="dropdown-item d-flex align-items-center  " data-toggle="modal" data-target=".bd-example-modal-lg"
+                                            href="javascript:void(0)">
+                                            <span class="TextBlue H-18 pr-3"><i class="fas fa-sliders-h"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Settings</span>
+                                        </a>
+
+                                        <a class="dropdown-item d-flex align-items-center  "
+                                            href="Profile_New.html">
+                                            <span class="TextBlue H-18 pr-3"><i class="fas fa-user"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Profile</span>
+                                        </a>
+
+                                        <a class="dropdown-item d-flex align-items-center  "
+                                            href="javascript:void(0)">
+                                            <span class="TextBlue H-18 pr-3"><i class="fas fa-hand-pointer"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Go to website</span>
+                                        </a>
+
+                                        <a class="dropdown-item d-flex align-items-center  " style="border-top: 1px solid #E8E8E8;"
+                                            href="javascript:void(0)">
+                                            <span class="OrangeColor H-18 pr-3"><i class="fas fa-sign-out-alt"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Sign out</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+
+
+
+                <div class="topnav pr-0">
+                    <div class="container-fluid px-0">
+                        <nav class="navbar navbar-light navbar-expand-lg topnav-menu justify-content-sm-between justify-content-end">
+                            <div class="navbar-brand-box row justify-content-start">
+                                <a href="Dashboard_New.html" class="logo text-left">
+                                    <img src="Images/logo-hedpay-header-top.svg" class="col-9"/>
+                                </a>
+
+                            </div>
+
+                            <!-- <div class="navbar-brand-box" >
+                                <a href="#" class="navbar-brand">
+                                    <img src="Images/logo-hedpay-header-top.svg" width="211" height="40"/>
+                                </a>
+                            </div> -->
+
+                            <button type="button" class="btn btn-sm px-sm-3 px-2 font-size-16 header-item waves-effect d-sm-inline-block d-lg-none d-none"
+                            id="Menu-Vertical-bottom">
+                                <span class="TextDark"><i class="fa fa-fw fa-bars"></i></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse justify-content-end" id="topnav-menu-content">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item  px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Dashboard_New.html">
+                                            <span class="TextBlue"><i class="fas fa-home"></i></span>
+                                          <span class="M-Text">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item ActiveMenu px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Wallet_New.html">
+                                            <span class="TextBlue"><i class="fas fa-wallet"></i></span>
+                                            <span class="M-Text">Wallet</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Dashboard_New.html">
+                                            <span class="TextBlue"> <i class="fas fa-exchange-alt"></i></span>
+                                            <span class="M-Text">Exchange</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Fund-Packages_New.html">
+                                            <span class="TextBlue"><i class="fas fa-align-center"></i></span>
+                                            <span class="M-Text">Fund Packages</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Contact_New.html">
+                                            <span class="TextBlue"><i class="fas fa-users"></i></span>
+                                            <span class="M-Text">Contacts</span>
+                                        </a>
+                                    </li>
+                                    <!-- <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Profile_New.html">
+                                            <span class="TextBlue"><i class="fas fa-user"></i></span>
+                                            <span class="M-Text">Profile</span>
+                                        </a>
+                                    </li> -->
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="FAQ-Profile_New.html">
+                                            <span class="TextBlue"><i class="far fa-question-circle"></i></span>
+                                            <span class="M-Text">FAQ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="d-flex justify-content-end align-items-center px-lg-2 px-lg-4 px-0 pt-2 d-lg-none d-inline-block">
+                                <a class="d-flex align-items-start justify-content-center H-16 BD-Color px-3 waves-effect position-relative pt-2"
+                                    href="Chat_New.html">
+                                    <img src="Icons/Profile/envelope.svg" class="Icon-Menu envelope-icon" />
+                                    <img src="Icons/Profile/MessageOrange.svg" class="Icon-Menu  position-absolute MessageIcon"  />
+
+                                    <p class="TextWhite position-absolute H-14 fontW-500 NumberIcon"  >2</p>
+                                </a>
+
+                                <a class="col d-flex align-items-center H-16 TextWhite pl-sm-4 pr-sm-2 px-0 pt-2"
+                                        href="Profile_New.html">
+                                        <img src="Icons/Profile/info-circle.svg" class="Icon-Menu  " />
+                                        <p class="d-flex BD-Color pl-1  my-0 H-16" >KYC<span class="OrangeColor pl-1"> 50%</span> </p>
+                                </a>
+
+                                <a class="col d-flex align-items-center H-16 TextWhite pl-md-2  pr-3 pt-2"
+                                        href="TwoFA.html">
+                                        <img src="Icons/Profile/mobile-alt.svg" class="Icon-Menu " />
+                                        <p class="d-flex BD-Color pl-1  my-0 H-16" >2FA </p>
+                                        <img src="Icons/Profile/record-vinyl.svg" class="Icon-Menu " />
+
+                                    </a>
+                                <a class="d-flex align-items-center H-16 BD-Color pl-md-3 ml-1 pr-3 pt-2"
+                                    href="Referral_New.html">
+                                    <span class="BD-Color MenuText pr-2 d-none d-sm-inline-block">Referral</span>
+                                    <img src="Icons/Profile/icon-referral.svg" class="Icon-Menu" />
+                                </a>
+                                <div id="ButtonBottomProfileMenu" class="d-sm-none">
+                                    <div class="col d-flex align-items-center justify-content-end px-0" >
+                                        <p class="BD-Color H-16 my-2 mx-xl-5 mx-2">|</p>
+                                        <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-sm-4 pr-1">
+                                            <button type="button" class="btn header-item waves-effect px-0" id="page-header-user-dropdown" onclick="OpenMenuTop()"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <span class=" mr-2 BD-Color H-16 my-2 pl-2 d-none d-sm-inline-block">Joe Doe</span>
+
+                                                <img class="rounded-circle header-profile-user Avatar-Changed" src="assets/images/users/avatar-2.jpg"
+                                                    alt="Header Avatar">
+                                                <i class="mdi mdi-chevron-down d-sm-inline-block H-20 BD-Color pr-2 ArrowIcon" ></i>
+
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-xs-none d-inline-block col-12">Joe Doe</p>
+                                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+
+                                                <a class="dropdown-item d-flex align-items-center  " data-toggle="modal" data-target=".bd-example-modal-lg"
+                                                    href="javascript:void(0)">
+                                                    <span class="TextBlue H-18 pr-3"><i class="fas fa-sliders-h"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Settings</span>
+                                                </a>
+
+                                                <a class="dropdown-item d-flex align-items-center  "
+                                                    href="Profile_New.html">
+                                                    <span class="TextBlue H-18 pr-3"><i class="fas fa-user"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Profile</span>
+                                                </a>
+
+                                                <a class="dropdown-item d-flex align-items-center  "
+                                                    href="javascript:void(0)">
+                                                    <span class="TextBlue H-18 pr-3"><i class="fas fa-hand-pointer"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Go to website</span>
+                                                </a>
+
+                                                <a class="dropdown-item d-flex align-items-center  " style="border-top: 1px solid #E8E8E8;"
+                                                    href="javascript:void(0)">
+                                                    <span class="OrangeColor H-18 pr-3"><i class="fas fa-sign-out-alt"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Sign out</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+            </header>
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu" >
+                <div data-simplebar class="h-100">
+                    <div class="d-flex justify-content-end px-3">
+                        <span class="TextDark H-30 " id="Vertical-Button-Opened"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div class="navbar-brand-box" >
+                        <a href="#" class="navbar-brand">
+                            <img src="Images/logo-hedpay-header-top.svg" width="168" height="32"/>
+                        </a>
+
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                        <!-- <div class="d-flex justify-content-end align-items-center col-12 px-0">
+                            <img class="rounded-circle  Avatar-Vertical" src="assets/images/users/avatar-2.jpg"
+                            alt="Header Avatar">
+                            <button class="ButtonSideVertical ml-5" id="Vertical-Button-Opened">
+                                <img src="Icons/Profile/Open-closed.svg" class="H-16">
+
+                            </button>
+                        </div> -->
+                        <p class="BD-Color H-16 mb-0 mt-2">Welcome</p>
+                        <p class="LigthBlue H-22 mt-0">Jamie Davies</p>
+
+                    </div>
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" >
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled px-3" id="side-menu">
+
+                            <li class="LineBlueBottom py-2">
+                                <a href="Dashboard_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="TextBlue H-30"> <i class="fas fa-home"></i></span>
+                                    <span class="H-16 TextBlue fontW-500">Dashboard</span>
+                                    <span class="TextBlue H-30"> <i class="fas fa-chevron-right"></i></span>
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Wallet_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-wallet"></i></span>
+                                    <span class="H-16 BD-Color fontW-500">Wallet</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Dashboard_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-exchange-alt"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Exchange</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Fund-Packages_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-align-center"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Fund Packages</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Contact_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-users"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Contacts</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <!-- <li class="LineDarkeBottom py-2">
+                                <a href="Profile_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-user"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Profile</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li> -->
+                            <li class="LineDarkeBottom py-2">
+                                <a href="FAQ-Profile_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="far fa-question-circle"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">FAQ</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+
+
+
+
+                <div class="page-content pb-5">
+                    <div class="container-fluid ">
+
+                        <section class="row d-flex flex-lg-row flex-column align-content-start justify-content-between pb-4">
+                            <div class="col-lg-4 ">
+
+                                <!-- ADD FUNDS STARTS -->
+                                <div class="col-12 px-0">
+                                    <p class="H-18 fontW-500 LigthBlue text-left my-2">Add funds by Card</p>
+                                </div>
+
+                                <div class="col-12 Box-Card px-4 py-4 Funds-Step1" >
+                                    <div class="control-group col-12 px-0 ">
+                                        <div class="control-group col-12 px-0 ">
+                                            <label class="H-14 LigthBlue" for="Choose">Please choose *</label>
+                                            <div class="wall ">
+                                                <div class="wallet-select ">
+                                                    <button class="btn-select btn-wallet-select SelectExchange DarkArrowSelect TextDark mt-0 Invite-Input"  id="Fund-Button" value=""></button>
+                                                    <div class="b-wallet"  >
+                                                    <ul class="a" id="Fund"  onclick="WalletConvertion();"></ul>
+                                                    </div>
+                                                </div>
+                                                <label style="width: fit-content">
+                                                    <select id="" name="Coin" class="Coin col-12 H-14 TextDark vodiapicker" >
+                                                        <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-14 TextDark my-0">USD - Dollar </p></option>
+                                                        <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-14 TextDark my-0 ">EUR - Euro</p></option>
+                                                        <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-14 TextDark my-0">GBP - British Pound</p></option>
+                                                        <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-14 TextDark my-0">HDP - Hdp.ф</p></option>
+                                                        <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-14 TextDark my-0">BTC - Bitcoin</p></option>
+                                                        <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-14 TextDark my-0">ETH - Ethereum</p></option>
+                                                        <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-14 TextDark my-0">USDT - Tether</p></option>
+                                                    </select>
+
+
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group mb-2 col-12 px-0">
+                                        <label class="H-14 LigthBlue" for="Address">Wallet address *</label>
+                                        <input type="text" class="Invite-Input H-14 TextDark form-control" id="Address"  placeholder="Your wallet address"/>
+                                    </div>
+
+                                    <div class="col-12 px-0 d-flex flex-column flex-xl-row">
+                                        <div class="control-group col-12 col-xl-6  pl-0 pr-xl-2 pr-0 mt-0">
+                                            <label class="H-14 LigthBlue" for="CurrType">Currency type *</label>
+                                            <div class="wall ">
+                                                <div class="wallet-select ">
+                                                    <button class="btn-select btn-wallet-select SelectExchange TextDark mt-0 Invite-Input"   value="" id="Curr-Button"></button>
+                                                    <div class="b-wallet">
+                                                    <ul class="a" id="Curr" onclick="WalletConvertion();"></ul>
+                                                    </div>
+                                                </div>
+                                                <label style="width: fit-content">
+                                                    <select id="" name="Money" class="Money col-12 H-14 TextDark vodiapicker"  >
+                                                        <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-14 TextDark my-0">USD - Dollar </p></option>
+                                                        <option value="CAD" data-thumbnail="Icons/canada.png"><p class=" H-14 TextDark my-0">CAD - Canadian Dollar </p></option>
+                                                        <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-14 TextDark my-0 ">EUR - Euro</p></option>
+                                                        <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-14 TextDark my-0">GBP - British Pound</p></option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="control-group col-12 col-xl-6 pr-0 pl-xl-2 pl-0 mt-xl-0 mt-3 ">
+                                            <label class="H-14 LigthBlue" for="Amount">Amount *</label>
+                                            <input type="number" class="Invite-Input H-14 TextDark form-control"  id="Amount-Wallet" placeholder="$"/>
+                                        </div>
+                                    </div>
+                                    <div class="control-group my-3 col-12 px-0 mt-4  linebottomgray ">
+                                        <div class="d-flex justify-content-between col">
+                                            <label class="H-14 TextDark fontW-400">Price</label>
+                                            <label class="H-14 TextDark fontW-400" >1 <span class="Fund-Value">HDP</span> = <span class="Rate-Wallet">0.5870</span> <span class="Curr-Value">USD</span></label>
+                                        </div>
+                                        <div class="d-flex justify-content-between col">
+                                            <label class="H-14 TextDark fontW-500">Total price</label>
+                                            <label class="H-14 TextDark fontW-500" ><span class="Amount-Wallet"> 0</span> <span class="Curr-Value">USD</span></label>
+                                        </div>
+                                        <div class="d-flex justify-content-between col">
+                                            <label class="H-14 LigthBlue fontW-500">Receive</label>
+                                            <label class="H-14 LigthBlue fontW-500" ><span class="Convertion-Wallet"> 0 </span> <span class="Fund-Value">HDP</span></label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-center align-items-center mt-md-5">
+                                        <button type="button" onclick="GoTo('Funds-Step1','Funds-Step2')" class="Ref-Button py-2 TextWhite H-14 col align-self-end">Next</button>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 Box-Card px-4 py-4 Funds-Step2" style="display: none;">
+
+                                    <div class="control-group mt-3 col-12 px-0">
+                                        <label class="H-14 LigthBlue" for="CardName">Card Name *</label>
+                                        <input type="text" class="Invite-Input H-16 TextDark form-control" id="CardName"  placeholder="Enter name as it appears on card"/>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center position-relative">
+                                        <div class="control-group mt-3 col-sm-9 col-12 px-0">
+                                            <label class="H-14 LigthBlue" for="CardNumber">Card Number *</label>
+                                            <input type="number" autocomplete="off" pattern="\d*" maxlength="19" minlength="16" onkeyup="VerifyCard(this.value)"  class="Invite-Input H-16 TextDark form-control" id="CardNumber"  placeholder="0000 0000 0000 0000"/>
+                                        </div>
+                                        <div class="d-flex col-3 justify-content-center align-items-center mt-5 CardsIcons">
+                                                <img src="Icons/Profile/cc-mastercard-gray.svg" class="MC-Gray mr-2">
+                                                <img src="Icons/Profile/cc-mastercard-orange.svg" class="MC-Orange mr-2" style="display: none;">
+                                                <img src="Icons/Profile/cc-visa-orange.svg" class="V-Orange" style="display: none;">
+                                                <img src="Icons/Profile/cc-visa-gray.svg" class="V-Gray">
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="col-12 px-0  d-flex flex-column flex-sm-row justify-content-between">
+                                        <div class="control-group mt-3 col-12 col-sm-6 pr-sm-2 px-0">
+                                            <label class="H-14 LigthBlue" for="Expiration">Expiration date *</label>
+                                            <input type="month" value="2023-06" class="Invite-Input H-16 TextDark form-control" id="Expiration"  pattern="[0-9]{4}-[0-9]{2}" placeholder="Year/Month"/>
+                                        </div>
+                                        <div class="control-group mt-3 col-12 col-sm-6 pl-sm-2 px-0">
+                                            <label class="H-14 LigthBlue" for="code">Security code *</label>
+                                            <input type="number" maxlength="3" minlength="3" class="Invite-Input H-16 TextDark form-control" id="code"  placeholder="3 digits"/>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="mt-md-5 d-flex flex-column align-items-center ">
+                                        <button type="button" onclick="GoTo('Funds-Step2','Funds-Step3')" class="Ref-Button py-2 col-md-6 TextWhite H-14  align-self-center">Submit</button>
+                                        <button type="button" onclick="GoTo('Funds-Step2','Funds-Step1')" class="btn py-2 col-md-6 LigthBlue H-14 " style="border-radius: 8px;">Go back</button>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 Box-Card px-3 py-4 Funds-Step3" style="display: none;">
+
+                                    <div class="d-flex justify-content-center align-items-center mt-3 mb-5 col-12  Funds-LabelBlue">
+                                        <p class="H-14 fontW-600 TextWhite mb-0 pr-2" >Transfer confirmation</p>
+                                        <img src="Icons/Profile/check-w.svg" class="Icon-Ref-New">
+                                    </div>
+                                    <div class="d-flex align-items-start">
+                                        <div class="d-flex flex-column col-6 pl-0">
+
+                                            <div class="d-flex flex-column col linebottomgray ">
+                                                <p class="H-14 LigthBlue my-2">Confirmation number</p>
+                                                <p class="H-14 TextDark  mb-1">2165261578469832</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Total price</p>
+                                                <p class="H-14 TextDark fontW-500 mb-1"><span class="Amount-Wallet"> 0</span> <span class="Curr-Value">USD</span></p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Price</p>
+                                                <p class="H-14 TextDark  mb-1">1 <span class="Fund-Value">HDP</span> = <span class="Rate-Wallet">0.5870</span> <span class="Curr-Value">USD</span></p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue  my-2">Visa credit card number</p>
+                                                <p class="H-14 TextDark mb-1">**** **** **** 4567</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="d-flex flex-column col-6 pr-0">
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Date</p>
+                                                <p class="H-14 TextDark mb-1">May 7, 2021</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Receive</p>
+                                                <p class="H-14 TextDark fontW-500 mb-1"><span class="Convertion-Wallet"> 0 </span> <span class="Fund-Value">HDP</span></p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Wallet address account</p>
+                                                <p class="H-14 TextDark mb-1" style="word-wrap: break-word;">HDP0xb6CE559DC67268b8c4317577346566788347823479</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="mt-md-5">
+                                        <button type="button" onclick="GoTo('Funds-Step3','Funds-Step1')" class="btn py-2 col LigthBlue H-14 " style="border-radius: 8px;">Go back</button>
+                                    </div>
+
+                                </div>
+                                <!-- ADD FUNDS ENDS -->
+
+                                <!-- SEPA SECTION STARTS -->
+                                <div class="col-12 px-0 pt-5">
+                                    <p class="H-18 fontW-500 LigthBlue text-left my-2">Add funds by wire transfer</p>
+                                </div>
+
+                                <div class="col Box-Card py-4 px-4" >
+                                    <div class="position-relative d-flex justify-content-start">
+                                    <img src="Icons/Profile/question-circle-wallet-orange.svg" class="Help-Box"/>
+                                        <p class="Expand-Box Box-Card text-justify H-14 TextDark position-absolute p-4 ">Select currency to show it</p>
+                                    </div>
+                                    <p class="H-14 OrangeColor fontW-500">Other methods to add funds</p>
+                                    <p class="H-14 LigthBlue fontW-500 mb-1">Bank wire transfer</p>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="position-relative d-flex justify-content-start">
+                                            <img src="Icons/Profile/question-circle-wallet-blue.svg" class="Help-Box"/>
+                                            <p class="Expand-Box Box-Card text-justify H-14 TextDark position-absolute p-4 ">Select currency to show it</p>
+                                        </div>
+                                        <p class="H-14 BD-Color mb-0 fontW-600 px-2">SEPA</p>
+
+                                    </div>
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="position-relative d-flex justify-content-start">
+                                            <img src="Icons/Profile/question-circle-wallet-blue.svg" class="Help-Box"/>
+                                            <p class="Expand-Box Box-Card text-justify H-14 TextDark position-absolute p-4 ">Select currency to show it</p>
+                                        </div>
+                                        <p class="H-14 BD-Color mb-0 fontW-600 px-2">International</p>
+                                    </div>
+                                    <p class="H-14 LigthBlue fontW-500">Interac only canadian bank</p>
+                                    <p class="H-14 BD-Color text-left">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                    <p class="H-14 BD-Color text-center">Learn more details</p>
+                                    <div class="d-flex justify-content-center">
+                                        <a class="Ref-Button py-2 text-center TextWhite H-14 col-4 " href="FAQ-Profile_New.html" style="min-height: 30px !important;">FAQ</a>
+                                    </div>
+
+                                </div>
+                                <!-- SEPA SECTION ENDS -->
+
+                            </div>
+                            <div class="col-lg-7 ">
+                                <div class="col-12 px-0">
+                                    <p class="H-18 fontW-500 LigthBlue text-left my-2">Transfer</p>
+                                </div>
+
+                                <div class="Box-Card px-4 py-4 Transfer-Internal-External">
+                                    <div class="d-flex flex-sm-row flex-column justify-content-center align-items-center pb-4">
+                                        <button type="button" onclick="GoTo('External-Step1','Transfers-Step1');$('.Active-Wallet').removeClass('Active-Wallet');$(this).addClass('Active-Wallet');" class="btn btn-secundary py-1 H-14  Active-Wallet mx-sm-2">Transfer within Hedpay</button>
+                                        <button type="button" onclick="GoTo('Transfers-Step1','External-Step1');$('.Active-Wallet').removeClass('Active-Wallet');$(this).addClass('Active-Wallet');" class="btn btn-secundary py-1 H-14 mx-sm-2">Transfer to external</button>
+
+                                    </div>
+                                    <!-- TRANSFER STARTS -->
+                                    <div class="row flex-column Transfers-Step1" >
+                                        <div class="col-12 px-0 row align-items-start">
+                                            <div class="col-lg-6">
+                                                <div class="control-group col-12  ">
+                                                    <label class="H-14 LigthBlue" for="Choose">Please choose *</label>
+                                                    <div class="wall ">
+                                                        <div class="wallet-select ">
+                                                            <button class="btn-select btn-wallet-select SelectExchange DarkArrowSelect TextDark mt-0 Invite-Input"  id="Asset-Button" value=""></button>
+                                                            <div class="b-wallet">
+                                                            <ul class="a" id="Asset"></ul>
+                                                            </div>
+                                                        </div>
+                                                        <label style="width: fit-content">
+                                                            <select id="" name="Coin" class=" col-12 H-14 TextDark vodiapicker" >
+                                                                <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                                                <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                                                <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                                                <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option>
+                                                                <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option>
+                                                                <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option>
+                                                                <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option>
+                                                            </select>
+
+
+                                                        </label>
+
+                                                    </div>
+                                                </div>
+                                                <div class="control-group col-12 ">
+                                                    <label class="H-14 LigthBlue text-left" for="Amount-Transfer">Amount *</label>
+                                                    <div class="d-flex col-12 px-0">
+                                                        <input type="number" style="border-right:none;border-radius: 6px 0 0 6px;" class="Invite-Input H-14 TextDark form-control col-sm-9 col-8 " id="Amount-Transfer"  placeholder="20,000,000.00"/>
+                                                        <span class="d-flex justify-content-center align-items-center col-sm-3 col-4 Invite-Input" style="border-left:none;border-radius:0 6px 6px 0;">
+                                                            <img src="Icons/HDP.svg" style="width:20px; height:14px;"  class="mr-1 Asset-Image">
+                                                            <p class="H-14 BD-Color mb-0 Asset-Value-A">Hdp.ф</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group mt-3 col-12 ">
+                                                    <label class="H-14 LigthBlue text-left" >Send to contact </label>
+                                                    <div class="d-flex col-12 px-0  SelectContacts Trans" >
+                                                        <select class="col-12 Invite-Input  pr-0" style="border-left:none !important; background: #FFFFFF !important; " >
+                                                            <option value="0" >Josephine C.</option>
+                                                            <option value="1">Harry H.</option>
+                                                            <option value="2">Maria D.</option>
+                                                            <option value="3">Chantal O.</option>
+                                                            <option value="4">Camilo P.</option>
+                                                        </select>
+                                                        <!-- <button class="btn Contact-Button position-absolute">
+                                                            <img src="Icons/Profile/Blue-contacts.svg" />
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                                <div class="control-group mt-3 col-12">
+                                                    <label class="H-14 LigthBlue text-left pt-3" for="UID">Or UID</label>
+                                                    <div class="d-flex col-12 px-0">
+                                                        <input type="text" style="border-right:none;border-radius: 6px 0 0 6px;" class="Invite-Input H-14 TextDark form-control col-9 " id="Amount-Transfer" placeholder="HDP0xb6CE559DC67268b8c431757734656678…"/>
+                                                        <button class="d-flex justify-content-center align-items-center col-3 Ref-Button my-0" style="border-left:none;border-radius:0 6px 6px 0;">
+                                                            <p class="H-14 TextWhite mb-0">Paste</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 ">
+                                                <label class="H-14 LigthBlue text-left">Available in my wallet</label>
+                                                <div class="d-flex justify-content-between col-12">
+                                                    <div class="d-flex align-items-center justify-content-center mb-0">
+                                                        <img src="Icons/HDP.svg" style="width:20px; height:14px;" class="mr-1 Asset-Image">
+                                                        <p class="H-14 BD-Color fontW-600 mb-0 Asset-Value">HDP - Hdp.ф</p>
+                                                    </div>
+                                                    <label class="H-14 BD-Color fontW-600 mb-0">20,000,000.00 <span class="Asset-Symbol">ф</span></label>
+                                                </div>
+                                                <!-- <div class="d-flex  justify-content-end mt-0 col-12">
+                                                    <p class="H-14 LigthBlue my-0">Hdp.ф</p>
+                                                    <label class="H-14 LigthBlue my-0">20,000,000.00 <span class="Asset-Value">USD</span></label>
+                                                </div> -->
+
+                                                <div class="control-group mt-3 col-12 pt-3">
+                                                    <label class="H-14 LigthBlue text-left" for="Email">Email *</label>
+                                                    <input type="text" class="Invite-Input H-14 TextDark form-control " id="Email"  placeholder="Enter your wallet address"/>
+                                                </div>
+
+                                                <div class="control-group mt-3 col-12 ">
+                                                    <label class="H-14 LigthBlue text-left" for="Message">Message</label>
+                                                    <textarea type="text" class="Invite-Input H-14 TextDark form-control " id="Message"  placeholder="Write your message here…"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center align-items-center mt-md-5 col-12">
+                                            <button type="button" onclick="GoTo('Transfer-Internal-External','Transfers-Step2')" class="Ref-Button py-2 TextWhite H-16 col-md-6">Submit</button>
+                                        </div>
+                                    </div>
+                                    <!-- TRANSFER ENDS -->
+
+
+
+                                    <!-- EXTERNAL STARTS -->
+                                    <div class="row flex-column External-Step1" style="display: none;">
+                                        <div class="col-12 px-0 row">
+                                            <div class="col-lg-6">
+                                                <div class="control-group col-12  ">
+                                                    <label class="H-14 OrangeColor" for="Choose">Please choose *</label>
+                                                    <div class="wall ">
+                                                        <div class="wallet-select ">
+                                                            <button class="btn-select btn-wallet-select SelectExchange DarkArrowSelect TextDark mt-0 Invite-Input"  id="Settl-Button" value=""></button>
+                                                            <div class="b-wallet">
+                                                            <ul class="a" id="Settl"></ul>
+                                                            </div>
+                                                        </div>
+                                                        <label style="width: fit-content">
+                                                            <select id="" name="Coin" class=" col-12 H-14 TextDark vodiapicker" >
+                                                                <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option>
+                                                                <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                                                <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                                                <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                                                <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option>
+                                                                <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option>
+                                                                <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group col-12 ">
+                                                    <label class="H-14 OrangeColor text-left" for="Amount-Transfer">Amount *</label>
+                                                    <div class="d-flex col-12 px-0">
+                                                        <input type="number" style="border-right:none;border-radius: 6px 0 0 6px;" class="Invite-Input H-14 TextDark form-control col-sm-9 col-8 " id="Amount-Transfer"  placeholder="20,000,000.00"/>
+                                                        <span class="d-flex justify-content-center align-items-center col-sm-3 col-4 Invite-Input" style="border-left:none;border-radius:0 6px 6px 0;">
+                                                            <img src="Icons/HDP.svg" style="width:20px; height:14px;" class="mr-1 Settl-Image">
+                                                            <p class="H-14 BD-Color mb-0 Settl-Value-A">Hdp.ф</p>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group  col-12 position-relative">
+                                                    <label class="H-14 OrangeColor text-left pt-3" >Send to contact </label>
+                                                    <div class="d-flex col-12 px-0  SelectContacts mb-4 ">
+                                                        <select class="col-12 Invite-Input Contacts-Ext pr-0" style="border-left:none !important; background: #FFFFFF !important; " >
+                                                            <option value="0" >Josephine C.</option>
+                                                            <option value="1">Harry H.</option>
+                                                            <option value="2">Maria D.</option>
+                                                            <option value="3">Chantal O.</option>
+                                                            <option value="4">Camilo P.</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group col-12 text-right">
+                                                    <a href="Contact_New.html" target="_blank" class="H-14 OrangeColor pt-3 text-left AddContactLink" >Add new contact</a>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-6 ">
+                                                <label class="H-14 OrangeColor text-left">Available in my wallet</label>
+                                                <div class="d-flex justify-content-between col-12">
+                                                    <div class="d-flex align-items-center justify-content-center mb-0">
+                                                        <img src="Icons/HDP.svg" style="width:20px; height:14px;" class="mr-1 Settl-Image">
+                                                        <p class="H-14 BD-Color fontW-600 mb-0 Settl-Value">HDP - Hdp.ф</p>
+                                                    </div>
+                                                    <label class="H-14 BD-Color fontW-600 mb-0">20,000,000.00 <span class="Settl-Symbol">ф</span></label>
+                                                </div>
+
+                                                <!-- <div class="d-flex justify-content-between col-12 py-2">
+                                                    <div class="d-flex align-items-center justify-content-center mb-0">
+                                                        <img src="Icons/HDP.svg" style="width:20px; height:14px;" class="mr-1">
+                                                        <p class="H-14 BD-Color fontW-600 mb-0">HDP</p>
+                                                    </div>
+                                                    <label class="H-14 BD-Color fontW-600 mb-0">20,000,000.00 ф</label>
+                                                </div> -->
+                                                <!-- <div class="d-flex  justify-content-between mt-0 col-12">
+                                                    <p class="H-14 LigthBlue my-0">Hdp.ф</p>
+                                                    <label class="H-14 LigthBlue my-0">20,000,000.00 USD</label>
+                                                </div> -->
+
+                                                <div class="control-group mt-3 col-12 pt-3">
+                                                    <label class="H-14 OrangeColor text-left" for="Email-External">Email *</label>
+                                                    <input type="text" class="Invite-Input H-14 TextDark form-control " id="Email-External"  placeholder="Enter your wallet address"/>
+                                                </div>
+
+                                                <div class="control-group mt-3 col-12 ">
+                                                    <label class="H-14 OrangeColor text-left" for="Message">Message</label>
+                                                    <textarea type="text" class="Invite-Input H-14 TextDark form-control " id="Message"  placeholder="Write your message here…"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center align-items-center mt-md-5 col-12">
+                                            <button type="button" onclick="GoTo('Transfer-Internal-External','External-Step2')" class="Profile-Button-Active py-2 TextWhite H-16 col-md-6">Submit</button>
+                                        </div>
+                                    </div>
+                                    <!-- EXTERNAL ENDS -->
+
+
+
+                                </div>
+                                 <!-- TRANSFER CONFIRMATION STARTS -->
+                                 <div class="col-12 Box-Card px-3 py-4 Transfers-Step2" style="display: none;">
+                                    <div class="d-flex justify-content-center align-items-center col-12 mt-3 mb-5">
+                                        <div class="d-flex justify-content-center align-items-center  col-sm-6  Funds-LabelBlue">
+                                            <p class="H-14 fontW-600 TextWhite mb-0 pr-2" >Transfer confirmation</p>
+                                            <img src="Icons/Profile/check-w.svg" class="Icon-Ref-New">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-start">
+                                        <div class="d-flex flex-column col-6 pl-0">
+
+                                            <div class="d-flex flex-column col linebottomgray ">
+                                                <p class="H-14 LigthBlue my-2">Confirmation number</p>
+                                                <p class="H-14 TextDark  mb-1">2165261578469832</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Date of transfer</p>
+                                                <p class="H-14 TextDark mb-1">May 7, 2021</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Quantity</p>
+                                                <p class="H-14 TextDark fontW-500 mb-1">200.0000 Hdp.ф</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue  my-2">Balance</p>
+                                                <p class="H-14 TextDark fontW-500 mb-1">710.0000 Hdp.ф</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="d-flex flex-column col-6 pr-0">
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Sent to wallet address</p>
+                                                <p class="H-14 TextDark mb-1" style="word-wrap: break-word;">HDP0xb6CE559DC67268b8c4317577346566788347823479436384834349</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Recipient’s email</p>
+                                                <p class="H-14 TextDark mb-1">harry@malopan.com</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 LigthBlue my-2">Message</p>
+                                                <p class="H-14 TextDark mb-1" style="word-wrap: break-word;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-md-5">
+                                        <button type="button" onclick="GoTo('Transfers-Step2','Transfer-Internal-External')" class="btn py-2 col LigthBlue H-14 " style="border-radius: 8px;">Go back</button>
+                                    </div>
+
+                                </div>
+                                <!-- TRANSFER CONFIRMATION ENDS -->
+
+                                  <!-- EXTERNAL CONFIRMATION STARTS -->
+                                  <div class="col-12 Box-Card px-3 py-4 External-Step2" style="display: none;">
+                                    <div class="d-flex justify-content-center align-items-center col-12 mt-3 mb-5">
+                                        <div class="d-flex justify-content-center align-items-center  col-sm-6  Funds-LabelOrange">
+                                            <p class="H-14 fontW-600 TextWhite mb-0 pr-2" >Transfer confirmation</p>
+                                            <img src="Icons/Profile/check-w.svg" class="Icon-Ref-New">
+                                        </div>
+                                    </div>
+
+                                    <div class="row align-items-start">
+                                        <div class="d-flex flex-column col-sm-6 col-md-4 pl-md-0">
+
+                                            <div class="d-flex flex-column col linebottomgray ">
+                                                <p class="H-14 OrangeColor my-2">Confirmation number</p>
+                                                <p class="H-14 TextDark  mb-1">2165261578469832</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Date of transfer</p>
+                                                <p class="H-14 TextDark mb-1">May 7, 2021</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Quantity</p>
+                                                <p class="H-14 TextDark fontW-500 mb-1">200.0000 Hdp.ф</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor  my-2">Balance</p>
+                                                <p class="H-14 TextDark fontW-500 mb-1">710.0000 Hdp.ф</p>
+                                            </div>
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Transfer to</p>
+                                                <p class="H-14 TextDark mb-1">Harry Hekimian</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column col-sm-6 col-md-4 pl-md-0">
+
+                                            <div class="d-flex flex-column col linebottomgray ">
+                                                <p class="H-14 OrangeColor my-2">Country</p>
+                                                <p class="H-14 TextDark  mb-1">Canada</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Bank</p>
+                                                <p class="H-14 TextDark mb-1">ScotiaBank</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">SWIFT/BIC Code</p>
+                                                <p class="H-14 TextDark mb-1">NOSCCATTXXX</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Routing</p>
+                                                <p class="H-14 TextDark mb-1">45678</p>
+                                            </div>
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Bank Code</p>
+                                                <p class="H-14 TextDark mb-1">1235548471448</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column col-md-4 pr-md-0">
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Account Number</p>
+                                                <p class="H-14 TextDark mb-1" >1234567</p>
+                                            </div>
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Transfer fees</p>
+                                                <p class="H-14 TextDark mb-1" >$0.2864 USD</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Recipient’s email</p>
+                                                <p class="H-14 TextDark mb-1">harry@malopan.com</p>
+                                            </div>
+
+                                            <div class="d-flex flex-column col linebottomgray">
+                                                <p class="H-14 OrangeColor my-2">Message</p>
+                                                <p class="H-14 TextDark mb-1" style="word-wrap: break-word;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-md-5">
+                                        <button type="button" onclick="GoTo('External-Step2','Transfer-Internal-External')" class="btn py-2 col OrangeColor H-14 " style="border-radius: 8px;">Go back</button>
+                                    </div>
+
+                                </div>
+                                <!-- EXTERNAL CONFIRMATION ENDS -->
+
+
+                                <!-- TABLE STARTS -->
+                                <div class="col-12 px-0 pt-5">
+                                    <p class="H-18 fontW-500 LigthBlue text-left my-2">Operations history</p>
+                                </div>
+                                <div class="d-flex  mt-xl-0 mt-5 flex-column align-content-xl-start  justify-content-start mx-md-0 ">
+                                    <!-- <div class="col-xl-6 col-md-4 col-6 px-0 d-flex mt-3">
+                                        <input class="wallet-inp" placeholder="Use keywords" />
+                                        <button type="button" class="Wallet-SearchButton"><img src="Icons/Profile/search-blue.svg" class="Wallet-SearchButton" /> </button>
+                                    </div> -->
+                                    <div class="col-12 d-flex flex-column">
+                                        <table class="table Table-Hedpay" data-page-length='10' id="Wallet-Stake-Table"  style="width:100%;">
+                                            <thead >
+                                                <tr style="border-top: none;margin-top: 0;width: 100%;">
+                                                    <td style="border-top: none;" ><p class="H-14 TextDark mb-0">Date</p></td>
+                                                    <td style="border-top: none;" ><p class="H-14 TextDark mb-0">Deposit</p></td>
+                                                    <td style="border-top: none;" ><p class="H-14 TextDark mb-0">Coin/token</p></td>
+                                                    <td style="border-top: none;" ><p class="H-14 TextDark mb-0">From</p></td>
+                                                    <td style="border-top: none;" ><p class="H-14 TextDark mb-0">To</p></td>
+                                                    <td style="border-top: none;" ><p class="H-14 TextDark mb-0">Status</p></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody >
+                                                 <tr>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >900</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP.Ф</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 LigthBlue" >Success</td>
+                                                 </tr>
+                                                 <tr>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >900</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP.Ф</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 LigthBlue" >Success</td>
+                                                 </tr>
+                                                 <tr>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >900</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP.Ф</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 LigthBlue" >Success</td>
+                                                 </tr>
+                                                 <tr>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >900</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP.Ф</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 LigthBlue" >Success</td>
+                                                 </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <!-- TABLE ENDS -->
+
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+                 <!-- ========== CHAT SUPORT Start ========== -->
+            <div id="Chat" >
+                <div class="Chat-Header Opened d-flex justify-content-between align-items-center px-3">
+                    <div class="col-6 px-0">
+                        <img class="Chat-icon" src="Icons/Profile/hedpay-logo-chat-support.svg" />
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center col-6 px-0 ">
+                        <p class="H-13 TextBlue mb-0 pr-2">Chat</p>
+                        <img class="Chat-icon-message" src="Icons/Profile/icon-hedpay-chat-support.svg" />
+                    </div>
+                </div>
+                <div class="Chat-Body p-3" >
+                    <div class="Chat-Messages p-2 position-relative my-2">
+                        <div class="Chat-Admin"></div>
+                        <p class="H-14 TextDark mb-0">
+                            <span class="fontW-600">Harry: </span>
+                            Welcome. My name is Harry, how can I help you?
+                        </p>
+                    </div>
+                    <div class="Chat-Messages-User p-2 position-relative my-2">
+                        <div class="Chat-User"></div>
+                        <p class="H-14 TextDark mb-0">
+                            <span class="fontW-600 TextBlue">You: </span>
+                            <span class="Body-Text">Thank you for responding, I have a few questions</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="Chat-footer p-3">
+                    <textarea class="Chat-Box">
+                    </textarea>
+                    <button type="button" onclick="Print();" class="btn"><span class="H-35 TextDark"><i class="fas fa-chevron-right"></i></span></button>
+                </div>
+        </div>
+        <!-- ========== CHAT SUPORT Ends ========== -->
+                  <!-- End Page-content -->
+                <footer class="footer px-0">
+                    <div class="container-fluid px-4">
+                        <div class="row justify-content-between align-items-start">
+                            <div class="d-flex flex-wrap flex-xl-row flex-lg-row flex-md-row align-items-start col-xl-6 col-lg-6 col-md-6 col-12">
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle bold">Menu</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="AboutUs.html">About Us</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="Products.html">Products</a></p>
+                                    <!-- <p class="Footer-Text"><a class="a-menu" href="Exchange.html">Exchange</a></p> -->
+
+                                    <!-- <p class="Footer-Text">Products</p> -->
+                                    <p class="Footer-Text"><a class="a-menu" href="Earn.html">Earn Hdp.ф</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://hedpay.medium.com/">Learn</a></p>
+                                </div>
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle bold">Account</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://test.hedpay.com/sign-up/">Open an Account</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://test.hedpay.com/sign-in">Sign In</a></p>
+                                </div>
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle bold">Policies</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="PrivacyPolicy.html">Privacy Policy</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="CookiePolicy.html">Cookies Policy</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="TermsConditions.html">Terms of Service</a></p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-start col-12 col-xl-6 col-lg-6 col-md-6">
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle">Information</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://hedpay.medium.com/">News</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="FAQ.html">FAQ</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="Contactus.html">Contact Us</a></p>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-8 d-flex flex-column justify-content-start col-12 ">
+                                    <p class="Footer-Tittle bold">Subscribe Now</p>
+                                    <p class="Footer-Desc">Enter your email to receive our monthly newsletter and periodical promotional offers before they become public.</p>
+                                    <div class="d-flex justify-content-between col-md-12 px-0">
+                                        <input type="email" placeholder="Your email" class="input-Footer col-md-10"/>
+                                        <button type="button" class="Button-Footer "><span style="color: #fff;"><i class="far fa-paper-plane"></i></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5 d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-center justify-content-between footer-margin col-md-12">
+                            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 col-12 d-flex justify-content-center mb-3">
+                                <img class="col-md-12 col-10 mt-2 foot-logo" src="Images/logo-hedpay-footer.svg" />
+                            </div >
+                            <div class="d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-center Foot-Bottom justify-content-between col-xl-8 col-lg-8 col-md-8 col-12">
+                                <div class="d-flex flex-column col-xl-5 col-lg-5 col-md-5 col-12 mb-3">
+                                    <p class="Footer-Tittle bold">Support</p>
+                                    <p class="Footer-Text-Desc">If you experience any problems with your account, please do not hesitate to <a href="#" style="font-weight: bold; color: #00263F;">submit a ticket</a>.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <img class="col-6 foot-logo" src="Icons/Groupe292.svg" />
+                                        <img class="col-6 foot-logo" src="Icons/Groupe293.svg" />
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column col-xl-5 col-lg-5 col-md-5 col-12 mb-3">
+                                    <p class="Footer-Tittle bold">Follow Us on Social Media</p>
+                                    <p class="Footer-Text-Desc">Use your personal referral link to share on your social channels and accumulate HDP.ф tokens.</a></p>
+                                    <div class="d-flex  justify-content-between">
+                                        <a href="https://www.facebook.com/hedpayltd"><img src="Icons/facebook.svg" /></a>
+                                        <a href="https://twitter.com/MyHEdpAY"><img src="Icons/twitter.svg" /></a>
+                                        <a href="https://www.reddit.com/user/HEdpAY/"><img class="SM-Icon" src="Icons/reddit-logo-hedpay.svg" /></a>
+                                        <a href="https://www.instagram.com/myhedpay/"><img src="Icons/instagram.svg"/></a>
+                                        <a href="https://t.me/HEdpAY"><img src="Icons/telegram-plane.svg"/></a>
+                                        <!-- <a href="#"><img src="Icons/telegram-plane.svg"/></a> -->
+                                        <a href="https://www.linkedin.com/company/hedpay/"><img src="Icons/linkedin.svg"/></a>
+                                        <a href="https://www.youtube.com/channel/UCpTk0N-CL24IO2IAY7k1t9g"><img src="Icons/youtube.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Footer-Blue d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-center justify-content-between">
+                        <p class="BlueFooterText">Hedpay Technologies</p>
+                        <p class="BlueFooterText">&copy; 2021 Hedpay Technologies. All rights reserved.</p>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+           <!-- Large modal -->
+           <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-sm-5 px-2 py-4">
+                    <div class="modal-header py-0">
+                        <p class="H-18 LigthBlue col-11 fontW-600 text-sm-left text-center">Settings</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <div class=" col-12 px-0 mt-3">
+
+                        <div class="d-flex align-items-start">
+                            <span class="OrangeColor pr-2"><i class="fas fa-info-circle"></i></span>
+                            <p class="H-14 TextDark">Select the accounts you want to be visible on your dashboard and your choice of default conversion currency.</p>
+                        </div>
+
+                        <div class="control-group col-12 px-0 ">
+                            <label class="H-14 LigthBlue ml-3" for="Choose">Default conversion currency *</label>
+                            <div class="wall ">
+                                <div class="wallet-select ">
+                                    <button class="btn-select btn-wallet-select SelectExchange DarkArrowSelect TextDark mt-0 Input-F-Quick"  id="SettingsCurr-Button" value=""></button>
+                                    <div class="b-wallet">
+                                    <ul class="a" id="SettingsCurr"></ul>
+                                    </div>
+                                </div>
+                                <label style="width: fit-content">
+                                    <select id="" name="Settings" class="Settings col-12 H-14 TextDark vodiapicker" >
+                                        <option value="CAD" data-thumbnail="Icons/canada.png"><p class=" H-14 TextDark my-0">CAD - Canadian Dollar </p></option>
+                                        <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-14 TextDark my-0">USD - Dollar </p></option>
+                                        <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-14 TextDark my-0 ">EUR - Euro</p></option>
+                                        <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-14 TextDark my-0">GBP - British Pound</p></option>
+                                    </select>
+
+
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="pt-3 row flex-column flex-md-row px-lg-4 px-sm-0 px-4">
+                            <div class="col-md-6">
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox locked"  type="checkbox" checked disabled/>
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/HDP.svg"/>HDP - Hdp.ф</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/BTC.svg"/>BTC - Bitcoin</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/ETH.svg"/>ETH - Ethereum</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/USDT.svg"/>USDT - Tether</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox locked S-Coin" id="CAD-SettCheck"  type="checkbox" checked/>
+                                    <label class="TextDark H-14"> <img class="pr-2 envelope-icon" src="Icons/canada.png"/>CAD - Canadian Dollar</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox S-Coin" id="USD-SettCheck"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/USD.svg"/>USD - Dollar</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox S-Coin" id="EUR-SettCheck" type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/EUR.svg"/>EUR - Euro</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox S-Coin" id="GBP-SettCheck" type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/GBP.svg"/>GBP - British Pound</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 px-0">
+                        <p class="H-18 LigthBlue fontW-600 text-sm-left text-center">Profile picture</p>
+                        <div class="form-group mt-4 pr-0 ">
+                            <div class="Profile-Div position-relative KYC-Avatar">
+                                <img src="assets/images/users/avatar-2.jpg" class="rounded-circle  Avatar-Profile Avatar-Changed" />
+                                <button class="position-absolute button-camara Avatar-Button"  type="button" ><span class="icon-camera"><i class="fas fa-camera"><input type='file' accept="image/*" id="Avatar" hidden/></i></span></button>
+
+                                <!-- <span class="icon-profile position-absolute"><i class="fas fa-user-circle"></i></span>
+                                <button class=" position-absolute button-camara"><span class="icon-camera"><i class="fas fa-camera"></i></span></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="menu-overlay"></div>
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+
+    <!-- Sweet Alerts Js-->
+    <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+
+
+
+         <!-- Morris Js-->
+        <script src="plugins/morris-js/morris.min.js"></script>
+
+        <!-- Raphael Js-->
+        <script src="plugins/raphael/raphael.min.js"></script>
+
+        <!-- Morris Custom Js-->
+        <script src="assets/pages/dashboard-demo.js"></script>
+
+        <!-- App js -->
+       <script src="assets/Vertical/js/theme.js"></script>
+       <!-- <script src="assets/js/theme.js"></script> -->
+
+       <!--dropify-->
+       <script src="plugins/dropify/dropify.min.js"></script>
+
+       <!-- nuevos scripts para agregar a la pagina principal -->
+       <script src="plugins/chart-js/chart.min.js"></script>
+     <!-- third party js -->
+   <script src="assets/datatables/jquery.dataTables.min.js"></script>
+   <script src="assets/datatables/dataTables.bootstrap4.js"></script>
+   <script src="assets/datatables/dataTables.responsive.min.js"></script>
+   <script src="assets/datatables/responsive.bootstrap4.min.js"></script>
+   <script src="assets/datatables/dataTables.buttons.min.js"></script>
+   <script src="assets/datatables/buttons.bootstrap4.min.js"></script>
+   <script src="assets/datatables/buttons.html5.min.js"></script>
+   <script src="assets/datatables/buttons.flash.min.js"></script>
+   <script src="assets/datatables/buttons.print.min.js"></script>
+   <script src="assets/datatables/dataTables.keyTable.min.js"></script>
+   <script src="assets/datatables/dataTables.select.min.js"></script>
+   <script src="assets/datatables/pdfmake.min.js"></script>
+   <script src="assets/datatables/vfs_fonts.js"></script>
+   <!-- third party js ends -->
+   <!-- Datatables init -->
+   <script src="assets/pages/datatables-demo.js"></script>
+
+   <!-- Slick carousel js -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <!-- custom js -->
+     <script src="assets/js/Custom_JS.js"></script>
+</body>
+</html>

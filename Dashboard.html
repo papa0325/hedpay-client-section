@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+     <!-- App favicon -->
+     <link rel="shortcut icon" href="Icons/HDPicon.svg">
+
+     <!-- App css -->
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/theme.css" rel="stylesheet" type="text/css" />
+     <link href="assets/Vertical/css/theme.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/CustomProfile.css" rel="stylesheet" type="text/css" />
+
+      <!-- Plugins css -->
+  <link href="assets/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Dropify css -->
+    <link href="plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body >
+    <a class="Go-Up"  javascript:void(0) title="Go up">
+        <span class="fa-stack" style="color: #2DCCD3;">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+    <div id="layout-wrapper">
+
+
+        <header id="page-topbar" class="px-0">
+            <div class="navbar-header d-flex align-items-md-center  justify-content-between  px-lg-2 px-lg-4 px-0">
+                <div class=" d-flex align-items-center justify-content-between ">
+                    <!-- d-lg-none -->
+                    <button type="button" class="btn btn-sm px-sm-3 px-2 font-size-16 header-item waves-effect d-inline-block d-sm-none"
+                    id="vertical-menu-btn">
+                    <span class="W-Color"><i class="fa fa-fw fa-bars"></i></span>
+                    </button>
+                    <div class="d-flex justify-content-between align-items-start pl-sm-2 pl-1">
+                        <div class="d-flex GrayBox mr-2">
+                            <p class="Nav-TextGray">Hdp.ф &nbsp;&nbsp;</p>
+                            <p class="Nav-TextGray">0.1039</p>
+                            <p class="Nav-TextGreen">(+15.15%)</p>
+                        </div>
+                        <div class="d-flex GrayBox">
+                            <p class="Nav-TextGray">Vol: &nbsp;&nbsp;</p>
+                            <p class="Nav-TextGray">2,082</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="ButtonProfileMenu">
+                    <div class="col d-flex align-items-center justify-content-end  " >
+                        <p class="W-Color H-16 my-2 mr-xl-2 mr-0 d-none d-md-inline-block">Last login 12 May 2021 5:58 PM</p>
+                        <p class="W-Color H-16 my-2 mx-xl-5 mx-2 d-none d-sm-inline-block">|</p>
+                        <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-4">
+                            <button type="button" class="btn header-item waves-effect px-0" id="page-header-user-dropdown"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="d-none d-sm-inline-block mr-2 W-Color H-16 my-2 pl-2">Joe Doe</span>
+
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg"
+                                    alt="Header Avatar">
+                                <i class="mdi mdi-chevron-down  d-inline-block H-20 W-Color pr-2" ></i>
+
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-sm-none d-inline-block col-12">Joe Doe</p>
+                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-md-none d-inline-block col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+
+                                <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                                href="javascript:void(0)">
+                                <span>Go to website</span>
+                                <img src="Icons/Profile/angle-left.svg" class="H-16">
+
+
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                                href="javascript:void(0)">
+                                    <span>Profile</span>
+                                    <img src="Icons/Profile/Dark-user.svg" class="H-16">
+
+
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                                href="javascript:void(0)">
+                                    <span>Sign out</span>
+                                    <img src="Icons/Profile/sign-out-alt.svg" class="H-16">
+
+
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end align-items-center px-lg-2 px-lg-4 px-0 pt-2" style="background: #FFFFFF;">
+                <a class="d-flex align-items-start justify-content-center H-16 BD-Color px-3 waves-effect position-relative pt-2"
+                    href="javascript:void(0)">
+                    <img src="Icons/Profile/envelope.svg" class="Icon-Menu envelope-icon" />
+                    <img src="Icons/Profile/MessageOrange.svg" class="Icon-Menu  position-absolute"  style="top:0px;right: 3px;"/>
+
+                    <p class="TextWhite position-absolute H-14 fontW-500" style="top:-1px;right: 8px;" >2</p>
+                </a>
+
+                <a class="d-flex align-items-center H-16 BD-Color pl-md-4  pr-2 pt-2"
+                    href="javascript:void(0)">
+                    <img src="Icons/Profile/icon-KYC-account.svg" class="Icon-Menu icon-2fa" />
+                    <p class="OrangeColor pl-1 mr-2 my-0 H-16" >50%</p>
+                </a>
+
+                <a class="d-flex align-items-center H-16 BD-Color pl-md-2  pr-3 pt-2"
+                    href="javascript:void(0)">
+                    <img src="Icons/Profile/2FA-icon.svg" class="Icon-Menu icon-2fa" />
+                </a>
+                <a class="d-flex align-items-center H-16 BD-Color pl-md-3 ml-1 pr-3 pt-2"
+                    href="Referral.html">
+                    <span class="BD-Color MenuText pr-2 d-none d-sm-inline-block">Referral</span>
+                    <img src="Icons/Profile/icon-referral.svg" class="Icon-Menu" />
+                </a>
+                <div id="ButtonBottomProfileMenu">
+                <div class="col d-flex align-items-center justify-content-end " >
+                    <p class="BD-Color H-16 my-2 mx-xl-5 mx-2">|</p>
+                    <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-sm-4 pr-1">
+                        <button type="button" class="btn header-item waves-effect px-0" id="page-header-user-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class=" mr-2 BD-Color H-16 my-2 pl-2 d-none d-sm-inline-block">Joe Doe</span>
+
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg"
+                                alt="Header Avatar">
+                            <i class="mdi mdi-chevron-down d-sm-inline-block H-20 BD-Color pr-2 ArrowIcon" ></i>
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-xs-none d-inline-block col-12">Joe Doe</p>
+                            <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+
+                            <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                            href="javascript:void(0)">
+                            <span>Go to website</span>
+                            <img src="Icons/Profile/angle-left.svg" class="H-16">
+
+
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                            href="javascript:void(0)">
+                                <span>Profile</span>
+                                <img src="Icons/Profile/Dark-user.svg" class="H-16">
+
+
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                            href="javascript:void(0)">
+                                <span>Sign out</span>
+                                <img src="Icons/Profile/sign-out-alt.svg" class="H-16">
+
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu-Closed d-none d-sm-inline-block">
+                <button class="ButtonSideVertical" id="Vertical-Button-Closed" style="margin-top: 258px;">
+                    <img src="Icons/Profile/Open-closed.svg" >
+                </button>
+        </div>
+
+
+        <div class="vertical-menu" >
+
+            <div data-simplebar class="h-100">
+
+                <div class="navbar-brand-box" style="padding-top:90px;">
+                    <a href="#" class="navbar-brand">
+                        <img src="Images/logo-hedpay-header-top.svg" width="211" height="40"/>
+                    </a>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+                    <div class="d-flex justify-content-end align-items-center col-12 px-0">
+                        <img class="rounded-circle  Avatar-Vertical" src="assets/images/users/avatar-2.jpg"
+                        alt="Header Avatar">
+                        <button class="ButtonSideVertical ml-5" id="Vertical-Button-Opened">
+                            <img src="Icons/Profile/Open-closed.svg" class="H-16">
+
+                        </button>
+                    </div>
+
+
+                    <p class="BD-Color H-16 mb-0 mt-2">Welcome</p>
+                    <p class="LigthBlue H-22 mt-0">Jamie Davies</p>
+
+                </div>
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+
+                        <li class="LineOrangeBottom py-2">
+                            <a href="Dashboard.html" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/home-orange.svg" class="H-16">
+                                <span class="H-14 OrangeColor fontW-500">Dashboard</span>
+                                <img src="Icons/Profile/arrow-orange-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="Wallet.html" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/wallet.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Wallet</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="Exchange-Profile.html" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/exchange-alt.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Exchange</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/fund-packeges.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Fund Packages</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/Blue-contacts.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Contacts</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/profile.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Profile</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/question-circle.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">FAQ</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="page-content">
+              <section class="d-flex flex-column pl-lg-5 pr-lg-3 px-md-3 px-2">
+                    <div class="col-12 row flex-column flex-xl-row ">
+                        <div class="col-xl-6 col-12">
+                            <p class="H-20 LigthBlue fontW-500 text-md-left text-center col-12">Balance of account</p>
+                            <div class="d-flex flex-column flex-md-row">
+                                <div class="d-flex flex-column  col-12 col-md-6 pl-md-0 pr-md-2 px-0">
+                                    <!-- HDP -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/HDP.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon " >HDP</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 Hdp.ф</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Hdp.ф</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress mb-2 ">
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                </div>
+                                    <!-- ETH -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/ETH.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">ETH</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 ETH</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Ethereum</p>
+                                                <p class="H-14 LigthBlue text-right my-1">20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress mb-2 " >
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                </div>
+                                    <!-- USD -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/USD.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">USD</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Dollar</p>
+                                                <p class="H-14 LigthBlue text-right my-1"></p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress mb-2 " >
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                </div>
+                                    <!-- GPB -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/GBP.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">GPB</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 GPB</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1 RespIcon">British Pound</p>
+                                                <p class="H-14 LigthBlue text-left my-1 RespIconPound">Pound</p>
+
+                                                <p class="H-14 LigthBlue text-right my-1">1,125.26 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress mb-2 " >
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                </div>
+                                </div>
+                                <div class="d-flex flex-column  col-12 col-md-6 pr-md-0 pl-md-2 px-0">
+                                    <!-- BTC -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/BTC.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">BTC</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 BTC</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Bitcoin</p>
+                                                <p class="H-14 LigthBlue text-right my-1">20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress mb-2 " >
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- USDT -->
+                                    <div class="BalanceBox">
+                                    <div class="d-flex flex-column">
+                                        <div class="d-flex justify-content-between">
+                                            <div class="d-flex">
+                                                <img src="Icons/USDT.svg" />
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">USDT</p>
+                                            </div>
+                                            <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 USDT</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="H-14 LigthBlue text-left my-1">Tether</p>
+                                            <p class="H-14 LigthBlue text-right my-1">20,000,000.00 USD</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <!-- Success -->
+                                            <div class="progress mb-2 " >
+                                                <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                    <p class="H-14 LigthBlue text-left my-0"></p>
+                                                </div>
+                                            </div>
+                                            <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- EUR -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/EUR.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">EUR</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">20,000,000.00 EUR</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Euro</p>
+                                                <p class="H-14 LigthBlue text-right my-1">301.79 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress mb-2 " >
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Wallet -->
+                                    <div class="BalanceBox">
+                                        <div class="d-flex flex-column">
+                                            <p class="H-16 LigthBlue text-right fontW-500 my-0">Wallet total</p>
+                                            <p class="H-18 BD-Color text-right fontW-500 my-0">11,139.46 USD</p>
+                                            <p class="H-12 LigthBlue text-right  my-0">Last updated June 14, 2021, 12:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-6 col-12 mt-xl-0 mt-5">
+                            <p class="H-20 LigthBlue fontW-500 text-md-left text-center col-12">Balance chart</p>
+                            <div class="col-12 d-flex flex-column">
+                                <canvas id="lineChart" class="" ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex flex-column flex-xl-row ">
+                        <div class="col-xl-6 col-12 d-flex flex-column mt-5">
+                            <div class="d-flex flex-column flex-sm-row align-content-start justify-content-between align-items-center pr-2 py-2">
+                                <p class="col-sm-6  H-20 LigthBlue fontW-500 px-md-3 px-0 my-0">Live Exchange Rates</p>
+                                <div class="col-sm-6 d-flex justify-content-end">
+                                    <p class="col-sm-6 col-5 H-16 TextDark my-0 pr-md-3 px-0 text-sm-left text-right">Amount</p>
+                                    <p class="col-sm-6 col-5 H-16 TextDark my-0 pr-md-3 px-0 text-xl-right text-sm-left text-right">Change (24h)</p>
+                                </div>
+                            </div>
+
+                             <!-- dropdown list -->
+                            <div class="Exch-Rates-Box-List d-flex align-items-center justify-content-between py-2 my-3">
+                                <div class="lang " style="width: 100%;">
+                                    <div class="lang-select ">
+                                        <button class="btn-select SelectExchange TextDark mt-0 " style="background: #fff !important;" id="Fund-Button"></button>
+                                        <div class="b-wallet">
+                                        <ul class="a" id="Fund"></ul>
+                                        </div>
+                                    </div>
+                                    <label style="width: 100%;">
+                                        <select  name="Coin" class="Coin col-12 H-16 TextDark vodiapicker" >
+                                            <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                            <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                            <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                            <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option>
+                                            <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option>
+                                            <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option>
+                                            <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                              <!-- USD -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 USD-Rates" style="display: none;">
+                                <div class="col-1">
+                                <img src="Icons/USD.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">USD<span class="d-sm-inline-block d-none"> - Dollar</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">0.3504</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 RedColor">-0.15%</span>
+                            </div>
+                            <!-- euro -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 EUR-Rates">
+                                <div class="col-1">
+                                    <img src="Icons/EUR.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">EUR <span class="d-sm-inline-block d-none"> - Euro</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">0.82457</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 RedColor">-0.15%</span>
+                            </div>
+                            <!-- gbp -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 GBP-Rates">
+                                <div class="col-1">
+                                    <img src="Icons/GBP.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">GBP <span class="d-sm-inline-block d-none">- British Pound</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">0.708336</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 RedColor">-0.1%</span>
+                            </div>
+                            <!-- hdp -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 HDP-Rates">
+                                <div class="col-1">
+                                    <img src="Icons/HDP.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">HDP<span class="d-sm-inline-block d-none"> - Hdp.ф</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">0.3681</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 LigthBlue">+8.30%</span>
+                            </div>
+                            <!-- btc -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 BTC-Rates">
+                                <div class="col-1">
+                                    <img src="Icons/BTC.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">BTC<span class="d-sm-inline-block d-none"> - Bitcoin</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">0.04077</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 LigthBlue">+13.72%</span>
+                            </div>
+                            <!-- eth -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 ETH-Rates">
+                                <div class="col-1">
+                                    <img src="Icons/ETH.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">ETH <span class="d-sm-inline-block d-none">- Ethereum</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">2,568.51</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 LigthBlue">+9.78%</span>
+                            </div>
+                            <!-- ustd -->
+                            <div class="Exch-Rates-Box row align-items-center justify-content-between py-2 mx-0 my-2 USDT-Rates">
+                                <div class="col-1">
+                                    <img src="Icons/USDT.svg"/>
+                                </div>
+                                <p class="col-sm-5 col-2 H-16 TextDark text-left my-0">USDT <span class="d-sm-inline-block d-none">- Tether</span></p>
+                                <p class="col-sm-3 col-4 H-16 TextDark my-0">1</p>
+                                <span class="col-sm-3 col-4 H-16  my-0 RedColor">-0.02%</span>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12  my-5">
+                            <p class="H-20 LigthBlue fontW-500 text-md-left text-center py-2 col-12">Latest operations</p>
+                            <div class="col-12 d-flex flex-column">
+                                <table class="table  Table-Hedpay" data-page-length='4'  id="Dashboard-Table" style="width:100%;">
+                                    <thead>
+                                        <tr style="border-top: none;margin-top: 0;">
+                                            <td style="border-top: none;" class="H-14 TextDark">Date</td>
+                                            <td style="border-top: none;" class="H-14 TextDark">Deposit</td>
+                                            <td style="border-top: none;" class="H-14 TextDark">Coin/token</td>
+                                            <td style="border-top: none;" class="H-14 TextDark">Status</td>
+                                            <td style="border-top: none;" class="H-14 TextDark" >From</td>
+                                            <td style="border-top: none;" class="H-14 TextDark" >To</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                         <tr>
+                                             <td class="H-14 TextDark" >05/05/2021</td>
+                                             <td class="H-14 TextDark" >900</td>
+                                             <td class="H-14 TextDark" >HDP.Ф</td>
+                                             <td class="H-14 LigthBlue" >Success</td>
+                                             <td class="H-14 TextDark" >05/05/2021</td>
+                                             <td class="H-14 TextDark" >05/05/2021</td>
+                                         </tr>
+                                         <tr>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >900</td>
+                                            <td class="H-14 TextDark" >HDP.Ф</td>
+                                            <td class="H-14 LigthBlue" >Success</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >900</td>
+                                            <td class="H-14 TextDark" >HDP.Ф</td>
+                                            <td class="H-14 LigthBlue" >Success</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >900</td>
+                                            <td class="H-14 TextDark" >HDP.Ф</td>
+                                            <td class="H-14 LigthBlue" >Success</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >900</td>
+                                            <td class="H-14 TextDark" >HDP.Ф</td>
+                                            <td class="H-14 LigthBlue" >Success</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >900</td>
+                                            <td class="H-14 TextDark" >HDP.Ф</td>
+                                            <td class="H-14 LigthBlue" >Success</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                            <td class="H-14 TextDark" >05/05/2021</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+              </section>
+            </div>
+        </div>
+
+        <!-- <footer class="footer">
+            @{
+                string year = DateTime.Now.Year.ToString();
+            }
+            <div class="text-right">
+                Copyright &copy; <a asp-area="" asp-controller="Home" asp-action="Index">La Maison Monaco </a> @year. @Localizer["All rights reserved."]
+            </div>
+        </footer> -->
+    </div>
+    <div class="menu-overlay"></div>
+
+
+     <!-- jQuery  -->
+     <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+     <script src="assets/js/waves.js"></script>
+     <script src="assets/js/simplebar.min.js"></script>
+      <!-- custom js -->
+    <script src="assets/js/Custom_JS.js"></script>
+ <!-- Sweet Alerts Js-->
+ <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+
+
+
+      <!-- Morris Js-->
+     <script src="plugins/morris-js/morris.min.js"></script>
+
+     <!-- Raphael Js-->
+     <script src="plugins/raphael/raphael.min.js"></script>
+
+     <!-- Morris Custom Js-->
+     <script src="assets/pages/dashboard-demo.js"></script>
+
+     <!-- App js -->
+    <script src="assets/Vertical/js/theme.js"></script>
+    <!-- <script src="assets/js/theme.js"></script> -->
+
+    <!--dropify-->
+    <script src="plugins/dropify/dropify.min.js"></script>
+
+    <!-- nuevos scripts para agregar a la pagina principal -->
+    <script src="plugins/chart-js/chart.min.js"></script>
+  <!-- third party js -->
+<script src="assets/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/datatables/dataTables.bootstrap4.js"></script>
+<script src="assets/datatables/dataTables.responsive.min.js"></script>
+<script src="assets/datatables/responsive.bootstrap4.min.js"></script>
+<script src="assets/datatables/dataTables.buttons.min.js"></script>
+<script src="assets/datatables/buttons.bootstrap4.min.js"></script>
+<script src="assets/datatables/buttons.html5.min.js"></script>
+<script src="assets/datatables/buttons.flash.min.js"></script>
+<script src="assets/datatables/buttons.print.min.js"></script>
+<script src="assets/datatables/dataTables.keyTable.min.js"></script>
+<script src="assets/datatables/dataTables.select.min.js"></script>
+<script src="assets/datatables/pdfmake.min.js"></script>
+<script src="assets/datatables/vfs_fonts.js"></script>
+<!-- third party js ends -->
+<!-- Datatables init -->
+<script src="assets/pages/datatables-demo.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange</title>
+     <!-- App favicon -->
+     <link rel="shortcut icon" href="Icons/HDPicon.svg">
+
+     <!-- App css -->
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/theme.css" rel="stylesheet" type="text/css" />
+     <link href="assets/Vertical/css/theme.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/CustomProfile.css" rel="stylesheet" type="text/css" />
+
+        <!-- Plugins css -->
+  <link href="assets/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Dropify css -->
+    <link href="plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .SelectExchange:after {
+        top: 12px;
+
+    } 
+       .SelectConvert:after {
+        content: '\f078 ';
+        font: normal normal normal 17px/1 FontAwesome;
+        color: #2DCCD3;
+        right: 0;
+        top: 0px;
+        height: 53px;
+        padding: 15px 25px 0 25px;
+        position: absolute;
+        pointer-events: none;
+        border: 1px solid #2DCCD3;
+        border-radius: 0 6px 6px 0;
+    }
+    
+    .btn-select li span{
+        z-index: 0;
+    }
+    .a li span{
+    padding-left: 0px !important;
+    opacity: 1;
+    z-index: 100;
+
+  }
+
+    </style>
+</head>
+<body >
+    <a class="Go-Up"  javascript:void(0) title="Go up">
+        <span class="fa-stack" style="color: #2DCCD3;">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+      <div id="layout-wrapper">
+
+   
+        <header id="page-topbar" class="px-0">
+            <div class="navbar-header d-flex align-items-md-center  justify-content-between  px-lg-2 px-lg-4 px-0">
+                <div class=" d-flex align-items-center justify-content-between ">
+                    <!-- d-lg-none -->
+                    <button type="button" class="btn btn-sm px-sm-3 px-2 font-size-16 header-item waves-effect d-inline-block d-sm-none" 
+                    id="vertical-menu-btn">
+                    <span class="W-Color"><i class="fa fa-fw fa-bars"></i></span>
+                    </button>
+                    <div class="d-flex justify-content-between align-items-start pl-sm-2 pl-1">
+                        <div class="d-flex GrayBox mr-2">
+                            <p class="Nav-TextGray">Hdp.ф &nbsp;&nbsp;</p>
+                            <p class="Nav-TextGray">0.1039</p>
+                            <p class="Nav-TextGreen">(+15.15%)</p>
+                        </div>
+                        <div class="d-flex GrayBox">
+                            <p class="Nav-TextGray">Vol: &nbsp;&nbsp;</p>
+                            <p class="Nav-TextGray">2,082</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="ButtonProfileMenu">
+                    <div class="col d-flex align-items-center justify-content-end  " >              
+                        <p class="W-Color H-16 my-2 mr-xl-2 mr-0 d-none d-md-inline-block">Last login 12 May 2021 5:58 PM</p>
+                        <p class="W-Color H-16 my-2 mx-xl-5 mx-2 d-none d-sm-inline-block">|</p>
+                        <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-4">
+                            <button type="button" class="btn header-item waves-effect px-0" id="page-header-user-dropdown"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="d-none d-sm-inline-block mr-2 W-Color H-16 my-2 pl-2">Joe Doe</span>
+
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg"
+                                    alt="Header Avatar">
+                                <i class="mdi mdi-chevron-down  d-inline-block H-20 W-Color pr-2" ></i>
+
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-sm-none d-inline-block col-12">Joe Doe</p>
+                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-md-none d-inline-block col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+
+                                <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                                href="javascript:void(0)">
+                                <span>Go to website</span>
+                                <img src="Icons/Profile/angle-left.svg" class="H-16">
+
+
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                                href="javascript:void(0)">
+                                    <span>Profile</span>
+                                    <img src="Icons/Profile/Dark-user.svg" class="H-16">
+
+
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                                href="javascript:void(0)">
+                                    <span>Sign out</span>
+                                    <img src="Icons/Profile/sign-out-alt.svg" class="H-16">
+
+
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end align-items-center px-lg-2 px-lg-4 px-0 pt-2" style="background: #FFFFFF;">
+                <a class="d-flex align-items-start justify-content-center H-16 BD-Color px-3 waves-effect position-relative pt-2"
+                    href="javascript:void(0)">
+                    <img src="Icons/Profile/envelope.svg" class="Icon-Menu envelope-icon" />
+                    <img src="Icons/Profile/MessageOrange.svg" class="Icon-Menu  position-absolute"  style="top:0px;right: 3px;"/>
+
+                    <p class="TextWhite position-absolute H-14 fontW-500" style="top:-1px;right: 8px;" >2</p>
+                </a>
+
+                <a class="d-flex align-items-center H-16 BD-Color pl-md-4  pr-2 pt-2"
+                    href="javascript:void(0)">
+                    <img src="Icons/Profile/icon-KYC-account.svg" class="Icon-Menu icon-2fa" />
+                    <p class="OrangeColor pl-1 mr-2 my-0 H-16" >50%</p>
+                </a>
+
+                <a class="d-flex align-items-center H-16 BD-Color pl-md-2  pr-3 pt-2"
+                    href="javascript:void(0)">
+                    <img src="Icons/Profile/2FA-icon.svg" class="Icon-Menu icon-2fa" />
+                </a>
+                <a class="d-flex align-items-center H-16 BD-Color pl-md-3 ml-1 pr-3 pt-2"
+                    href="Referral.html">
+                    <span class="BD-Color MenuText pr-2 d-none d-sm-inline-block">Referral</span>
+                    <img src="Icons/Profile/icon-referral.svg" class="Icon-Menu" />
+                </a>
+                <div id="ButtonBottomProfileMenu">
+                <div class="col d-flex align-items-center justify-content-end " >  
+                            
+                    <p class="BD-Color H-16 my-2 mx-xl-5 mx-2">|</p>
+                    <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-sm-4 pr-1 ">
+                        <button type="button" class="btn header-item waves-effect px-0" id="page-header-user-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class=" mr-2 BD-Color H-16 my-2 pl-2 d-none d-sm-inline-block">Joe Doe</span>
+
+                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-2.jpg"
+                                alt="Header Avatar">
+                            <i class="mdi mdi-chevron-down d-sm-inline-block H-20 BD-Color pr-2 ArrowIcon" ></i>
+
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-xs-none d-inline-block col-12">Joe Doe</p>
+                            <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+
+                            <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                            href="javascript:void(0)">
+                            <span>Go to website</span>
+                            <img src="Icons/Profile/angle-left.svg" class="H-16">
+
+
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                            href="javascript:void(0)">
+                                <span>Profile</span>
+                                <img src="Icons/Profile/Dark-user.svg" class="H-16">
+
+
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center justify-content-between H-16 BD-Color LineBlueBottom"
+                            href="javascript:void(0)">
+                                <span>Sign out</span>
+                                <img src="Icons/Profile/sign-out-alt.svg" class="H-16">
+
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </header>
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="vertical-menu-Closed d-none d-sm-inline-block">
+                <button class="ButtonSideVertical" id="Vertical-Button-Closed" style="margin-top: 258px;">
+                    <img src="Icons/Profile/Open-closed.svg" >
+                </button>
+        </div>
+
+
+        <div class="vertical-menu" >
+
+            <div data-simplebar class="h-100">
+
+                <div class="navbar-brand-box" style="padding-top:90px;">
+                    <a href="#" class="navbar-brand">
+                        <img src="Images/logo-hedpay-header-top.svg" width="211" height="40"/>
+                    </a>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+                    <div class="d-flex justify-content-end align-items-center col-12 px-0">
+                        <img class="rounded-circle  Avatar-Vertical" src="assets/images/users/avatar-2.jpg"
+                        alt="Header Avatar">
+                        <button class="ButtonSideVertical ml-5" id="Vertical-Button-Opened">
+                            <img src="Icons/Profile/Open-closed.svg" class="H-16">
+
+                        </button>
+                    </div>
+
+                    
+                    <p class="BD-Color H-16 mb-0 mt-2">Welcome</p>
+                    <p class="LigthBlue H-22 mt-0">Jamie Davies</p>
+
+                </div>
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu list-unstyled" id="side-menu">
+
+                        <li class="LineBlueBottom py-2">
+                            <a href="Dashboard.html" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/home.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Dashboard</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="Wallet.html" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/wallet.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Wallet</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineOrangeBottom py-2">
+                            <a href="Exchange-Profile.html" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/exchange-alt-orange.svg" class="H-16">
+                                <span class="H-14 OrangeColor fontW-500">Exchange</span>
+                                <img src="Icons/Profile/arrow-orange-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/fund-packeges.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Fund Packages</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/Blue-contacts.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Contacts</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/profile.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">Profile</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                        <li class="LineBlueBottom py-2">
+                            <a href="#" class="waves-effect d-flex justify-content-between">
+                                <img src="Icons/Profile/question-circle.svg" class="H-16">
+                                <span class="H-14 BD-Color fontW-500">FAQ</span>
+                                <img src="Icons/Profile/arrow-blue-rigth.svg" class="H-16">
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="page-content">
+                <section class="d-flex flex-column flex-xl-row align-items-start pl-xl-5 pr-xl-3 px-md-3 px-2">
+                    <div class="col-xl-4 col-12 ">
+                        <p class="H-20 LigthBlue text-left fontW-500">Exchange</p>
+                         <!-- Wallet -->
+                        <div class="Box-Card Wallet-Box-Card mr-0">
+                            <div class="d-flex justify-content-between">
+                                <p class="H-16 LigthBlue text-left fontW-500 mb-0">Wallet total</p>
+                                <p class="H-18 BD-Color text-right fontW-500 mb-0">10,768.09 USD</p>
+                            </div>
+                            <p class="H-12 LigthBlue text-right mb-0">Last updated June 14, 2021, 12:00</p>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between col-12 px-0">
+                            <div class="col-6 pl-0">
+                                <button type="button" onclick="GoToWallet('Exchange-Index','Convert')" class="Wallet-BlueLigth H-16 TextWhite col-12 px-0">Convert</button>
+                            </div>
+                            <div class="col-6 pr-0">
+                                <button type="button" onclick="GoToWallet('Exchange-Index','Trade')" class="Wallet-BlueDark H-16 TextWhite col-12 px-0">Trade</button>
+                            </div>
+                        </div>
+                        <div class="d-flex py-3 px-0 ">
+                            <div class="">
+                                <img src="Icons/Profile/Exclam-circle.svg" />
+                            </div>
+                            <p class="H-14 TextGrayWallet mb-0" >&nbsp;Select the currency with which you want to make a transaction</p>
+
+                        </div>
+                        <div class="d-flex flex-xl-column flex-md-row flex-column justify-content-between">
+                            <div class="d-flex flex-column px-1">
+                                 <!-- HDP -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="HDP" >
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/HDP.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon " >HDP</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 Hdp.ф</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Hdp.ф</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 ">                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/HDP.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >HDP- Hdp.ф</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center mt-3">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 Hdp.ф</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <!-- ETH -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="ETH">
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/ETH.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">ETH</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 ETH</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Ethereum</p>
+                                                <p class="H-14 LigthBlue text-right my-1">20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 " >                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/ETH.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >ETH - Ethereum</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center mt-3">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 ETH</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- USD -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="USD">
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/USD.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">USD</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Dollar</p>
+                                                <p class="H-14 LigthBlue text-right my-1"></p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 " >                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center" style="height: 60px;">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/USD.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >USD - Dollar</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center ">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">560.00 USD</p>
+                                                <!-- <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <!-- GBP -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="GBP">
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/GBP.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">GBP</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 GBP</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1 RespIcon">British Pound</p>
+                                                <p class="H-14 LigthBlue text-left my-1 RespIconPound">Pound</p>
+            
+                                                <p class="H-14 LigthBlue text-right my-1">1,125.26 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 " >                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/GBP.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >GBP - British Pound</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center mt-3">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 GBP</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column px-1">
+                                 <!-- BTC -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="BTC">
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/BTC.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">BTC</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 BTC</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Bitcoin</p>
+                                                <p class="H-14 LigthBlue text-right my-1">20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 " >                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/BTC.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >BTC - Bitcoin</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center mt-3">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 BTC</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <!-- USDT -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="USDT">
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/USDT.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">USDT</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 USDT</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Tether</p>
+                                                <p class="H-14 LigthBlue text-right my-1">20,000,000.00 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 " >                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/USDT.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >USDT - Tether</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center mt-3">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 USDT</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <!-- EUR -->
+                                <div class="Box-Card WB mr-0 px-3 py-3 my-2" id="EUR">
+                                    <div class="Wallet-Show-ProggressBar">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex">
+                                                    <img src="Icons/EUR.svg" />
+                                                    <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon ">EUR</p>
+                                                </div>
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 EUR</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <p class="H-14 LigthBlue text-left my-1">Euro</p>
+                                                <p class="H-14 LigthBlue text-right my-1">301.79 USD</p>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <!-- Success -->
+                                                <div class="progress progress-wallet mb-2 " >                                    
+                                                    <div class="progress-bar Bg-LBlue "  role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                        <p class="H-14 LigthBlue text-left my-0"></p>
+                                                    </div>
+                                                </div>
+                                                <p class="H-12 LigthBlue text-right my-0 ml-2">25%</p>
+            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Wallet-Hide-ProggressBar">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="Icons/EUR.svg" class="Wallet-icon"/>
+                                                <p class="H-16 BD-Color text-left ml-2 my-0 RespIcon fontW-500" >EUR - Euro</p>
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center mt-3">
+                                                <p class="H-16 BD-Color text-right my-0 fontW-500">10,000,000.00 EUR</p>
+                                                <p class="H-14 LigthBlue text-right my-1" >20,000,000.00 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                           
+                           
+                        </div>
+                        
+                       
+                    </div>
+
+                    <div class="col-xl-8 col-12 ">
+                        <div class="row flex-column align-items-end Exchange-Index mx-md-3">
+                            <div class="col-12">
+                                <div class="d-flex  mt-xl-0 mt-5 flex-column align-content-xl-start  justify-content-start mx-md-0 ">
+                                    <p class="H-20 LigthBlue fontW-500 my-0 text-left" >Active orders</p>
+                                    <div class="col-12 d-flex flex-column">
+                                        <table class="table nowrap Table-Hedpay " data-page-length='8' id="Wallet-Stake-Table"  style="width:100%;">
+                                            <thead >
+                                                <tr style="border-top: none;margin-top: 0;width: 100%;">
+                                                    <td style="border-top: none;" class="H-14 TextWhite mb-0"></td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Order Date</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Asset</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Quantity</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Trade Type</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Rate</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Settlement With</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Status</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Valid Until</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0"></td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0"></td>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody class="Box-Card">
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 greenColor mb-0" >Open</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                     <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Market</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 greenColor mb-0" >Open</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+                                                    <td class="H-14 RedColor mb-0" ><span><i class="fas fa-ban"></i></span></td>
+
+                                                 </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+    
+                            <div class="col-12 mt-4">
+                                <div class="d-flex  mt-xl-0 mt-5 flex-column align-content-xl-start  justify-content-start mx-md-0">
+                                    <p class="H-20 LigthBlue fontW-500 my-0 text-left" >Order history</p>
+                                   <!--  -->
+                                   <div class="col-12 d-flex flex-column">
+                                        <table class="table nowrap Table-Hedpay " data-page-length='8' id="Wallet-History-Table"  style="width:100%;">
+                                           <thead>
+                                                <tr style="border-top: none;margin-top: 0;width: 100%;">
+                                                    <td style="border-top: none;" class="H-14 TextWhite mb-0"></td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Order Date</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Asset</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Quantity</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Trade Type</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Rate</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Settlement With</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Status</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0">Transaction Date</td>
+                                                    <td style="border-top: none;" class="H-14 TextDark mb-0"></td>
+
+                                                </tr>
+                                           </thead> 
+                                            <tbody class="Box-Card">
+                                                <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 TextDark mb-0" >Closed</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Price Limit</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 TextDark mb-0" >Closed</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 TextDark mb-0" >Closed</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Price Limit</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 TextDark mb-0" >Closed</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 TextDark mb-0" >Closed</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Price Limit</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 TextDark mb-0" >Closed</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 TextDark mb-0" >Closed</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Price Limit</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 TextDark mb-0" >Closed</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 TextDark mb-0" >Closed</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Price Limit</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 TextDark mb-0" >Closed</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 LigthBlue" >Buy</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 TextDark mb-0" >HDP</td>
+                                                     <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                     <td class="H-14 TextDark mb-0" >Market</td>
+                                                     <td class="H-14 TextDark mb-0" ></td>
+                                                     <td class="H-14 TextDark" >USD - Dollar</td>
+                                                     <td class="H-14 TextDark mb-0" >Closed</td>
+                                                     <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                     <td class="H-14 LigthBlue mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 <tr>
+                                                    <td class="H-14 OrangeColor" >Sell</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 TextDark mb-0" >HDP</td>
+                                                    <td class="H-14 TextDark mb-0" >800 Hdp.ф</td>
+                                                    <td class="H-14 TextDark mb-0" >Price Limit</td>
+                                                    <td class="H-14 TextDark mb-0" ></td>
+                                                    <td class="H-14 TextDark" >USD - Dollar</td>
+                                                    <td class="H-14 TextDark mb-0" >Closed</td>
+                                                    <td class="H-14 TextDark mb-0" >05/05/2021</td>
+                                                    <td class="H-14 OrangeColor mb-0" >See <span><i class="far fa-eye"></i></span></td>
+
+                                                 </tr>
+                                                 
+                                            </tbody>
+                                        </table>
+                                   </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row flex-column  Convert mx-md-3">
+                            <div class="col-12 d-flex flex-column flex-lg-row ">
+                                <div class="d-flex flex-column align-content-xl-start justify-content-start col-xl-8  mt-xl-0 mt-5 px-0 Block-Funds">
+                                    <p class="H-20  LigthBlue fontW-500 my-0 text-left pb-3" >Convert</p>
+                                   
+                                    <div class="col-12 Box-Card px-4 py-4 Convert-Step1" >
+                                        <div class="control-group col-12 px-0 ">
+                                            <!-- <label class="H-16 LigthBlue" for="Choose">Please choose</label> -->
+                                            <div class="control-group col-12  px-0 ">
+                                                <label class="H-16 LigthBlue" for="Choose">Convert from*</label>
+                                                <div class="wall ">
+                                                    <div class="wallet-select ">
+                                                        <button class="btn-select btn-wallet-select SelectExchange SelectConvert TextDark mt-0 Invite-Input" style="height: 53px !important;" id="Fund-Button" value=""></button>
+                                                        <div class="b-wallet">
+                                                        <ul class="a" id="Fund"></ul>
+                                                        </div>
+                                                    </div>
+                                                    <label style="width: fit-content">
+                                                        <select id="" name="Coin" class="Coin col-12 H-16 TextDark vodiapicker" >
+                                                            <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                                            <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                                            <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                                            <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option>
+                                                            <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option>
+                                                            <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option>
+                                                            <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option>
+                                                        </select>
+            
+                                                    
+                                                    </label>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group mt-3 col-12 px-0 text-right">
+                                          <button class="btn " type="button" style="background:#00263F;" id="Exch-Switch-Button" onclick="Switch()"><span class="TextWhite"><i class="fas fa-exchange-alt icon-rotate"></i></span></button>
+                                        </div>
+                                        
+                                        <div class="control-group col-12 px-0 ">
+                                            <label class="H-16 LigthBlue" for="CurrType">Convert to *</label>
+                                            <div class="wall ">
+                                                <div class="wallet-select ">
+                                                    <button class="btn-select btn-wallet-select SelectExchange SelectConvert TextDark mt-0 Invite-Input" style="height: 53px !important;" value="" id="Curr-Button"></button>
+                                                    <div class="b-wallet">
+                                                    <ul class="a" id="Curr"></ul>
+                                                    </div>
+                                                </div>
+                                                <!-- <label style="width: fit-content">
+                                                    <select id="" name="Curr" class="Curr col-12 H-16 TextDark vodiapicker"  >
+                                                        <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                                        <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                                        <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                                        <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option>
+                                                        <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option>
+                                                        <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option>
+                                                        <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option>
+                                                    </select>
+        
+                                                
+                                                </label> -->
+                                                
+                                            </div>                                                
+                                        </div>
+                                          
+                                        <div class="control-group col-12 mt-3 px-0">
+                                            <label class="H-16 LigthBlue" for="Amount">Amount *</label>
+                                            <div class="d-flex">
+                                                <input type="number" class="Invite-Input H-16 TextDark form-control col-9 pr-0" style="height: 53px !important;border-right: 0;border-radius: 6px 0 0 6px;"  id="Amount" placeholder="$"/>
+                                                <input type="text" class="Currency-Type Invite-Input H-16 TextDark form-control col-3 px-0 text-center" style="height: 53px !important;border-left: 0;background: #fff !important; border-radius: 0 6px 6px 0;"  disabled/>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group my-3 mx-0 col-12 px-0 mt-4 row justify-content-between linebottomgray Total-Converted" style="display: none;">
+                                            <p class="H-20 TextDark fontW-400 mb-0">Exchange Rate </p>
+                                            <div class="d-flex">
+                                                <p class="H-16 TextDark fontW-400 col mb-0" id="Rate-Exch">0.78547569</p>
+                                                <p class="H-16 TextDark fontW-400 col mb-0 pl-2 Currency-Type"  ></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group my-3 mx-0 col-12 px-0 mt-4 row justify-content-between linebottomgray Total-Converted" style="display: none;">
+                                            <p class="H-20 LigthBlue fontW-400 mb-0">Amount</p>
+                                            <div class="d-flex">
+                                                <p class="H-20 LigthBlue fontW-400 mb-0 col" id="Total-Exchanged" aria-placeholder="10,000,000.00"></p>
+                                                <p class="H-20 LigthBlue fontW-400 mb-0 col pl-2" id="Conversion-Type" ></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center mt-5">
+                                            <button type="button" onclick="GoToWallet('Convert','Exchange-Index')" class="Bg-OrangeColor Ref  TextWhite H-18 col-5  align-self-end" style="border-radius: 8px;">Cancel</button>
+                                            <button type="button" onclick="Convert()" class="Ref-Button Ref TextWhite H-18 col-5  align-self-end Convert-Button">Calculate</button>
+        
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="col-12 Box-Card px-4 py-4 Convert-Step2 " style="display: none;"> 
+                                        
+                                        <div class="d-flex justify-content-between align-items-center my-3 col-12  Funds-LabelBlue">
+                                            <p class="H-20 Title-Fund-Final TextWhite mb-0" >Confirmation of conversion</p>
+                                            <img src="Icons/Profile/check-w.svg">
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0">Conversion number</p>
+                                            <p class="WalletFinalStep LigthBlue fontW-500 mb-0">2165261578469832</p>
+                                        </div>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0 text-right">Conversion made on May 7, 2021, 12:00</p>
+                                        </div>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0">Amount</p>
+                                            <div class="d-flex">
+                                                <p class="WalletFinalStep TextDark mb-0 Amount"></p>
+                                                <p class="WalletFinalStep TextDark mb-0 pl-2 Currency-Type"></p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0">Exchange Rate</p>
+                                            <div class="d-flex">
+                                                <p class="WalletFinalStep TextDark mb-0 Rate-Exch"></p>
+                                                <p class="WalletFinalStep TextDark mb-0 pl-2 Currency-Type"></p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0">Conversion amount</p>
+                                            <div class="d-flex">
+                                                <p class="WalletFinalStep LigthBlue mb-0 Total-Exchanged "></p>
+                                                <p class="WalletFinalStep LigthBlue mb-0 pl-2 Conversion-Type "></p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0">Balance</p>
+                                            <p class="WalletFinalStep TextDark mb-0 ">20,000,000.00</p>
+                                        </div>
+                                       
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                            <p class="WalletFinalStep LigthBlue mb-0">Conversion made between</p>
+                                            <div class="d-flex">
+                                                <img src="" id="From"/>
+                                                <p class="WalletFinalStep TextDark mb-0 Currency-Type pl-2"></p>
+                                                <p class="WalletFinalStep TextDark mb-0  px-2">to</p>
+                                                <img src="" id="To"/>
+                                                <p class="WalletFinalStep TextDark mb-0 pl-2 Conversion-Type "></p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-center align-items-center mt-5">
+                                            <button type="button" onclick="GoToWallet('Convert-Step2','Convert-Step1')" class="Ref-Button Ref TextWhite H-18 col-12 col-md-6  align-self-end">Back to</button>
+                                        </div>
+                                    
+                                    </div>
+                                   
+                                </div>
+                               
+                            </div>
+    
+                        </div>
+
+                        <div class="row Trade mx-md-3 py-xl-0 py-5">
+                            <div class="col-xl-8 d-flex flex-column">
+                                <p class="H-20  LigthBlue fontW-500 my-0 text-left pb-3 " >Trade</p>
+                                <div class="Box-Card px-4 py-4 Transfer-Internal-External">
+                                    <div class="control-group mt-3 col-12 d-flex justify-content-between align-items-center px-0">
+                                        <div class="d-flex">
+                                            <img src="Icons/HDP.svg" style="width:30px; height:20px;" class="mr-1">
+                                            <p class="H-16 BD-Color mb-0 fontW-500">HDP</p>
+                                        </div>
+                                        <p class="H-16 BD-Color mb-0 fontW-500">20,000,000.00 Hdp.ф</p>
+
+                                    </div>
+
+                                    <p class="H-16 LigthBlue col-12 text-center mt-5">What do you want to do?</p>
+                                    <div class="d-flex justify-content-between align-items-center mt-5">
+                                        <button type="button" onclick="GoToWallet('To-External-Step1','Trade-Step1')" class="Ref-Button Wallet-Trade-Button TextWhite H-18 col-5  align-self-end" style="height: 35px;">Buy</button>
+                                        <button type="button" onclick="GoToWallet('Trade-Step1','To-External-Step1')" class="Bg-OrangeColor Wallet-Trade-Button  TextWhite H-18 col-5  align-self-end" style="border-radius: 8px;height: 35px;">Sell</button>
+    
+                                    </div>
+                                    <div class="row flex-column Trade-Step1" style="display: none;">
+                                        <p class="H-16 LigthBlue col-12 text-center my-5">Buy</p>
+                                        <div class="control-group col-12 px-0 ">
+                                            <!-- <label class="H-16 LigthBlue" for="Choose">Please choose</label> -->
+                                            <div class="control-group col-12  px-0 ">
+                                                <label class="H-16 LigthBlue" for="Asset">Asset *</label>
+                                                <div class="wall ">
+                                                    <div class="wallet-select ">
+                                                        <button class="btn-select btn-wallet-select SelectExchange  TextDark mt-0 Invite-Input" style="height: 53px !important;" id="Asset-Button" value=""></button>
+                                                        <div class="b-wallet">
+                                                        <ul class="a" id="Asset"></ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <label style="width: fit-content">
+                                                        <select id="" name="Coin" class=" col-12 H-16 TextDark vodiapicker" >
+                                                            <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                                            <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                                            <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                                            <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option>
+                                                            <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option>
+                                                            <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option>
+                                                            <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option>
+                                                        </select>
+            
+                                                    
+                                                    </label> -->
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control-group col-12 mt-3 px-0">
+                                            <label class="H-16 LigthBlue" for="Amount-Trade-Buy">Amount *</label>
+                                            <input type="number" class="Invite-Input H-16 TextDark form-control pr-0" style="height: 58px !important;"  id="Amount-Trade-Buy" placeholder="$"/>
+                                        </div>
+                                        <div class="control-group col-12 mt-3 px-0 ">
+                                            <label class="H-16 LigthBlue" for="Amount-Trade-Buy">Trade Price *</label>
+                                            <div class="SelectExchange Invite-Input H-16 TextDark form-control py-0 px-0 col-12">
+                                                <select class=" col-12 SelectExchange form-control form-control-lg" style="height: 58px; background: #fff !important;">
+                                                    <option value="">Select trade price</option>
+                                                    <option value="PriceLimit">Price Limit</option>
+                                                    <option value="Market">Market</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="control-group col-12 px-0 my-3">
+                                            <!-- <label class="H-16 LigthBlue" for="Choose">Please choose</label> -->
+                                            <div class="control-group col-12  px-0 ">
+                                                <label class="H-16 LigthBlue" for="Settl">Settlement With *</label>
+                                                <div class="wall ">
+                                                    <div class="wallet-select ">
+                                                        <button class="btn-select btn-wallet-select SelectExchange TextDark mt-0 Invite-Input" style="height: 53px !important;" id="Settl-Button" value=""></button>
+                                                        <div class="b-wallet">
+                                                        <ul class="a" id="Settl"></ul>
+                                                        </div>
+                                                    </div>
+                                                    <label style="width: fit-content">
+                                                        <select id="" name="" class="Money col-12 H-16 TextDark vodiapicker" >
+                                                            <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-16 TextDark my-0">USD - Dollar </p></option>
+                                                            <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-16 TextDark my-0 ">EUR - Euro</p></option>
+                                                            <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-16 TextDark my-0">GBP - British Pound</p></option>
+                                                            <!-- <option value="HDP" data-thumbnail="Icons/HDP.svg"><p class="H-16 TextDark my-0">HDP - Hdp.ф</p></option> -->
+                                                            <!-- <option value="BTC" data-thumbnail="Icons/BTC.svg"><p class="H-16 TextDark my-0">BTC - Bitcoin</p></option> -->
+                                                            <!-- <option value="ETH" data-thumbnail="Icons/ETH.svg"><p class="H-16 TextDark my-0">ETH - Ethereum</p></option> -->
+                                                            <!-- <option value="USDT" data-thumbnail="Icons/USDT.svg"><p class=" H-16 TextDark my-0">USDT - Tether</p></option> -->
+                                                        </select>
+            
+                                                    
+                                                    </label>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        <div class="d-flex justify-content-between align-items-center mt-5 col-12">
+                                            <button type="button" onclick="GoToWallet('Trade','Exchange-Index')" class="Bg-OrangeColor Ref  TextWhite H-18 col-5  align-self-end" style="border-radius: 8px;">Cancel</button>
+                                            <button type="button" onclick="GoToWallet('Transfer-Internal-External','Trade-Step2')" class="Ref-Button Ref TextWhite H-18 col-5  align-self-end">Submit</button>
+        
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row flex-column To-External-Step1" style="display: none;">
+                                        <p class="H-16 LigthBlue col-12 text-center mt-5">Transfer to external</p>
+                                        <div class="d-flex  justify-content-between mt-3 col-12">
+                                            <div class="d-flex align-items-center justify-content-center mb-0">
+                                                <img src="Icons/USD.svg" style="width:20px; height:14px;" class="mr-1">
+                                                <p class="H-16 BD-Color mb-0">USD - Dollar</p>
+                                            </div>
+                                            <label class="H-16 BD-Color mb-0">20,000,000.00 USD</label>
+                                        </div>
+
+                                        <div class="control-group mt-3 col-12 ">
+                                            <label class="H-16 LigthBlue text-left" for="Amount-External">Amount *</label>
+                                            <div class="d-flex col-12 px-0">
+                                                <input type="number" style="border-right:none;border-radius: 6px 0 0 6px;" class="Invite-Input H-16 TextDark form-control col-sm-9 col-8 " id="Amount-External" style="height: 53px !important;" placeholder="20,000,000.00"/>
+                                                <span class="d-flex justify-content-center align-items-center col-sm-3 col-4 Invite-Input" style="border-left:none;border-radius:0 6px 6px 0;">
+                                                    <img src="Icons/USD.svg" style="width:20px; height:14px;" class="mr-1">
+                                                    <p class="H-16 BD-Color mb-0">USD</p>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group mt-3 col-12 ">
+                                            <label class="H-16 LigthBlue text-left" for="Contacts">Send to contact *</label>
+                                            <div class="d-flex col-12 px-0 SelectExchange " >
+                                                <select class="col-12 Invite-Input Contacts" style="height: 58px !important;border-left:none !important; background: #FFFFFF !important; " >
+                                                    <option value="0" >Josephine C.</option>
+                                                    <option value="1">Harry H.</option>
+                                                    <option value="2">Maria D.</option>
+                                                    <option value="3">Chantal O.</option>
+                                                    <option value="4">Camilo P.</option>
+                                                </select>
+                                                <button class="btn Contact-Button position-absolute">
+                                                    <img src="Icons/Profile/Blue-contacts.svg" />
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group mt-3 col-12 text-right">
+                                            <a href="Contacts.html" target="_blank" class="H-16 LigthBlue text-left AddContactLink" for="UID">Add new contact</a>
+                                           
+                                        </div>
+
+                                        <div class="control-group mt-3 col-12 ">
+                                            <label class="H-16 LigthBlue text-left" for="Email-External">Email *</label>
+                                            <input type="text" class="Invite-Input H-16 TextDark form-control " id="Email-External" style="height: 53px !important;" placeholder="Enter your wallet address"/>
+                                        </div>
+
+                                        <div class="control-group mt-3 col-12 ">
+                                            <label class="H-16 LigthBlue text-left" for="Message-External">Message</label>
+                                            <textarea type="text" class="Invite-Input H-16 TextDark form-control " id="Message-External" style="height: 53px !important;" placeholder="Write your message here…"></textarea>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center mt-5 col-12">
+                                            <button type="button" onclick="GoToWallet('Trade','Exchange-Index')" class="Bg-OrangeColor Ref  TextWhite H-18 col-5  align-self-end" style="border-radius: 8px;">Cancel</button>
+                                            <button type="button" onclick="GoToWallet('Transfer-Internal-External','To-External-Step2')" class="Ref-Button Ref TextWhite H-18 col-5  align-self-end">Submit</button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 Box-Card px-4 py-4 Trade-Step2" style="display: none;">
+                                        
+                                    <div class="d-flex justify-content-between align-items-center my-3 col-12  Funds-LabelBlue">
+                                        <p class="H-20 Title-Fund-Final TextWhite mb-0" >Transfer confirmation</p>
+                                        <img src="Icons/Profile/check-w.svg">
+                                    </div>
+
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep LigthBlue mb-0">Confirmation number</p>
+                                        <p class="WalletFinalStep LigthBlue fontW-500 mb-0">2165261578469832</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep LigthBlue mb-0">Date of transfer</p>
+                                        <p class="WalletFinalStep TextDark mb-0">May 7, 2021</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep LigthBlue mb-0">Quantity</p>
+                                        <p class="WalletFinalStep TextDark mb-0">20,000,000.00 Hdp.ф</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep LigthBlue mb-0">Balance</p>
+                                        <p class="WalletFinalStep LigthBlue mb-0">20,000,000.00 Hdp.ф</p>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between mt-3 col-12">
+                                        <p class="WalletFinalStep LigthBlue mb-0 col px-0">Sent to wallet address</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center px-0 col-12 linebottomgray">
+                                        <p class="WalletFinalStep GUID-CODE mb-0 TextDark fontW-400">HDP0xb6CE559DC67268b8c4317577346566788347823479</p>
+                                    </div>
+                                    <div class="d-flex flex-column mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep LigthBlue mb-0">Recipient’s email</p>
+                                        <p class="WalletFinalStep TextDark ">harry@malopan.com</p>
+                                    </div>
+                                    <div class="d-flex flex-column col-12 linebottomgray mt-3">
+                                        <p class="WalletFinalStep LigthBlue fontW-400 mb-0">Message</p>
+                                        <p class="WalletFinalStep TextDark mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since.</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button type="button" onclick="GoToWallet('Trade','Exchange-Index')" class="Ref-Button Ref TextWhite H-18 col-12 col-md-6  align-self-end">Back to Wallet</button>
+                                    </div>
+                                
+                                </div>
+
+                                <div class="col-12 Box-Card px-4 py-4 To-External-Step2" style="display: none;">
+                                        
+                                    <div class="d-flex justify-content-between align-items-center my-3 col-12  Transfer-LabelOrange">
+                                        <p class="H-20 Title-Fund-Final TextWhite mb-0" >Transfer confirmation</p>
+                                        <img src="Icons/Profile/check-w.svg">
+                                    </div>
+
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Confirmation number</p>
+                                        <p class="WalletFinalStep OrangeColor fontW-500 mb-0">2165261578469832</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Date of transfer</p>
+                                        <p class="WalletFinalStep TextDark mb-0">May 7, 2021</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Quantity</p>
+                                        <p class="WalletFinalStep TextDark mb-0">20,000,000.00 USD</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Balance</p>
+                                        <p class="WalletFinalStep OrangeColor mb-0">20,000,000.00 USD</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Transfer to</p>
+                                        <p class="WalletFinalStep TextDark mb-0">Harry Hekimian</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Country</p>
+                                        <p class="WalletFinalStep TextDark mb-0">Canada</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Bank</p>
+                                        <p class="WalletFinalStep TextDark mb-0">ScotiaBank</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">SWIFT/BIC Code</p>
+                                        <p class="WalletFinalStep TextDark mb-0">NOSCCATTXXX</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Routing</p>
+                                        <p class="WalletFinalStep TextDark mb-0">45678</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Bank Code</p>
+                                        <p class="WalletFinalStep TextDark mb-0">123</p>
+                                    </div>
+                                    <div class="d-flex flex-column flex-sm-row justify-content-between mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Account Number</p>
+                                        <p class="WalletFinalStep TextDark mb-0">1234567</p>
+                                    </div>
+
+                                    <div class="d-flex flex-column mt-3 col-12 linebottomgray">
+                                        <p class="WalletFinalStep OrangeColor mb-0">Recipient’s email</p>
+                                        <p class="WalletFinalStep TextDark ">harry@malopan.com</p>
+                                    </div>
+                                    <div class="d-flex flex-column col-12 linebottomgray mt-3">
+                                        <p class="WalletFinalStep OrangeColor fontW-400 mb-0">Message</p>
+                                        <p class="WalletFinalStep TextDark mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since.</p>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center mt-5">
+                                        <button type="button" onclick="GoToWallet('Trade','Exchange-Index')" class="Ref-Button Ref TextWhite H-18 col-12 col-md-6  align-self-end" style="background: #FFA300;">Back to Wallet</button>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- <footer class="footer">
+            @{
+                string year = DateTime.Now.Year.ToString();
+            }
+            <div class="text-right">
+                Copyright &copy; <a asp-area="" asp-controller="Home" asp-action="Index">La Maison Monaco </a> @year. @Localizer["All rights reserved."]
+            </div>
+        </footer> -->
+    </div>
+    <div class="menu-overlay"></div>
+
+
+     <!-- jQuery  -->
+     <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+     <script src="assets/js/waves.js"></script>
+     <script src="assets/js/simplebar.min.js"></script>
+      <!-- custom js -->
+    <script src="assets/js/Custom_JS.js"></script>
+ <!-- Sweet Alerts Js-->
+ <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+
+
+
+      <!-- Morris Js-->
+     <script src="plugins/morris-js/morris.min.js"></script>
+     
+     <!-- Raphael Js-->
+     <script src="plugins/raphael/raphael.min.js"></script>
+
+     <!-- Morris Custom Js-->
+     <script src="assets/pages/dashboard-demo.js"></script>
+
+     <!-- App js -->
+    <script src="assets/Vertical/js/theme.js"></script>
+    <!-- <script src="assets/js/theme.js"></script> -->
+
+    <!--dropify-->
+    <script src="plugins/dropify/dropify.min.js"></script>
+
+ <!-- third party js -->
+<script src="assets/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/datatables/dataTables.bootstrap4.js"></script>
+<script src="assets/datatables/dataTables.responsive.min.js"></script>
+<script src="assets/datatables/responsive.bootstrap4.min.js"></script>
+<script src="assets/datatables/dataTables.buttons.min.js"></script>
+<script src="assets/datatables/buttons.bootstrap4.min.js"></script>
+<script src="assets/datatables/buttons.html5.min.js"></script>
+<script src="assets/datatables/buttons.flash.min.js"></script>
+<script src="assets/datatables/buttons.print.min.js"></script>
+<script src="assets/datatables/dataTables.keyTable.min.js"></script>
+<script src="assets/datatables/dataTables.select.min.js"></script>
+<!-- third party js ends -->
+<!-- Datatables init -->
+<script src="assets/pages/datatables-demo.js"></script>
+
+<script>
+    ///////////////////////////////////////////////////////////////////
+// $('select').selectpicker();
+///////////////////////////////////////////////////////////////////
+
+    //
+    $('.Convert').hide();
+    $('.Convert-Step2').hide();
+    $('.Trade').hide();
+
+    function GoToWallet(from, to){
+        $('.'+from).hide("slow");
+        $('.'+to).show("slow");
+
+        if(to=="Exchange-Index"){
+            $('.Convert').hide();
+            $('.Convert-Step2').hide();
+
+            $('.Trade-Step1').hide();
+            $('.Trade-Step2').hide();
+
+            $('.To-External-Step1').hide();
+            $('.To-External-Step2').hide();
+
+            $('html, body').animate({
+            scrollTop: ($('body').offset().top)
+            },2000);
+        }
+        if(from=="Exchange-Index" && to=="Trade"){
+            $('.Convert').hide();
+            $('.Convert-Step2').hide();
+
+            $('.Transfer-Internal-External').show();
+            if(screen.width<'1200'){
+                $('html, body').animate({
+            scrollTop: ($('.Trade').offset().top)
+            },2000);
+            }
+           
+        }
+        else if(from=="Exchange-Index" && to=="Convert"){
+            $('.Convert-Step2').hide();
+            $('.Trade').hide();
+
+            $('.Convert-Step1').show();
+
+            if(screen.width<'1200'){
+                $('html, body').animate({
+            scrollTop: ($('.Convert').offset().top)
+            },2000);
+            }
+           
+        }
+
+       
+
+    }
+
+    
+
+    //DROPDOWLIST WITH IMAGES OR ICONS
+// var langArray = [];
+// $('.Coin option').each(function(){
+// var img = $(this).attr("data-thumbnail");
+// var text = this.innerText;
+// var value = $(this).val();
+// var item = '<li class="col-12 row justify-content-start '+value+'"><div class="col-sm-1 col-2 pl-1 pr-4"><img src="'+ img +'" alt="" value="'+value+'" style="width:20px; height:14px;margin-left:0;"/></div><span class="H-16 col-8 px-0 col-sm-9 text-left TextDark my-0">'+ text +'</span></li>';
+// langArray.push(item);
+// })
+///////////////////SETTING THE CURRENCY SELECT OPTIONS/////////////////////////////////
+
+// $('#Fund').html(langArray);
+// //Set the button value to the first el of the array
+// $('#Fund-Button').html(langArray[3]);
+// $('#Fund-Button').attr('value', 'HDP');
+// //setting the type of currency in the input of amount
+// $('.Currency-Type').val('HDP');
+// $('.Currency-Type').text('HDP');
+
+// $("#From").attr("src","Icons/HDP.svg");//for Convert-Step2
+
+// $('#Curr').html(langArray);
+// //Set the button value to the first el of the array
+// $('#Curr-Button').html(langArray[0]);
+// $('#Curr-Button').attr('value', 'USD');
+// $('#Conversion-Type').text('USD');
+// $('.Conversion-Type').text('USD');//for Convert-Step2
+
+// $("#To").attr("src","Icons/USD.svg");//for Convert-Step2
+
+//BUY SELL BUTTONS IN TRADE SECTION///////////////////
+// $('#Asset').html(langArray);
+// //Set the button value to the first el of the array
+// $('#Asset-Button').html(langArray[3]);
+// $('#Asset-Button').attr('value', 'HDP');
+
+// $('#Settl').html(langArray);
+// //Set the button value to the first el of the array
+// $('#Settl-Button').html(langArray[1]);
+// $('#Settl-Button').attr('value', 'USD');
+//////////////////////////////////////////////////////
+///////////////////SETTING THE CURRENCY SELECT OPTIONS END/////////////////////////////////
+
+
+
+
+
+
+//change button stuff on click
+// $('.a li').click(function(e){
+// var id=e.target.closest(".a").id;
+// var img = $(this).find('img').attr("src");
+// var value = $(this).find('img').attr('value');
+// var text = this.innerText;
+
+// var item = '<li class="col-12 row justify-content-start "><div class="col-sm-1 col-2 pl-1 pr-4"><img src="'+ img +'" alt="" style="width:20px; height:14px;margin-left:0;"/></div><span class="H-16 col-8 col-sm-9 px-0 text-left TextDark my-0">'+ text +'</span></li>';
+
+// $('#'+id+'-Button').html(item);
+// $('#'+id+'-Button').attr('value', value);
+// $("#"+id).parent(".b-wallet").toggle();
+
+
+//     // if(id=='Fund'){
+//     //     //setting the type of currency in the input of amount
+//     //     $('.Currency-Type').val(value);
+//     //     $('.Currency-Type').text(value);
+//     //     $("#From").attr("src","Icons/"+value+".svg");//for Convert-Step2
+
+//     // }else if(id=='Curr'){
+//     //     $('#Conversion-Type').text(value);
+//     //     $('.Conversion-Type').text(value);//for Convert-Step2
+//     //     $("#To").attr("src","Icons/"+value+".svg");//for Convert-Step2
+
+//     // }
+// //   console.log(value);
+// });
+
+// $(".btn-select").click(function(e){
+// var id=e.target.closest(".btn-select").id;
+//     $("#"+id).siblings(".b-wallet").toggle();
+
+// });
+
+// //check local storage for the lang
+// var sessionLang = localStorage.getItem('lang');
+// if (sessionLang){
+//   //find an item with value of sessionLang
+//   var langIndex = langArray.indexOf(sessionLang);
+//   $('.btn-select').html(langArray[langIndex]);
+//   $('.btn-select').attr('value', sessionLang);
+// } else {
+//    var langIndex = langArray.indexOf('ch');
+//   console.log(langIndex);
+//   $('.btn-select').html(langArray[langIndex]);
+//   //$('.btn-select').attr('value', 'en');
+// }
+
+</script>
+    
+</body>
+</html>

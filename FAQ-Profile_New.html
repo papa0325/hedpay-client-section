@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+     <!-- App favicon -->
+     <link rel="shortcut icon" href="Icons/HDPicon.svg">
+
+     <!-- App css -->
+     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+     <!-- CSS FOR THE MENU IN THE LEFT -->
+     <!-- <link href="assets/Vertical/css/theme.css" rel="stylesheet" type="text/css" /> -->
+
+     <!-- CSS FOR THE MENU HORIZONTAL -->
+     <link href="assets/css/theme.css" rel="stylesheet" type="text/css" />
+
+     <link href="assets/css/CustomProfile.css" rel="stylesheet" type="text/css" />
+
+      <!-- Plugins css -->
+  <link href="assets/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link href="assets/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Slick carousel css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Dropify css -->
+    <link href="plugins/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+<style>
+    .navbar-header,#page-topbar {
+  background-color: #002554;
+
+}
+.topnav .topnav-menu{
+    min-height: 80px;
+    height: 80px;
+}
+.Input-F-Quick {
+        background: #FFFFFF 0% 0% no-repeat padding-box !important;
+        box-shadow: 3px 3px 12px #00000029 !important;
+        /*border-radius: 0 6px 6px 0 !important;*/
+        text-align: left;
+        font-family: 'Roboto', sans-serif !important;
+        letter-spacing: 0px;
+        color: #48484A;
+        outline: none !important;
+        border: none !important;
+        height: fit-content;
+        margin-bottom: 0;
+        margin-top: 0;
+        line-height: 1.5;
+    min-height: 40px;
+
+    }
+    .FAQ-Button{
+    min-height: 40px;
+}
+.Answer-Text{
+  font-size: 0.875rem;
+  padding-left: 10%;
+}
+</style>
+</head>
+<body>
+    <a class="Go-Up"  javascript:void(0) title="Go up">
+        <span class="fa-stack" style="color: #2DCCD3;">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+          <!-- Begin page -->
+          <div id="layout-wrapper">
+
+            <div class="main-content">
+
+                <header id="page-topbar">
+                    <div class="navbar-header">
+                        <div class=" d-flex align-items-center justify-content-between ">
+                            <!-- d-lg-none -->
+                            <button type="button" class="btn btn-sm px-sm-3 px-2 font-size-16 header-item waves-effect d-inline-block d-sm-none"
+                            id="vertical-menu-btn">
+                            <span class="W-Color"><i class="fa fa-fw fa-bars"></i></span>
+                            </button>
+                            <div class="d-flex justify-content-between align-items-start pl-sm-2 pl-1">
+                                <div class="d-flex GrayBox mr-2">
+                                    <p class="Nav-TextGray">Hdp.ф &nbsp;&nbsp;</p>
+                                    <p class="Nav-TextGray">0.1039</p>
+                                    <p class="Nav-TextGreen">(+15.15%)</p>
+                                </div>
+                                <div class="d-flex GrayBox">
+                                    <p class="Nav-TextGray">Vol: &nbsp;&nbsp;</p>
+                                    <p class="Nav-TextGray">2,082</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ButtonProfileMenu" class="d-sm-inline-block d-none">
+                            <div class=" d-flex align-items-center justify-content-end " >
+                                <div class="d-lg-flex align-items-center justify-content-end d-none">
+                                    <a class="col d-flex align-items-start justify-content-center H-16 TextWhite px-xl-4 waves-effect position-relative pt-2"
+                                        href="Chat_New.html">
+                                        <img src="Icons/Profile/envelope.svg" class="Icon-Menu envelope-icon" />
+                                        <img src="Icons/Profile/MessageOrange.svg" class="Icon-Menu  position-absolute MessageIcon" />
+
+                                        <p class="TextWhite position-absolute H-14 fontW-500 NumberIcon" >2</p>
+                                    </a>
+
+                                    <a class="col d-flex align-items-center H-16 TextWhite px-xl-4 pl-md-4  pr-2 pt-2"
+                                        href="Profile_New.html">
+                                        <img src="Icons/Profile/info-circle.svg" class="Icon-Menu  " />
+                                        <p class="d-flex TextWhite pl-1 mr-2 my-0 H-16" >KYC<span class="OrangeColor pl-1"> 50%</span> </p>
+                                    </a>
+
+                                    <a class="col d-flex align-items-center H-16 TextWhite pl-md-2  pr-3 pt-2 px-xl-4"
+                                        href="TwoFA.html">
+                                        <img src="Icons/Profile/mobile-alt.svg" class="Icon-Menu " />
+                                        <p class="d-flex TextWhite pl-1 mr-2 my-0 H-16" >2FA </p>
+                                        <img src="Icons/Profile/record-vinyl.svg" class="Icon-Menu " />
+
+                                    </a>
+                                    <a class="col d-flex align-items-center H-16 TextWhite pl-md-3 ml-1  pt-2"
+                                        href="Referral_New.html">
+                                        <span class="TextWhite MenuText pr-2 d-none d-sm-inline-block">Referral</span>
+                                        <img src="Icons/Profile/icon-referral.svg" class="Icon-Menu" />
+                                    </a>
+                                </div>
+                                <p class="W-Color H-16 my-2 mx-xl-3 mx-2 d-none d-sm-inline-block">|</p>
+                                <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-4">
+                                    <button type="button" class="btn header-item waves-effect px-0 d-flex align-items-center" id="page-header-user-dropdown"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                            <span class="d-none d-sm-inline-block mr-2 W-Color H-16 my-2 pl-2" style="line-height: 0.9;">Joe Doe
+                                                <br>
+                                                <span class="H-12 py-0 OrangeColor">87654321</span>
+                                            </span>
+
+                                        <img class="rounded-circle header-profile-user Avatar-Changed" src="assets/images/users/avatar-2.jpg"
+                                            alt="Header Avatar">
+                                        <i class="mdi mdi-chevron-down  d-inline-block H-20 W-Color pr-2" ></i>
+
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-sm-none d-inline-block col-12">Joe Doe</p>
+                                        <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-md-none d-inline-block col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+                                        <a class="dropdown-item d-flex align-items-center  " data-toggle="modal" data-target=".bd-example-modal-lg"
+                                            href="javascript:void(0)">
+                                            <span class="TextBlue H-18 pr-3"><i class="fas fa-sliders-h"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Settings</span>
+                                        </a>
+
+                                        <a class="dropdown-item d-flex align-items-center  "
+                                            href="Profile_New.html">
+                                            <span class="TextBlue H-18 pr-3"><i class="fas fa-user"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Profile</span>
+                                        </a>
+
+                                        <a class="dropdown-item d-flex align-items-center  "
+                                            href="javascript:void(0)">
+                                            <span class="TextBlue H-18 pr-3"><i class="fas fa-hand-pointer"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Go to website</span>
+                                        </a>
+
+                                        <a class="dropdown-item d-flex align-items-center  " style="border-top: 1px solid #E8E8E8;"
+                                            href="javascript:void(0)">
+                                            <span class="OrangeColor H-18 pr-3"><i class="fas fa-sign-out-alt"></i></span>
+                                            <span class="BD-Color H-16 fontW-700">Sign out</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+
+
+
+                <div class="topnav pr-0">
+                    <div class="container-fluid px-0">
+                        <nav class="navbar navbar-light navbar-expand-lg topnav-menu justify-content-sm-between justify-content-end">
+                            <div class="navbar-brand-box row justify-content-start">
+                                <a href="Dashboard_New.html" class="logo text-left">
+                                    <img src="Images/logo-hedpay-header-top.svg" class="col-9"/>
+                                </a>
+
+                            </div>
+
+                            <!-- <div class="navbar-brand-box" >
+                                <a href="#" class="navbar-brand">
+                                    <img src="Images/logo-hedpay-header-top.svg" width="211" height="40"/>
+                                </a>
+                            </div> -->
+
+                            <button type="button" class="btn btn-sm px-sm-3 px-2 font-size-16 header-item waves-effect d-sm-inline-block d-lg-none d-none"
+                            id="Menu-Vertical-bottom">
+                                <span class="TextDark"><i class="fa fa-fw fa-bars"></i></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse justify-content-end" id="topnav-menu-content">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item  px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Dashboard_New.html">
+                                            <span class="TextBlue"><i class="fas fa-home"></i></span>
+                                          <span class="M-Text">Dashboard</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Wallet_New.html">
+                                            <span class="TextBlue"><i class="fas fa-wallet"></i></span>
+                                            <span class="M-Text">Wallet</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Dashboard_New.html">
+                                            <span class="TextBlue"> <i class="fas fa-exchange-alt"></i></span>
+                                            <span class="M-Text">Exchange</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Fund-Packages_New.html">
+                                            <span class="TextBlue"><i class="fas fa-align-center"></i></span>
+                                            <span class="M-Text">Fund Packages</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Contact_New.html">
+                                            <span class="TextBlue"><i class="fas fa-users"></i></span>
+                                            <span class="M-Text">Contacts</span>
+                                        </a>
+                                    </li>
+                                    <!-- <li class="nav-item px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="Profile_New.html">
+                                            <span class="TextBlue"><i class="fas fa-user"></i></span>
+                                            <span class="M-Text">Profile</span>
+                                        </a>
+                                    </li> -->
+                                    <li class="nav-item ActiveMenu px-xl-2 px-1">
+                                        <a class="nav-link TextDark H-14" href="FAQ-Profile_New.html">
+                                            <span class="TextBlue"><i class="far fa-question-circle"></i></span>
+                                            <span class="M-Text">FAQ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="d-flex justify-content-end align-items-center px-lg-2 px-lg-4 px-0 pt-2 d-lg-none d-inline-block">
+                                <a class="d-flex align-items-start justify-content-center H-16 BD-Color px-3 waves-effect position-relative pt-2"
+                                    href="javascript:void(0)">
+                                    <img src="Icons/Profile/envelope.svg" class="Icon-Menu envelope-icon" />
+                                    <img src="Icons/Profile/MessageOrange.svg" class="Icon-Menu  position-absolute MessageIcon"  />
+
+                                    <p class="TextWhite position-absolute H-14 fontW-500 NumberIcon"  >2</p>
+                                </a>
+
+                                <a class="col d-flex align-items-center H-16 TextWhite pl-sm-4 pr-sm-2 px-0 pt-2"
+                                        href="javascript:void(0)">
+                                        <img src="Icons/Profile/info-circle.svg" class="Icon-Menu  " />
+                                        <p class="d-flex BD-Color pl-1  my-0 H-16" >KYC<span class="OrangeColor pl-1"> 50%</span> </p>
+                                </a>
+
+                                <a class="col d-flex align-items-center H-16 TextWhite pl-md-2  pr-3 pt-2"
+                                        href="javascript:void(0)">
+                                        <img src="Icons/Profile/mobile-alt.svg" class="Icon-Menu " />
+                                        <p class="d-flex BD-Color pl-1  my-0 H-16" >2FA </p>
+                                        <img src="Icons/Profile/record-vinyl.svg" class="Icon-Menu " />
+
+                                    </a>
+                                <a class="d-flex align-items-center H-16 BD-Color pl-md-3 ml-1 pr-3 pt-2"
+                                    href="Referral_New.html">
+                                    <span class="BD-Color MenuText pr-2 d-none d-sm-inline-block">Referral</span>
+                                    <img src="Icons/Profile/icon-referral.svg" class="Icon-Menu" />
+                                </a>
+                                <div id="ButtonBottomProfileMenu" class="d-sm-none">
+                                    <div class="col d-flex align-items-center justify-content-end px-0" >
+                                        <p class="BD-Color H-16 my-2 mx-xl-5 mx-2">|</p>
+                                        <div class="dropdown d-inline-block ml-xl-2 ml-0 pr-md-0 pr-sm-4 pr-1" >
+                                            <button type="button" class="btn header-item waves-effect px-0" id="page-header-user-dropdown" onclick="OpenMenuTop()"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                                    <span class=" mr-2 BD-Color H-16 my-2 pl-2 d-none d-sm-inline-block">Joe Doe</span>
+
+                                                <img class="rounded-circle header-profile-user Avatar-Changed" src="assets/images/users/avatar-2.jpg"
+                                                    alt="Header Avatar">
+                                                <i class="mdi mdi-chevron-down d-sm-inline-block H-20 BD-Color pr-2 ArrowIcon" ></i>
+
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 d-xs-none d-inline-block col-12">Joe Doe</p>
+                                                <p class="BD-Color text-center H-16 my-2 mr-xl-2 mr-0 col-12 LineBlueBottom">Last login 12 May 2021 5:58 PM</p>
+
+                                                <a class="dropdown-item d-flex align-items-center  " data-toggle="modal" data-target=".bd-example-modal-lg"
+                                                    href="javascript:void(0)">
+                                                    <span class="TextBlue H-18 pr-3"><i class="fas fa-sliders-h"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Settings</span>
+                                                </a>
+
+                                                <a class="dropdown-item d-flex align-items-center  "
+                                                    href="Profile_New.html">
+                                                    <span class="TextBlue H-18 pr-3"><i class="fas fa-user"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Profile</span>
+                                                </a>
+
+                                                <a class="dropdown-item d-flex align-items-center  "
+                                                    href="javascript:void(0)">
+                                                    <span class="TextBlue H-18 pr-3"><i class="fas fa-hand-pointer"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Go to website</span>
+                                                </a>
+
+                                                <a class="dropdown-item d-flex align-items-center  " style="border-top: 1px solid #E8E8E8;"
+                                                    href="javascript:void(0)">
+                                                    <span class="OrangeColor H-18 pr-3"><i class="fas fa-sign-out-alt"></i></span>
+                                                    <span class="BD-Color H-16 fontW-700">Sign out</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+            </header>
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="vertical-menu" >
+                <div data-simplebar class="h-100">
+                    <div class="d-flex justify-content-end px-3">
+                        <span class="TextDark H-30 " id="Vertical-Button-Opened"><i class="fas fa-times"></i></span>
+                    </div>
+                    <div class="navbar-brand-box" >
+                        <a href="#" class="navbar-brand">
+                            <img src="Images/logo-hedpay-header-top.svg" width="168" height="32"/>
+                        </a>
+
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                        <!-- <div class="d-flex justify-content-end align-items-center col-12 px-0">
+                            <img class="rounded-circle  Avatar-Vertical" src="assets/images/users/avatar-2.jpg"
+                            alt="Header Avatar">
+                            <button class="ButtonSideVertical ml-5" id="Vertical-Button-Opened">
+                                <img src="Icons/Profile/Open-closed.svg" class="H-16">
+
+                            </button>
+                        </div> -->
+                        <p class="BD-Color H-16 mb-0 mt-2">Welcome</p>
+                        <p class="LigthBlue H-22 mt-0">Jamie Davies</p>
+
+                    </div>
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" >
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu list-unstyled px-3" id="side-menu">
+
+                            <li class="LineBlueBottom py-2">
+                                <a href="Dashboard_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="TextBlue H-30"> <i class="fas fa-home"></i></span>
+                                    <span class="H-16 TextBlue fontW-500">Dashboard</span>
+                                    <span class="TextBlue H-30"> <i class="fas fa-chevron-right"></i></span>
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Wallet_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-wallet"></i></span>
+                                    <span class="H-16 BD-Color fontW-500">Wallet</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Dashboard_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-exchange-alt"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Exchange</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Fund-Packages_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-align-center"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Fund Packages</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <li class="LineDarkeBottom py-2">
+                                <a href="Contact_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-users"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Contacts</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                            <!-- <li class="LineDarkeBottom py-2">
+                                <a href="Profile_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="fas fa-user"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">Profile</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li> -->
+                            <li class="LineDarkeBottom py-2">
+                                <a href="FAQ-Profile_New.html" class="waves-effect d-flex justify-content-between align-items-center">
+                                    <span class="BD-Color H-30"> <i class="far fa-question-circle"></i></span>
+                                    <span class="H-14 BD-Color fontW-500">FAQ</span>
+                                    <span class="BD-Color H-30"> <i class="fas fa-chevron-right"></i></span>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sidebar -->
+                </div>
+            </div>
+
+
+                <div class="page-content">
+                    <div class="container-fluid pb-5">
+                        <section class="justify-content-center px-lg-5 px-md-3 px-2">
+                            <p class="H-18 fontW-500 TextBlue text-left">FAQ</p>
+                            <div class="Categories col-12 d-flex align-content-start flex-wrap my-2">
+                                <!-- <button type="button" id="All" class=" Cat-Button H-14 Active my-2" onclick="Category('')">All</button> -->
+                                <button type="button" id="Category" class=" Cat-Button H-14 Active my-2" onclick="Category('Category')">About&nbsp;Hedpay</button>
+                                <button type="button" id="Category1" class=" Cat-Button H-14 my-2" onclick="Category('Category1')">Hedpay&nbsp;Account</button>
+                                <button type="button" id="Category2" class=" Cat-Button H-14 my-2" onclick="Category('Category2')">Hedpay&nbsp;Fund&nbsp;Package</button>
+                                <button type="button" id="Category3" class=" Cat-Button H-14 my-2" onclick="Category('Category3')">Hedpay&nbsp;Mc&nbsp;Wallet</button>
+                                <button type="button" id="Category4" class=" Cat-Button H-14 my-2" onclick="Category('Category4')">Hedpay&nbsp;Fund&nbsp;Transfer</button>
+                                <button type="button" id="Category5" class=" Cat-Button H-14 my-2" onclick="Category('Category5')">Access&nbsp;Hedpay&nbsp;APP</button>
+                                <button type="button" id="Category6" class=" Cat-Button H-14 my-2" onclick="Category('Category6')">Registration</button>
+                            </div>
+                            <div class="Questions py-3 d-inline-flex flex-wrap" >
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex col-md-12 DivHei" >
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button>
+                                        <p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Hedpay is a platform that aims to create a community network effect around purchasing power. Hedpay aims to improve these concepts through the use of its ERC20 token-based e-currency wallet.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center " >Which Blockchain Technology uses Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Hedpay currently is an ERC-23 token standard, which was launched on the Ethereum blockchain network.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >Will Hedpay have its own blockchain?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">The Hedpay team is working to develop its own Blockchain technology to be available as of 2022.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >Is the Hedpay token a utility or security token?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow pt-2">Hedpay has three kinds of tokens: Utility, Security, and Stable</p>
+                                    <ul class="col-10 Answer-Text NoShow " style="list-style-type: circle;">
+                                        <li>Hedpay's main Token is the Security Token as it is pegged to the equity of the company</li>
+                                        <li>The current token in circulation is the Utility Token for mass trade and use purposes</li>
+                                        <li>Token address: 0xc4d5545392f5fc57eba3af8981815669bb7e2a48</li>
+                                        <li>Hedpay will soon launch a Stable Token backed by pure gold with limited value</li>
+                                    </ul>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >What are the official channels of Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You can find us on the following platforms. Please don’t hesitate to ask us your questions.</p>
+                                    <ul class="col-md-11  Answer-Text NoShow FAQMargin" style="list-style-type: circle;">
+                                        <li>Medium</li>
+                                        <li>Telegram</li>
+                                        <li>Twitter</li>
+                                        <li>Facebook</li>
+                                        <li>Instagram</li>
+                                        <li>Youtube</li>
+                                        <li>Website</li>
+                                    </ul>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >Where is Hedpay based?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Hedpay Ltd. was incorporated in London (United Kingdom) as the parent corporation. Hedpay Technologies, which is the technology development arm, is based in Montreal, Canada.
+                                        <br>
+                                        <br>
+                                        Later on, Hedpay UAB was incorporated in Lithuania under the following activity sectors:
+                                        Cryptocurrency Exchange and Crypto Currency Depository Wallet Operator, effective vehicle serves crypto-fiat payments, with KYC/AML measures implemented and supervised by Lithuanian Financial Crime Investigation Unit (FIU).
+
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >How old is Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Hedpay Ltd. was formed in 2017.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >Who are the people behind Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Hedpay was founded by Vicken Kaprelian. As a founder, CEO, and executive entrepreneur, he has considerable experience in the commodities sector with gold and diamonds from 1989 in the Middle East and North America (Canada), where he founded IBIG Investments Inc. and thereafter founded KIG Mining Plc in the United Kingdom, a public company listed on Frankfurt Stock Exchange. Mr. Kaprelian then started Hedpay Ltd. in the United Kingdom and brought back together his previous collaborators in Canada.
+                                        <br>
+                                        <br>
+                                        Today, the team of fifteen highly professional members consists of analysts, data scientists, marketers, IT security engineers, and developers with various expertise.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >Why should I choose Hedpay over another asset wallet and exchange?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">The Hedpay wallet in its simple form is no different than other asset wallets and DEX Exchanges. However, the difference becomes apparent when you combine Hedpay banking and our account offerings. With Hedpay, you can execute transactions between cryptocurrencies and FIAT within one platform, thus avoiding the fees and delays between wallets, exchanges, and FIAT banks.
+                                        <br>
+                                        <br>
+                                        In addition, you can generate passive income by using the HEdpAY token (HDP) while transacting within Hedpay and when you use our various services and products, or by taking advantage of our periodical special offers.
+                                        </p>
+                                </div>
+
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button>
+                                        <p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >What type of account will I get after registration?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">When you successfully pass the KYC verifications, you will get a HEdpAY Unique Account ID. (UID)
+                                        <br>
+                                        <br>
+                                        If you skipped the KYC process during registration, your account will be opened but will not be fully activated until you complete the KYC verification process.
+                                        </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >What can I use my Hedpay account for?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow pt-2">You can:</p>
+
+                                        <ul class="col-10 Answer-Text NoShow " style="list-style-type: circle;">
+                                            <li>Hold or exchange the following cryptocurrencies: HDP, BTH, ETH, USDT.</li>
+                                            <li>Send/Receive available currencies.</li>
+                                            <li>Pay with available currencies at accepted locations <b>(locations accepting BTC, ETH, USDT or HDP)</b></li>
+                                            <li>Also stake your HDP holding and earn interest. <b>(see Hedpay Fund Packages below)</b></li>
+                                            <li>Make in and out transfers and transfers in between Hedpay users. <b>(see the Fund Transfer Section of the FAQ)</b></li>
+                                        </ul>
+                                        <p class="col-md-11 Answer-Text NoShow FAQMargin"><b>Others options will be available soon.</b>
+                                         <br>
+                                        Limited pairs of currency exchange.<br>
+                                        HEdpAY MC Payment Card - you can pre-order your own card now. (link).
+                                    </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Where can I find my account number?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The HEdpAY Unique Account ID (UID) is available for natural persons who completed the KYC/AML verification process. It is displayed in your profile page.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Can a natural person have a several Hedpay accounts?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">No! One person can only have one HEdpAY Unique Account. However, within one account, you may have multiple subaccounts for different types of digital or FIAT currencies.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What type of fees does Hedpay charge?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">Opening a Hedpay account is free of charge.
+                                        <br><br>
+                                        A fixed monthly low maintenance fee will be charged if the account is maintained below the required amount. The frequency of use of the account will also affect the maintenance fee. High volume of activity may eliminate the maintenance fees.
+                                        </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">I have registered but cannot log in. Why?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">After registering on the Hedpay platform, you have to activate your account. An activation code will be sent to the unique email address provided during registration. Follow the steps in the email to activate your account.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Why is my account inactive?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">After six months of inactivity, the system will send out notification emails. After the third notification, the account will be suspended (inactive) to avoid maintenance fees.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is the difference between UID and the QR code in my account?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The UID is your account number within the Hedpay platform. The QR code is your unique HEdpAY MC Wallet address that is used for your cryptocurrency transactions.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category1">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I close my Hedpay account?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">You can close your account only when the account or subaccounts have a zero (0) balance. Login to your account, verify your balance(s) and notify our customer support department by email <a>(support@HEdpAY.com)</a> of your request.</p>
+                                </div>
+
+                                <!-- CATEGORY 2 -->
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is a Hedpay Fund Package?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">A Hedpay Fund Package is a subaccount where you can deposit your Hedpay tokens and earn interest. Your interest rate will be established based on your volume of deposit and the length of period chosen.
+                                        <br><br>
+                                        Keep in mind that the interest rate in a Hedpay Fund Package is fixed during the time of staking. This means if Hedpay changes the interest rate, it will not affect your package.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I buy a Hedpay fund Package?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">You may purchase a Hedpay Fund Package via our website or using the Hedpay App - anytime, anywhere!</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How different is a Hedpay Fund Package from a Hedpay Mc Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The Hedpay Mc Wallet is for safe keeping your various funds. You can transfer your funds in and out of Hedpay, you can transfer to other Hedpay users, or you can use to trade or exchange currencies.
+                                        <br><br>
+                                        Hedpay Fund Packages are for earning interest on your savings, which are applicable only to Hedpay tokens.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is the minimum amount to stake in a Hedpay Fund Package?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The minimum start package value is 10,000 Hdp, and the maximum value is 500,000 Hdp.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Do I need to wait until maturity to get my interest?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The interest rate is set according the amount staked, on an annual basis and paid monthly. The interest is added to your Hedpay MC wallet, <b>free to be used immediately.</b></p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Is there a bonus interest if I stake for more than one year?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">Yes! There is 10% bonus added to the original staked amount at the end of the first year. The interest on the second year will be calculated on the bonus as well.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Is there a penalty for cancelling my Hedpay Fund Package before maturity?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">As previously mentioned, the interest is calculated on an annual basis and paid monthly. Upon cancellation, you will lose the interest of the current month.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is “early withdrawal” or “pre-termination”?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">Early withdrawal or pre-termination is considered the same as a cancellation (see above).</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I upgrade my Hedpay Fund Package?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">You cannot upgrade the staked package. However, you can always add a new one.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I close my Hedpay Fund Package?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">You don’t need to close a Hedpay Fund Package. It will close automatically at maturity.<br>
+                                        You can choose to close the Hedpay Fund Package by cancelling it at any time. However, you will lose the accumulated interest.
+                                        </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How many Hedpay Fund Packages can I own at the same time?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">There is no limit on the number of packages you can hold. Although the number of available packages is limited to a preset amount.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How is the tax for a Hedpay Fund Package calculated?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">Tax declaration is based on your domiciled tax jurisdiction and it is your responsibility to declare as required.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category2">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">When will my interest be credited to my account?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">Before the 5th of each month. Your previous month’s interest will be credited to your Hedpay MC Wallet.</p>
+                                </div>
+
+                                <!-- CATEGORY 3 -->
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is a Hedpay Mc Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The wallet allows you to deposit, store, stake, transfer, and exchange crypto and FIAT currencies such a US$, CAD$, EURO, and GBP, and it is secured with private keys.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I open a Headpay Mc Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">As soon as your Hedpay account is approved, your wallet will be activated.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is the minimum amount which can be deposited in a Hedpay Mc Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The minimum value is set to $30 USD or the equivalent in any currency.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is the maximum amount which can be deposited in a Hedpay Mc Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">There is no maximum limit to deposit in Hedpay MC Wallet for cryptocurrencies.
+                                        <br>
+                                        <br>
+                                        There is a limit for FIAT currencies on new accounts based on the banking laws of your jurisdiction <b>(applicable if any).</b>
+                                        <br>
+                                        <br>
+                                        Also, the limit depends on your gradual use of the account, which can be up to $10,000,000 USD or the equivalent per currency.
+                                    </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">When can I access the money/cryptocurrencies in my Hedpay Mc Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">Anytime, anywhere with the Hedpay App or via our website. Please refer to the Transfers section to learn about transfer delays.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Is my money safe with Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">The Hedpay MC Wallet is an innovative, proprietary, decentralized finance application based on Ethereum Blockchain.
+                                      <br>According to the decentralized “Cryptocurrency” Blockchain technology, all Hedpay MC Wallets have unique private KEYs and addresses, which are safe and securely held in an encrypted database.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category3">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus"></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I exchange my tokens for FIAT money?</p>
+                                    </div>
+                                    <p class="col-md-11 Answer-Text NoShow FAQMargin">To exchange the cryptocurrencies in your wallet to FIAT money, go to the “Trade” section from the menu. You can then move the required amount to the trade account provided to you and exchange to the desired cryptocurrency or FIAT as the availability of BUY or SELL orders.
+                                        <br>
+                                        <br>
+                                        <b>(see Exchange section for more details)</b>
+                                         </p>
+                                </div>
+                                <!-- CATEGORY 4 -->
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >How do I transfer funds to my account?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Once you login to your account, go to the “Wallet” section from the menu and follow the link to “Deposit”. Simply follow instructions to add funds to your Hedpay account.</p>
+
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Are there any fees for adding funds to my account?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">There are no fees for adding funds.</p>
+
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Are there any fees for transferring funds?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">There are no fees and no limits for transferring funds between Hedpay users.
+                                        <br>
+                                        <br>When transferring in and out of Hedpay, there will be fees charged based on the services used, the currency exchange, and corresponding banking fees.
+                                        </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I make a transfer to another Hedpay platform user?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">First, set the recipient and save in your contacts to make transfers. You can set up recipients by using their QR code or UID number.
+
+                                        Then go to the “Wallet” section from the menu for internal transfers. Select a recipient from your contacts to initiate a transfer.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I make a transfer (a payment) to an external account?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">To make a transfer or a payment, you need to first have the banking information of the recipient. Then, simply follow the instructions for “Withdraw” or “Send”.</p>
+
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is a withdrawal? How does it work?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">A withdrawal is the same thing as a transfer initiated to your own bank account.</p>
+
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I transfer in monies to Hedpay account?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">
+                                        You can transfer to your Hedpay account via a bank transfer, by performing a standard (IBAN) transfer. To avoid delays and misplacement of funds, you must include your UID number <b>ONLY</b> in your Reference section of the bank transfer.
+                                        <br><br>
+                                        Please refer to the banking information section for incoming transfer instructions.
+                                    </p>
+
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1" onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is the banking information for incoming transfers?</p>
+                                    </div>
+                                    <aside class="self-left NoShow col-11 ">
+                                        <p class="Answer-Text  FAQMargin">SEPA Bank Transfers with IBAN</p>
+                                        <hr style="max-width: 600px;margin-left: 0; background-color: #87a1b3;box-shadow: 16px 4px 6px #000">
+                                       <p class="Answer-Text  FAQMargin">
+                                        Account Name: HEdpAY UAB
+                                        <br>
+                                        </p>
+
+                                        <table id="Table-Smart" class="table table-striped col-12 FAQ-Smart">
+                                            <thead>
+                                                <tr>
+                                                    <th>BANK&nbsp;</th>
+                                                    <th>IBAN&nbsp;</th>
+                                                    <th>BIC/SWIFT&nbsp;</th>
+                                                    <th>REFERENCE&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Luminor&nbsp;Bank&nbsp;AS</td>
+                                                    <td>LT65&nbsp;4010&nbsp;0424&nbsp;0210&nbsp;6048</td>
+                                                    <td>AGBLLT2X</td>
+                                                    <td>UID&nbsp;#&nbsp;000000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p class="col-md-11  Answer-Text  FAQMargin"><b>As reference enter</b> your <b>HEdpAY</b> Unique Account ID <b>(UID) number 000000</b></p>
+                                        <br>
+
+                                        <p class="col-md-11  Answer-Text  FAQMargin">International Bank Transfers</p>
+                                        <hr style="max-width: 600px;margin-left: 0; background-color: #87a1b3;box-shadow: 16px 4px 6px #000">
+
+
+                                        <table class="table col-12 d-flex" id="bank">
+                                            <thead>
+                                                <tr class="d-">
+                                                    <th>Beneficiary&nbsp;Name:</th>
+                                                    <th colspan="2">Beneficiary&nbsp;Bank:</th>
+                                                    <th>SWIFT/BIC&nbsp;Code:</th>
+                                                    <th>Routing:</th>
+                                                    <th>Bank&nbsp;Code:</th>
+                                                    <th>Account&nbsp;Number:</th>
+                                                    <th>Account&nbsp;Number:</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="d-">
+                                                    <td>HEdpAY&nbsp;Technologies</td>
+                                                    <td colspan="2">ScotiaBank (no&nbsp;address&nbsp;required)</td>
+                                                    <td>NOSCCATTXXX</td>
+                                                    <td>50641</td>
+                                                    <td>002</td>
+                                                    <td>0208213 (for&nbsp;Canadian&nbsp;$)</td>
+                                                    <td>0101516 (for&nbsp;US&nbsp;$)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="col-md-11  Answer-Text  FAQMargin"><b>As reference enter</b> your <b>HEdpAY</b> Unique Account ID <b>(UID) number 000000</b></p>
+                                        <br>
+                                    </aside>
+
+
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">I transferred funds into the account but do not see them yet!</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Once the funds are received at Hedpay accounts, it takes less than 24 hours during normal business hours to credit your account, however, it may take 48 to 72 hours over the weekends or holidays.
+                                        <br><br>
+                                        NOTE: There may be delays from your bank if the information is not entered correctly. If your funds do not appear in your account within 5 business days, please contact the support team as well as your bank. Funds may have been returned to the sender.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How long does it take digital assets to appear in my Wallet?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">If you funded your account in digital assets (BTC, ETH, USDT or HDP) when generating the transaction, due to blockchain technology that requires a minimum of 6 confirmations in general, this may take anywhere between 10 minutes or 1 hour depending on the traffic of the blockchain.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What is the limit for a Hedpay-Hedpay transfer?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You can see the latest transaction limits here: (link)</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How much is the fee for a Hedpay-to-Hedpay transfer?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">It’s 100% free! Spread the good news and enjoy more freedom.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I transfer funds to another bank account?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Super easy! Go to your Home screen, select Send, and follow the instructions.
+                                        <br><br>
+                                        Select the destination account and provide the required bank details as well as the amount you want to send. Then, perform the required authorization and you’re done!
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I transfer funds overseas?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You can transfer to any bank, local or international, as long as you provide all the required information and necessary details for the destination account.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category4 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">I typed the wrong account number as the recipient of my fund transfer. Can I cancel or undo the transfer?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">A fund transfer instruction, once submitted after you key in your OTP, cannot be cancelled or reversed.
+                                        <br><br>
+                                        Please make sure you enter the correct account number before keying in your transaction OTP.
+                                         </p>
+                                </div>
+                                <!-- CATEGORY 5 -->
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category5 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Where can I download the Hedpay App?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You may download the Hedpay App from either the <b>Apple App Store</b> or the <b>Google Play Store</b>.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category5 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What are the minimum OS requirements to be able to download the Hedpay App?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">For iPhone users, the minimum supported software system is iOS 10.0.0
+                                        <br><br>For Android users, the minimum supported OS is Android OS 7.0.0
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category5 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What are the minimum hardware specifications needed to operate the application on my mobile phone?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Your mobile phone needs to have a front-facing camera. It is also recommended that your phone has at least 3GB of RAM.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category5 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Why is the Hedpay App requesting permission to access my location, contacts list, camera, and photos?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">The app needs to access your location, contacts list, camera, and photos to function properly.
+                                      <br><br>  Your location and camera are used for security purposes and to pass the KYC/AML verification process, which allows full functionality of the app on your phone.
+                                      <br><br>
+                                        Your contacts list is used for selecting fund transfer recipients.
+                                        <br><br>
+                                        Your camera and photos are also used by you for account customization.
+                                        </p>
+                                </div>
+                                <!-- CATEGORY 6 -->
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Who can register as a Hedpay user?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">
+                                        CANADA
+                                        <br>1.	At least 18 years old
+                                        <br>2.	Has a residence In Canada
+                                        <br>3.	Has a valid email address
+                                        <br>4.	Has an active Canadian mobile number
+                                        <br>5.	Does not classify under the United States FATCA
+                                        <br><br>
+                                        EUROPE
+                                        <br>1.	At least 18 years old
+                                        <br>2.	Has a residence in the UK, EU/EEA
+                                        <br>3.	Has a valid email address
+                                        <br>4.	Has an active mobile number (linked to the jurisdiction in question)
+                                        <br><br>
+                                        UNITED STATES (a disclaimer for SEC)
+                                        <br>1.	At least 18 years old
+                                        <br>2.	Has a residence, proven address
+                                        <br>3.	Has a valid email address
+                                        <br>4.	Has an active mobile number (linked to the jurisdiction in question)
+                                        <br><br>
+                                        ASIA
+                                        <br>1.	At least 18 years old
+                                        <br>2.	Has a residence, proven address
+                                        <br>3.	Has a valid email address
+                                        <br>4.	Has an active mobile number (linked to the jurisdiction in question)
+
+                                        </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I register?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You could register directly on this website through the sign-up page or you could download and install the Hedpay App / Connect to the Hedpay platform and then register by going through our app’s onboarding process.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Do I need to present any ID before I am able to open an account with Hedpay?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">No, you don’t need an ID to open an account. If you do not have any of the accepted IDs at the time of registration, you may still register by skipping the ID upload step.
+                                      <br>However, the account created will be limited to a maximum balance of 10,000 Hdp. and a 12-month validity period. The said balance limit and validity period will only be lifted once you are able to upload one of the accepted IDs to the application.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">What are the accepted IDs?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">
+                                        1.	Passport<br>
+                                        2.	Driver's License<br>
+                                        3.	Unified Multi-Purpose<br>
+                                        4.	Social Security System<br>
+                                        5.	Etc.<br>
+                                    </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How do I properly perform a Face Identity Scan?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">
+                                    </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I logout from the Hedpay App?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You will be logged out automatically when your application has been inactive for five (5) minutes.
+                                        <br>
+                                        <br>If you want to logout completely from the app, you may also press logout.
+                                        <br>
+                                        <br>You may reset the app and password, where you will be required to set up a new password and perform face verification / Face Identity Scan on your next login.
+                                        </p>
+                                </div>
+                                <div class=" col-12 col-md-6 justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">Can I login from another device?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Yes, you can. However, you may only access your Hedpay account from a verified device at any given time. Only one (1) verified app or mobile device is allowed.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">How can I change my registered phone number?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You can call Hedpay Customer Care at +514-525-7895 to have your registered phone number changed.</p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center">I uploaded a valid ID during the registration process, but my name is not being scanned properly. What should I do?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">You should call Hedpay Customer Care at +514-525-7895 so we may assist you with your registration.
+                                        <br>
+                                        <br>
+                                        Generally, if you follow the steps of the ID upload correctly, the validation process will work properly. The system will not accept or pass faulty or blurry documents.
+                                         </p>
+                                </div>
+                                <div class=" col-12 col-md-6  justify-content-center align-items-center Category6 ">
+                                    <div class="d-flex  col-md-12 DivHei">
+                                        <button class="FAQ-Button col-md-1 " onclick="ShowAns(this)"><span style="color: #fff;"><i class="fas fa-plus "></i></span></button><p class="Input-F-Quick H-14 col-md-11 d-flex justify-content-start align-items-center" >Do I need to reset my password every time I change my device?</p>
+                                    </div>
+                                    <p class="col-md-11  Answer-Text NoShow FAQMargin">Yes. For security reasons, you may only access the Hedpay App from one (1) verified device. If you wish to access your account from a different device, it has to be verified by you or you will be prompted to reset your password in the new device.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+                  <!-- End Page-content -->
+
+                 <!-- ========== CHAT SUPORT Start ========== -->
+            <div id="Chat" >
+                <div class="Chat-Header Opened d-flex justify-content-between align-items-center px-3">
+                    <div class="col-6 px-0">
+                        <img class="Chat-icon" src="Icons/Profile/hedpay-logo-chat-support.svg" />
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center col-6 px-0 ">
+                        <p class="H-13 TextBlue mb-0 pr-2">Chat</p>
+                        <img class="Chat-icon-message" src="Icons/Profile/icon-hedpay-chat-support.svg" />
+                    </div>
+                </div>
+                <div class="Chat-Body p-3" >
+                    <div class="Chat-Messages p-2 position-relative my-2">
+                        <div class="Chat-Admin"></div>
+                        <p class="H-14 TextDark mb-0">
+                            <span class="fontW-600">Harry: </span>
+                            Welcome. My name is Harry, how can I help you?
+                        </p>
+                    </div>
+                    <div class="Chat-Messages-User p-2 position-relative my-2">
+                        <div class="Chat-User"></div>
+                        <p class="H-14 TextDark mb-0">
+                            <span class="fontW-600 TextBlue">You: </span>
+                            <span class="Body-Text">Thank you for responding, I have a few questions</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="Chat-footer p-3">
+                    <textarea class="Chat-Box">
+                    </textarea>
+                    <button type="button" onclick="Print();" class="btn"><span class="H-35 TextDark"><i class="fas fa-chevron-right"></i></span></button>
+                </div>
+        </div>
+        <!-- ========== CHAT SUPORT Ends ========== -->
+                  <footer class="footer px-0">
+                    <div class="container-fluid px-4">
+                        <div class="row justify-content-between align-items-start">
+                            <div class="d-flex flex-wrap flex-xl-row flex-lg-row flex-md-row align-items-start col-xl-6 col-lg-6 col-md-6 col-12">
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle bold">Menu</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="AboutUs.html">About Us</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="Products.html">Products</a></p>
+                                    <!-- <p class="Footer-Text"><a class="a-menu" href="Exchange.html">Exchange</a></p> -->
+
+                                    <!-- <p class="Footer-Text">Products</p> -->
+                                    <p class="Footer-Text"><a class="a-menu" href="Earn.html">Earn Hdp.ф</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://hedpay.medium.com/">Learn</a></p>
+                                </div>
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle bold">Account</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://test.hedpay.com/sign-up/">Open an Account</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://test.hedpay.com/sign-in">Sign In</a></p>
+                                </div>
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle bold">Policies</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="PrivacyPolicy.html">Privacy Policy</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="CookiePolicy.html">Cookies Policy</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="TermsConditions.html">Terms of Service</a></p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-start col-12 col-xl-6 col-lg-6 col-md-6">
+                                <div class="d-flex flex-column col-xl-4 col-lg-4 col-md-4 col-12">
+                                    <p class="Footer-Tittle">Information</p>
+                                    <p class="Footer-Text"><a class="a-menu" href="https://hedpay.medium.com/">News</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="FAQ.html">FAQ</a></p>
+                                    <p class="Footer-Text"><a class="a-menu" href="Contactus.html">Contact Us</a></p>
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-8 d-flex flex-column justify-content-start col-12 ">
+                                    <p class="Footer-Tittle bold">Subscribe Now</p>
+                                    <p class="Footer-Desc">Enter your email to receive our monthly newsletter and periodical promotional offers before they become public.</p>
+                                    <div class="d-flex justify-content-between col-md-12 px-0">
+                                        <input type="email" placeholder="Your email" class="input-Footer col-md-10"/>
+                                        <button type="button" class="Button-Footer "><span style="color: #fff;"><i class="far fa-paper-plane"></i></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5 d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-center justify-content-between footer-margin col-md-12">
+                            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 col-12 d-flex justify-content-center mb-3">
+                                <img class="col-md-12 col-10 mt-2 foot-logo" src="Images/logo-hedpay-footer.svg" />
+                            </div >
+                            <div class="d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-center Foot-Bottom justify-content-between col-xl-8 col-lg-8 col-md-8 col-12">
+                                <div class="d-flex flex-column col-xl-5 col-lg-5 col-md-5 col-12 mb-3">
+                                    <p class="Footer-Tittle bold">Support</p>
+                                    <p class="Footer-Text-Desc">If you experience any problems with your account, please do not hesitate to <a href="#" style="font-weight: bold; color: #00263F;">submit a ticket</a>.</p>
+                                    <div class="d-flex justify-content-between">
+                                        <img class="col-6 foot-logo" src="Icons/Groupe292.svg" />
+                                        <img class="col-6 foot-logo" src="Icons/Groupe293.svg" />
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column col-xl-5 col-lg-5 col-md-5 col-12 mb-3">
+                                    <p class="Footer-Tittle bold">Follow Us on Social Media</p>
+                                    <p class="Footer-Text-Desc">Use your personal referral link to share on your social channels and accumulate HDP.ф tokens.</a></p>
+                                    <div class="d-flex  justify-content-between">
+                                        <a href="https://www.facebook.com/hedpayltd"><img src="Icons/facebook.svg" /></a>
+                                        <a href="https://twitter.com/MyHEdpAY"><img src="Icons/twitter.svg" /></a>
+                                        <a href="https://www.reddit.com/user/HEdpAY/"><img class="SM-Icon" src="Icons/reddit-logo-hedpay.svg" /></a>
+                                        <a href="https://www.instagram.com/myhedpay/"><img src="Icons/instagram.svg"/></a>
+                                        <a href="https://t.me/HEdpAY"><img src="Icons/telegram-plane.svg"/></a>
+                                        <!-- <a href="#"><img src="Icons/telegram-plane.svg"/></a> -->
+                                        <a href="https://www.linkedin.com/company/hedpay/"><img src="Icons/linkedin.svg"/></a>
+                                        <a href="https://www.youtube.com/channel/UCpTk0N-CL24IO2IAY7k1t9g"><img src="Icons/youtube.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Footer-Blue d-flex flex-column flex-xl-row flex-lg-row flex-md-row align-items-center justify-content-between">
+                        <p class="BlueFooterText">Hedpay Technologies</p>
+                        <p class="BlueFooterText">&copy; 2021 Hedpay Technologies. All rights reserved.</p>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+            <!-- Large modal -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-sm-5 px-2 py-4">
+                    <div class="modal-header py-0">
+                        <p class="H-18 LigthBlue col-11 fontW-600 text-sm-left text-center">Settings</p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <div class=" col-12 px-0 mt-3">
+
+                        <div class="d-flex align-items-start">
+                            <span class="OrangeColor pr-2"><i class="fas fa-info-circle"></i></span>
+                            <p class="H-14 TextDark">Select the accounts you want to be visible on your dashboard and your choice of default conversion currency.</p>
+                        </div>
+
+                        <div class="control-group col-12 px-0 ">
+                            <label class="H-14 LigthBlue ml-3" for="Choose">Default conversion currency *</label>
+                            <div class="wall ">
+                                <div class="wallet-select ">
+                                    <button class="btn-select btn-wallet-select SelectExchange DarkArrowSelect TextDark mt-0 Input-F-Quick"  id="SettingsCurr-Button" value=""></button>
+                                    <div class="b-wallet">
+                                    <ul class="a" id="SettingsCurr"></ul>
+                                    </div>
+                                </div>
+                                <label style="width: fit-content">
+                                    <select id="" name="Settings" class="Settings col-12 H-14 TextDark vodiapicker" >
+                                        <option value="CAD" data-thumbnail="Icons/canada.png"><p class=" H-14 TextDark my-0">CAD - Canadian Dollar </p></option>
+                                        <option value="USD" data-thumbnail="Icons/USD.svg"><p class=" H-14 TextDark my-0">USD - Dollar </p></option>
+                                        <option value="EUR" data-thumbnail="Icons/EUR.svg"><p class=" H-14 TextDark my-0 ">EUR - Euro</p></option>
+                                        <option value="GBP" data-thumbnail="Icons/GBP.svg"><p class=" H-14 TextDark my-0">GBP - British Pound</p></option>
+                                    </select>
+
+
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="pt-3 row flex-column flex-md-row px-lg-4 px-sm-0 px-4">
+                            <div class="col-md-6">
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox locked"  type="checkbox" checked disabled/>
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/HDP.svg"/>HDP - Hdp.ф</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/BTC.svg"/>BTC - Bitcoin</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/ETH.svg"/>ETH - Ethereum</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/USDT.svg"/>USDT - Tether</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox locked S-Coin" id="CAD-SettCheck"  type="checkbox" checked/>
+                                    <label class="TextDark H-14"> <img class="pr-2 envelope-icon" src="Icons/canada.png"/>CAD - Canadian Dollar</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox S-Coin" id="USD-SettCheck"  type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/USD.svg"/>USD - Dollar</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox S-Coin" id="EUR-SettCheck" type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/EUR.svg"/>EUR - Euro</label>
+                                </div>
+                                <div class="text-left S-Curr row form-group align-items-center">
+                                    <input class="BlueCBox S-Coin" id="GBP-SettCheck" type="checkbox" />
+                                    <label class="TextDark H-14"> <img class="pr-2" src="Icons/GBP.svg"/>GBP - British Pound</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4 px-0">
+                        <p class="H-18 LigthBlue fontW-600 text-sm-left text-center">Profile picture</p>
+                        <div class="form-group mt-4 pr-0 ">
+                            <div class="Profile-Div position-relative KYC-Avatar">
+                                <img src="assets/images/users/avatar-2.jpg" class="rounded-circle  Avatar-Profile Avatar-Changed" />
+                                <button class="position-absolute button-camara Avatar-Button" onclick="Ask_Permition();" type="button" ><span class="icon-camera"><i class="fas fa-camera"><input type='file' accept="image/*" id="Avatar" hidden/></i></span></button>
+
+                                <!-- <span class="icon-profile position-absolute"><i class="fas fa-user-circle"></i></span>
+                                <button class=" position-absolute button-camara"><span class="icon-camera"><i class="fas fa-camera"></i></span></button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="menu-overlay"></div>
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+
+    <!-- Sweet Alerts Js-->
+    <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+
+
+
+         <!-- Morris Js-->
+        <script src="plugins/morris-js/morris.min.js"></script>
+
+        <!-- Raphael Js-->
+        <script src="plugins/raphael/raphael.min.js"></script>
+
+        <!-- Morris Custom Js-->
+        <script src="assets/pages/dashboard-demo.js"></script>
+
+        <!-- App js -->
+       <script src="assets/Vertical/js/theme.js"></script>
+       <!-- <script src="assets/js/theme.js"></script> -->
+
+       <!--dropify-->
+       <script src="plugins/dropify/dropify.min.js"></script>
+
+       <!-- nuevos scripts para agregar a la pagina principal -->
+       <script src="plugins/chart-js/chart.min.js"></script>
+     <!-- third party js -->
+   <script src="assets/datatables/jquery.dataTables.min.js"></script>
+   <script src="assets/datatables/dataTables.bootstrap4.js"></script>
+   <script src="assets/datatables/dataTables.responsive.min.js"></script>
+   <script src="assets/datatables/responsive.bootstrap4.min.js"></script>
+   <script src="assets/datatables/dataTables.buttons.min.js"></script>
+   <script src="assets/datatables/buttons.bootstrap4.min.js"></script>
+   <script src="assets/datatables/buttons.html5.min.js"></script>
+   <script src="assets/datatables/buttons.flash.min.js"></script>
+   <script src="assets/datatables/buttons.print.min.js"></script>
+   <script src="assets/datatables/dataTables.keyTable.min.js"></script>
+   <script src="assets/datatables/dataTables.select.min.js"></script>
+   <script src="assets/datatables/pdfmake.min.js"></script>
+   <script src="assets/datatables/vfs_fonts.js"></script>
+   <!-- third party js ends -->
+   <!-- Datatables init -->
+   <script src="assets/pages/datatables-demo.js"></script>
+
+   <!-- Slick carousel js -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="assets/js/Custom_JS.js"></script>
+
+   <script>
+    Category("Category");
+
+   </script>
+</body>
+</html>
